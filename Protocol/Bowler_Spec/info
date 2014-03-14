@@ -1,0 +1,40 @@
+Introduction:
+
+The Bowler communications system defines a common language that allows for embedded robotics hardware and computing hardware to work together while doing what each does best. Computers are powerful and affordable. They can connect to other consumer hardware easily allowing them to use devices like cameras, controllers, large arrays of cheep storage ,and each other.They come with ritch IDEs and various languages and they’re really easy to develop for.
+
+However, they fall short when it comes to dealing with the world around them. A modern operating system is not a real time OS, your application may get pre-empted causing a delay of milliseconds. The closest thing to GPIO that you have would be parallel and serial ports which are vanishing from modern computers these days. Dealing with the real world is annoying at best and impossible at worst.
+
+One common solution is to pair them up with a sidekick like a micro-controller or a FPGA. The micro-controller eats sleeps and breathes in the physical world. However this comes at the cost of some of the conveniences that we find when developing on a computer. So the time critical things happen on a micro-controller and the computer supervises, sends instructions, and receives updates. Before we developed the bowler communications system we spent a lot of time writing this, over, and over, and over again. We’d felt like we where re-writing the same thing tweaked slightly for each application.
+
+This project was formed after three of us sat down and realized that we had each hacked together the same thing. So, we sat down and tried to write something that people like us could use and save themselves some trouble. We want to build robots and not spend 2 hours troubleshooting something only to realize we screwed up the byte order of an integer we shoved through a serial port.
+
+Packet Format:
+This is the format of a bowler packet. It's role is to allow the host to call a library function on the device and receive a response.
+![bowler packets](https://f.cloud.github.com/assets/6901308/2401924/f5d2249a-aa1b-11e3-99f6-19bdaca3ad43.PNG)
+
+Version Field:
+This is the protocol Version field. It is 1 byte in size and it always has the value of 3.
+
+OUI Mac Address:
+This is the address of the Co-Processor the packet is intended for. An Address of all zeroes can be used to "Broadcast" the packet to all Co-Processors.
+
+If you are implementing a Bowler Device, you need a few MAC addresses. Contact us and we might be able to let you use a small portion of our block
+
+Affect: 
+This is a 1 byte of meta-information describing how the packet should affect the co-processor. The intent of this field is to give any future queuing.filtering mechanisms information on what the packet's affect on it;s intended recipient will be.
+
+There are currently 5 "Types" of packets.
+![types of packets](https://f.cloud.github.com/assets/6901308/2402015/fb35e92a-aa1c-11e3-9b7c-3722c99cde4c.PNG)
+
+Direction:
+A value of zero is a packet sent TO the co-processor and a packet with a value of 1 is sent FROM the co-processor.
+
+NS Hint:
+You can have a function that has the same name in TWO namespaces. The host needs to detect this condition and in the case of a conflict provide the namespace number. The list of namespaces can be gotten using the _nms function in com.bcs.core. If this field is left zero and there is no conflict then it is ignored. If it’s left zero and there IS a conflict the device will respond with an ERROR packet. See Namespace Collision Resolution for more details.
+
+Payload Length:
+The number of bytes following the header containing the function ID and arguments.
+
+Header Checksum:
+The sum of all of the header bytes up to the checksum byte.
+
