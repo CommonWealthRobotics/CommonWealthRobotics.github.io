@@ -2,6 +2,73 @@ RPC Data:
 The RPC Request consisting of a 4 byte Function code and a number of arguments.
 
 Functions and Arguments:
-The function to be called and it's Arguments fit into the RPC Data Field in the packet above. This Data Field Starts with a 4-byte Function Code Followed by Arguments. The type and amount of arguments are specific to the function and the Byte Order is Big Endian.
+The function to be called and it's Arguments fit into the *RPC Data* Field in the packet above. This Data Field Starts with a 4-byte Function Code Followed by Arguments. The type and amount of arguments are specific to the function and the Byte Order is Big Endian.
 
 Below is an example function with 3 arguments. Argument 1 and 2 are 8-bit ints and argument 3 is a 16 bit int.
+
+![rpc](https://f.cloud.github.com/assets/6901308/2402208/1327e388-aa1f-11e3-9663-1e0375c4b767.PNG)
+
+Transactions:
+![transactions](https://f.cloud.github.com/assets/6901308/2402324/d7407568-aa20-11e3-820c-1901c659ef0d.PNG)
+
+Namespaces:
+A namespace is a collection of functions identified by a 4 byte code that is unique to that specific namespace. Each namespace can be thought of as a "Library" which contains a set of functions that allows the Host to access a set of features. The presence of a namespace indicates that the co-processor supports that feature set.
+
+The Core Namespaces:
+All Co-Processors are required to implement one namespace called core (com.bcs.core) The Core namespace contains two RPCs that allow the host to Interrogate the device for additional namespaces.
+
+Retrieving a List of Namespaces:
+Below are the flurry of packets exchanged between the DyIO and the java library. This is less of an enumeration and more of an interrogation because the device will still process packets properly if this is omitted but the host won't know what features a device implements.
+![packets](https://f.cloud.github.com/assets/6901308/2402424/d941749c-aa21-11e3-8bf7-e2162c473efe.PNG)
+![packets2](https://f.cloud.github.com/assets/6901308/2402436/f9e8617e-aa21-11e3-8cd0-a840ed386d73.PNG)
+
+Namespace String Format:
+The namespace string follows this format
+![namespace structure](https://f.cloud.github.com/assets/6901308/2402463/5c8208c6-aa22-11e3-8657-253289acb30e.PNG)
+In the example above bcs.io provides functions for getting the type of (analog,gpio,pwm,etc..) and getting/setting the value of IO pins. bcs.io.setmode adds functions that allow you to get an IO channel's supported types and to switch between types.
+
+With bcs.io you can ask "Is channel 5 an analog input? What is its value?" or "Is channel 2 a digital output? Set it high" bcs.io.setmode allows you to, in addition to the above to ask "What can channel 5 be? Set it to a digital input" It makes no sense to implement bcs.io.setmode without bcs.io
+
+Namespace Collision Resolution:
+Functions within a namespace are defined by a 4 byte function code. This is unique to that namespace but not unique to a device.
+
+A device may implement two different namespaces with two different functions that have the same function code.
+
+The mechanism used to resolve this ambiguity is the namespace hint in the packet's header. When the co-processor receives a RPC with a function code and it doesn't know what namespace to use it checks the hint field. If the hint field is zero it returns a namespace collision error [note: add example]. If the field is an integer it then takes this integer and indexes into the list of namespaces and sends it to that namespace.
+
+For example. IF a device implements 3 namespaces.
+![collision resolution](https://f.cloud.github.com/assets/6901308/2402550/96f8e118-aa23-11e3-8c59-010a4dae4dff.PNG)
+and namespaces org.foo and org.bar both implement a RPC "_baz" (0x5f62617a) and a packet arrives with a hint:0 and a function:0x5f62617a the device will respond with an error.
+
+The Host then interrogates the device (or checks the result of its previous interrogation) and determines the number of the namespace (same number used by _nms) and then retransmits the packet with that number in the NS Hint field and the right function in the right namespace is called
+Bowler Protocol
+
+Name Space List:
+Com.bcs.core
+![name purpose](https://f.cloud.github.com/assets/6901308/2402598/5c117abe-aa24-11e3-913d-2ec0385172ca.PNG)
+![name purpose2](https://f.cloud.github.com/assets/6901308/2402600/664f6c66-aa24-11e3-8423-98fc89d25595.PNG)
+Com.bcs.io	
+Single Channel IO
+Single channel IO only use one physical pin on the device.
+
+Multi Channel IO
+Multi Channel IO like the serial interfaces, counters,and DC Motor channels use more then one physical pin. These are grouped together and when one is set the other pins in the group will change state and an async packet will be sent to the host with a list of pins and their new states.
+
+For Example, Setting channel 16 on the DyIO to UART TX will result in pin 17 changing state to UART RX. An async packet will then be sent to the host letting it know that pin 17 is now UART RX.
+
+Channel Types
+![channel type](https://f.cloud.github.com/assets/6901308/2402681/43a89be6-aa25-11e3-94b6-389a010d3605.PNG)
+ RPCs
+![rpcs](https://f.cloud.github.com/assets/6901308/2402713/99df444c-aa25-11e3-9c73-7a257ac4b12d.PNG)
+
+Com.bcs.safe	
+Namespace Purpose
+The presence of this namespace indicates the presence of a watchdog timer. The watchdog timer, when enabled, counts up to a defined value and is reset whenever any packet from the host arrives. If the watchdog timer counts up to it's count-up-to value the device will go into it's safe state. The safe state behavior is device specific. For example, A wheeled robot would stop moving and a robot arm could either lock its position or go slack.
+![rpcs2](https://f.cloud.github.com/assets/6901308/2402816/26f52206-aa27-11e3-8193-59d072a93025.PNG)
+
+Com.neuronrobotics.dyio	
+Namespace Purpose
+RPCs
+![rpc1](https://f.cloud.github.com/assets/6901308/2402861/dd3b9aae-aa27-11e3-912e-4d88ce0c935b.PNG)
+![rpc2](https://f.cloud.github.com/assets/6901308/2402876/04b6414c-aa28-11e3-88cb-b29ef0082e68.PNG)
+![rpc3](https://f.cloud.github.com/assets/6901308/2402879/09796f74-aa28-11e3-9aee-11e8387c3bec.PNG)
