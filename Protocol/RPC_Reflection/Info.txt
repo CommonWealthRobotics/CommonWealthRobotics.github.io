@@ -1,0 +1,7 @@
+RPC Data:
+The RPC Request consisting of a 4 byte Function code and a number of arguments.
+
+Functions and Arguments:
+The function to be called and it's Arguments fit into the RPC Data Field in the packet above. This Data Field Starts with a 4-byte Function Code Followed by Arguments. The type and amount of arguments are specific to the function and the Byte Order is Big Endian.
+
+Below is an example function with 3 arguments. Argument 1 and 2 are 8-bit ints and argument 3 is a 16 bit int.
