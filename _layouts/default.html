@@ -6,23 +6,19 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="/css/main.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS-->
-        <link rel="stylesheet" href="/css/main.css">
 
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-
-  
+ 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -30,20 +26,10 @@
     <![endif]-->
   </head>
 
-  <body>
-	<nav class="navbar navbar-default" role="navigation">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="/">Bowler</a>
-	    </div>
-
+  <body class="personal">
+	<img src="/bowler.gif" alt ="No Image" style="height:100px;"/>
+	<nav class="navbar navbar-inverse" role="navigation">
+	  <div class="container" >
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
@@ -69,39 +55,39 @@
 			<li><a href="/SDK/NR_dev_tools/">NR Dev Tools</a></li>
 			<li><a href="/SDK/Python/">Python</a></li>
 			<li><a href="/SDK/Ruby/">Ruby</a></li>
-			<li><a href="/SDK/Java/">Java</a>
+			<li><a href="/SDK/Java/">Java</a></li>
 		  </ul>
 		</li>
-		<li><a href="/Contact/">Contact</a></li>
+		
 	      </ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="http//:github.com/NeuronRobotics">GitHub</a></li>
+	</ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-
+	<div class="content">
           {{ content }}
+	</div>
 
           <div class="footer">
-            <div class="contact">
+            <div class="contact" style="float:right">
               <p>
-                Neuron Robotics<br />
-                Engineering Co-Op<br />
-                NeuronRobotics.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/NeuronRobotics">github.com/yourusername</a><br />
+		Neuron Robotics<br />
+		Phone: +1 (877)474-6038<br/>
+		E-mail: Info@NeuronRobotics.com<br/>
+		95 Prescott St. Worcester, MA 01609<br/>
               </p>
             </div>
           </div>
-        </div>
+  
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>
 </html>
