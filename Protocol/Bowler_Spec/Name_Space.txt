@@ -1,8 +1,0 @@
-Namespaces:
-A namespace is a collection of functions identified by a 4 byte code that is unique to that specific namespace. Each namespace can be thought of as a "Library" which contains a set of functions that allows the Host to access a set of features. The presence of a namespace indicates that the co-processor supports that feature set.
-
-The Core Namespaces:
-All Co-Processors are required to implement one namespace called core (com.bcs.core) The Core namespace contains two RPCs that allow the host to Interrogate the device for additional namespaces.
-
-Retrieving a List of Namespaces:
-Below are the flurry of packets exchanged between the DyIO and the java library. This is less of an enumeration and more of an interrogation because the device will still process packets properly if this is omitted but the host won't know what features a device implements.
