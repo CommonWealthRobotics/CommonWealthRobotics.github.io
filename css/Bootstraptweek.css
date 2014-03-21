@@ -54,7 +54,9 @@ body{
 	position:relative; 
 	width:100%;
 	max-width:960px;
-	text-align:inherit;
+	text-align:left;
+	margin:0;
+	padding:0;
 }
 .footer{
 	position:relative; 
