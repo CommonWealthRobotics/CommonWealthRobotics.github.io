@@ -46,7 +46,7 @@
 body{
 	color:black; 
 	background-color:#828282;
-	background-image:url(/bg.png) repeat-x;
+	background-image:url(/bg.png);
 	/*background-size:100%;*/
 }
 .content{
