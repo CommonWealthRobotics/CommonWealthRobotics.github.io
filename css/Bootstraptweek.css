@@ -36,10 +36,6 @@
 .nav .navbar-nav .navbar-right{
 	margin:0;
 }
-@media (min-width: 768px)
-.navbar-nav.navbar-right:last-child {
-margin-right: 0px;
-}
 .container{
 	max-width:980px;
 	margin:auto;
