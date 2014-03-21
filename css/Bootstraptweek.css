@@ -47,8 +47,8 @@ body{
 	color:black; 
 	background-color:#828282;
 	background-image:url(/bg.png);
-	background-repeat: none;
-	background-size:100%;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
 }
 .content{
 	position:relative; 
