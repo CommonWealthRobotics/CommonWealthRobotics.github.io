@@ -32,7 +32,7 @@
 	<div class="container">
 		<img src="/bowler.gif" alt ="No Image" style="height:100px;"/>
 		<nav class="navbar navbar-inverse" role="navigation">
-		  <div class="container" >
+		  <div class="container-fluid" >
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
@@ -71,19 +71,189 @@
 		</nav>
 
 		<div class="content">
-		  <h>DyIO Videos</h>
+		  <h>Welcome to Bowler.io's DyIO "How To's" and videos</h>
+
+<p>In this section, you will learn everything you need to begin with the DyIO device.</p>
 
 
-<p><a href="https://NeuronRobotics.github.io/">Home</a></p>
+<p>=Introduction=
+NR-Console is a stand-alone Java program that runs on Windows, Linux and Mac OSX.</p>
 
-<p>
-Firmware Update!<br/>
-<a href="https://www.youtube.com/watch?v=gMD_0VicgGc">
-<img src="http://media.neuronrobotics.com/media/2012/02/04/diy0-23.jpg" alt="Firmware Update!" width="240" height="180" border="10" />
-</a>
-<br/>
-Info
-</p>
+<p>NR-Console is designed to help you get started working with the DyIO and other Bowler devices by giving you quick access to all of DyIO's available features before you are ready to begin programming in Java.</p>
+
+<p>Included on this page are directions for setting up NR Console, using NR-Console to connect to a DyIO, and descriptions of the components of NR Console and how to use them.</p>
+
+<p>=Installing NR-Console and All Neuron Robotics Software=</p>
+
+<p>'''<big><span style="color:red"> IMPORTANT: Install all software before plugging in your hardware!</span></big>'''</p>
+
+<p>NR-Console is a component of the NRDK, and therefore is installed automatically during the NRDK installation process.</p>
+
+<p>To install NR-Console, you will need to download and install '''<big><span style="color:red">(in this order)</span></big>''':</p>
+
+<h1>Ensure Java is installed on your computer</h1>
+
+<h1>*(Windows)The [http://www.oracle.com/technetwork/java/javase/downloads/jdk7u7-downloads-1836413.html Java 7 Development Kit (JDK)] We recommend the 32 bit version even if you have a 64 bit machine.</h1>
+
+<h1>*(Ubuntu) Use 'Software Center' and search for 'OpenJDK'. Select Java 6 if it is the only option, 7 if it is available.</h1>
+
+<h1>*(Mac OS) Java is integrated into the operating system and does not need to be installed.</h1>
+
+<h1>The [http://neuronrobotics.com/neuronrobotics/store/nrdk/ NRDK latest release].</h1>
+
+<h1>Plug in the USB cable to the DyIO</h1>
+
+<p>==(Windows Only) Driver/Connection Problems If I Plug In The DyIO Before Installing The Driver==
+If you are using windows and plug in the DyIO BEFORE installing the driver, windows will automatically assign an incorrect driver. To correct this </p>
+
+<h1>Go into the 'Device Manager'</h1>
+
+<h1>Right click on the DyIO v.3</h1>
+
+<h1>Select 'Uninstall Driver'</h1>
+
+<h1>Unplug the DyIO</h1>
+
+<h1>Install the NRSDK normally</h1>
+
+<h1>Plug the DyIO back in</h1>
+
+<h1>It should now install using the driver from the NRSDK and show up as a COM port.</h1>
+
+<p>=Using NR-Console=</p>
+
+<p></p>
+
+<p>'''BEFORE YOU BEGIN'''</p>
+
+<p>Any time you install the NRDK, you should update the firmware of your new DyIO before attempting to use any of the NRDK's features:</p>
+
+<ul>
+<li>[[NR<em>Console</em>Update_Firmware | Use NR-Console to update your DyIO's firmware]]</li>
+</ul>
+
+<p>Once the firmware is up to date, you are now ready to start using the NR-console.</p>
+
+<p>=Connecting to a DyIO=</p>
+
+<p>[[File:NRConsoleConnect.jpg|500px|thumb|right|Fig. 1: The connection prompt window]]</p>
+
+<p>The first thing you will see when you launch the NR-Console program is a window prompting you to connect to your DyIO (see Fig. 1: The connection prompt window). At this point, you have a choice of how to connect to your DyIO:</p>
+
+<p>'''Connecting via Serial (USB):'''
+* By default, the "'''Serial'''" tab is selected on the connection window. You should use this tab to connect to a DyIO that is plugged into your computer via USB, or direct serial.
+* If you have not already done so, plug in your DyIO via USB. See [[DyIO module#DyIO Layout|the DyIO wiki page]] for help in locating the USB port on your DyIO. At this point you should <span style="color:red">click the "'''Refresh'''" button to update the list of connected devices</span>.
+* In the drop down menu labeled "'''Connection:'''", find your DyIO. 
+<em>* In windows it will be labeled as any com port above 1 (IE: '''<span style="color:green">COM2</span>''')
+*</em> In linux it will be '''<span style="color:green">/dev/ttyDyIOx</span>'''  or '''<span style="color:green">/dev/DyIOx</span>''', where x is a number (IE: ''/dev/ttyDyIO0'' or  ''/dev/DyIO3'').
+** In OSX it will be '''<span style="color:green">/dev/tty.usbmodemXXXX</span>''' where the X's are replaced with some unique identifier 
+* Since you are connecting with USB and not direct serial, you can leave the "'''Baudrate'''" field at it's default (115200).
+* Click the "'''Connect'''" button to connect to your DyIO.</p>
+
+<p>'''Connecting via Serial (direct):'''
+* By default, the "'''Serial'''" tab is selected on the connection window. You should use this tab to connect to a DyIO that is plugged into your computer via USB, or direct serial.</p>
+
+<p>'''Connecting via Bluetooth:'''
+* Select the tab labeled "'''Bluetooth'''" in the connection window.</p>
+
+<p>'''Connecting via UDP:'''
+* Select the tab labeled "'''UDP'''" in the connection window.</p>
+
+<p>'''Connecting via TCP:'''
+* Select the tab labeled "'''TCP'''" in the connection window.</p>
+
+<p>==NR-Console Main Window==
+[[File:NRConsoleMainComponents.jpg|500px|thumb|right|Fig. 2: The key features of the NR Console program]]</p>
+
+<p>Once you've successfully connected to a DyIO, you will be taken to the main window of the NR Console program. This window consists of 3 key features:</p>
+
+<p>;[[#The<em>Main</em>Toolbar| The Main Toolbar]]: Some advanced functions, help, and the connection management tools, and "quit" are stored here
+;[[#The<em>DyIO</em>Map<em>Panel| The DyIO Map Panel]]: A graphical representation of your DyIO
+;[[#The</em>Selected<em>Channels</em>Tray| The Selected Channels Tray]]: A tray that displays details for each channel you select</p>
+
+<p>Each feature has a corresponding section on this page below. Please see these sections for more information.</p>
+
+<p>==The Main Toolbar==
+[[File:NRConsoleMainToolbar.jpg|500px|thumb|right|Fig. 3: The main toolbar]]</p>
+
+<p>The main tool bar has four menus:</p>
+
+<p>'''File''' menu:
+* The quit function is stored here. This disconnects your DyIO from NR Console and closes the program.</p>
+
+<p>'''Connection''' menu:
+* This menu stores functions that manage the connection to your DyIO, namely '''Set Connection''' and '''Disconnect''';
+<em>* '''Disconnect''':
+<strong></em> This function terminates the current connection and returns you to the home screen without quitting. You must be connected to a DyIO to access NR Console's functionality, so you should either use the '''Set Connection''' function to connect to a DyIO and continue working, or use the '''quit''' function (under the file menu) to exit NR Console.
+<em></strong> Note: <span style="color:red">It is not necessary to explicitly disconnect from a DyIO before quitting NR Console. This is done automatically during the '''quit''' process.</span>
+*</em> '''Set Connection''':
+<em>*</em> This function terminates the current connection, and reopens the [[#Connecting to a DyIO|connection prompt window]].
+* Note that each running instance of the NR Console program can only connect to a single DyIO, so you must disconnect from one DyIO to connect to another. Therefore, <span style="color:red">If you wish to manage multiple DyIOs concurrently, you must run an instance of NR Console for each DyIO to be controlled</span>.</p>
+
+<p>'''About''' menu:
+* This menu stores the '''About NR Console''' function. This function, when activated, launches a browser window and takes you to this page.</p>
+
+<p>'''DyIO''' menu:
+* This menu stores functions that extend NR Console's functionality for special projects.</p>
+
+<p>==The DyIO Map Panel==
+[[File:NRConsoleDyIOMapPanel.jpg|500px|thumb|right|Fig. 4: The DyIO Map Panel]]</p>
+
+<p>This panel is a visual representation of what your DyIO is currently set up to do.</p>
+
+<p>The key features of this panel are:</p>
+
+<p>;'''Battery Voltage Indicator''': This displays, in volts, the voltage of the external power source you may have plugged into your DyIO. Press the "Refresh" button to update the voltage display.</p>
+
+<p>;'''MAC Address''': Each DyIO is assigned a unique identifier that conforms to the IEEE standard. This is where the identifier to your connected DyIO is displayed.</p>
+
+<p>;'''Firmware Version Number''': This is the firmware version your DyIO is currently running. See [[NR<em>Console</em>Update_Firmware|this page]] for more information.</p>
+
+<p>;'''About Firmware Button''': This button launches a browser to take you to [[NR<em>Console</em>Update_Firmware| this page]]</p>
+
+<p>;'''Bowler Connection Outlet''': This indicates where on the DyIO you can find the Bowler Serial Connection outlet. See [this page] for more information on the Bowler Serial Connection.</p>
+
+<p>;'''USB Connection Outlet''': This indicates where on the DyIO you can find the USB outlet.</p>
+
+<p>;'''Channel Bank LED Indicator''': These squares correspond to the bank LEDs on your DyIO. See [[DyIO<em>module#LED</em>Reference| this page]] for an explanation of what the colors mean.</p>
+
+<p>;'''Channel Bank Displays''': Each rectangle on these displays correspond to a channel on your DyIO. The numbers to the sides of these rectangles indicate which channel they correspond to, and the channels on the DyIO map are in the same layout configuration as the channels on your DyIO (Both numerically, and where GND indicates the ground rail, VCC indicates the power rail, and IO indicates the signal rail). The icon displayed in the space for the signal rail indicates what mode that particular channel is set to on your DyIO. See [[DyIO#Channel_Modes|this page]] for a quick explanation of the possible modes, an icon key, and a chart of which modes are available for each channel.
+:<span style="color:red">To configure the channels of your DyIO, click to select the channel that you would like to work on.</span> Options and configurations for selected channels are displayed in the tray to the right of the DyIO Map.
+::* This tray is called the "Selected Channels Tray". Learn more about this feature [[#The Selected Channels Tray|here]].
+:<span style="color:red">Multiple channels may be selected at one time by holding the shift key on your keyboard while you click on the additional channels you wish to select.</span></p>
+
+<p>;'''Safe Mode Check Box''': When un-checked, this will disable safemode for the DyIO. This will allow any channel to be set to Servo regardless of the voltage on the power rail. For API information, see [[Servo<em>Channel#Safe</em>Mode|DyIO Servo Safe Mode]] .</p>
+
+<p>;'''Default Button''': When pressed, this button resets all the channels to their default configuration:  [[Bowler<em>Transactions#Asynchronous</em>Transactions|Asynchronous]] [[Digital<em>Input</em>Channel| Digital Input]] [[DyIO#Channel_Modes|mode]].</p>
+
+<p>==The Selected Channels Tray==</p>
+
+<p>[[File:NRConsoleSelectedChannelsTray.jpg|500px|thumb|right|Fig. 5: The Selected Channels Tray]]</p>
+
+<p>This is a tray that holds the information for all channels you have selected on the DyIO map panel.
+Information and configuration options for each channel is displayed in that channel's '''Channel Control Widget'''.
+These '''Channel Control Widgets''' are displayed in a list by numerical order inside the '''Selected Channels Tray'''.</p>
+
+<p>'''Channel Control Widget'''
+* Each '''Channel Control Widget''' consists of the following:
+<em>* A title bar showing the '''channel number''' and selected '''mode''' for the channel the widget corresponds to.
+*</em> A '''Mode Selection Menu''' that allows you to change the assigned mode for that channel via drop down menu.
+<em>* An '''Asynchronous Selection Panel''' that allows you to enable and control the asynchronous option for that channel.
+*</em> A '''Mode Specific Panel''' that gives the options (if any) for the selected mode of the channel.</p>
+
+<p>=In Depth Descriptions=
+Listed here are some simple tutorials to help you familiarize yourself with using the NR-Console to access the DyIO's many features:</p>
+
+<ul>
+<li>[[NR<em>Console</em>DyIO_Modes | Use NR-Console to access the DyIO's channel modes.]]</li>
+<li>[[PID<em>Controller</em>Example | Use NR-Console to access the DyIO's PID controller.]]</li>
+<li>[[NR<em>Console</em>DyIO_Scheduler | Use NR-Console to access the Scheduler system for recording and playing back servo motions.]]</li>
+<li>[[NR<em>Hexapod</em>Kit<em>Assembly#Hexapod</em>Configuration | Use NR-Console to access the Hexapod configuration editor with a walking control interface.]]</li>
+<li>[[Programming_Demo|Programming Examples with the DyIO and the NRSDK]]</li>
+</ul>
+
+
+
 
 		</div>
 
