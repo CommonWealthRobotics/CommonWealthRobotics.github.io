@@ -10,18 +10,22 @@
 	color:white;
 }
 .navbar .nav>li>a{
-	background-color:#AD0516;
+	background-color:#9C1B1E;
 	background-image: none;
 	color:white;
+	
 }
 .navbar .nav>.active>a,
 .navbar .nav>.active>a:focus{
-	background-color:#AD0516;
+	background-color:#9C1B1E;
 	background-image: none;
 }
 .navbar .nav>.active>a:hover,
 .navbar .nav>li>a:hover,
-.navbar .nav>li>a:focus{
+.navbar .nav>li>a:focus,
+.navbar-inverse .navbar-nav>.open>a, 
+.navbar-inverse .navbar-nav>.open>a:hover, 
+.navbar-inverse .navbar-nav>.open>a:focus {
 	background-color:#AD0010;
 	background-image: none;
 	color:gray;
@@ -31,7 +35,7 @@
 	position:relative; 
 	width:100%;
 	margin:auto;
-	background-color:#AD0516;
+	background-color:#9C1B1E;
 	background-image: none;	
 }
 .nav .navbar-nav .navbar-right{
