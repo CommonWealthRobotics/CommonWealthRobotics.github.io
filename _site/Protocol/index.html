@@ -70,7 +70,8 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-	<div class="col-sm-3 col-md-2 sidebar" style="margin:0;padding:0;text-align:left;position:fixed;top:100px;">
+	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar" style="margin:0;padding:0;text-align:left;">
+
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview</a></li>
             <li><a href="#">Reports</a></li>
@@ -125,5 +126,24 @@ Subjects found here are for experienced users
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	</div>
+	<script>
+		$(document).ready(function () {
+ 		 $(window).scroll(function (event) {
+		    // what the y position of the scroll is
+		    var y = $(window).scrollTop();
+			var offset = $(window).scrollTop()-150;
+			
+		    // whether that's below the form
+		    if (y >= 150) {
+		      // if so, ad the fixed class
+		      $("#sidebar").css("postion","fixed");
+			$("#sidebar").css("top", offset);
+		    } else {
+		      // otherwise remove it
+		      $("#sidebar").css("postion","relative");
+			$("#sidebar").css("top", "0");
+		    }
+		  });
+});</script>
     </body>
 </html>
