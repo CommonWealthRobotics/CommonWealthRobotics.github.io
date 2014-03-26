@@ -43,7 +43,7 @@
 }
 .container{
 	width:100%;
-	margin:auto;
+	margin:0;
 	padding:0;
 }
 
@@ -59,7 +59,7 @@ body{
 	position:relative; 
 	width:15%;
 	float:left;
-	text-align:left
+	text-align:left;
 	margin:0;
 	padding:0;
 }
