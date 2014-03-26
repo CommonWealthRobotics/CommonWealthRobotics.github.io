@@ -7,7 +7,7 @@ categories: jekyll update
 
 <h1>Architecture</h1>
 <p>The Bowler communication system is designed to be a distributed processing system for micro-controllers and OS based computers.
-A Device's features are accessed using remote procedure calls called [[Bowler RPCs]]. These RPCs are then grouped together into [[Bowler Namespaces]] which serve as an interface to a specific sets of functionality( For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
+A Device's features are accessed using remote procedure calls called <a href="http://wiki.neuronrobotics.com/Bowler_RPCs">Bowler RPC's</a> . These RPCs are then grouped together into <a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a>  which serve as an interface to a specific sets of functionality( For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
 
 <p>The protocol allows for the host to query a device for implemented name-spaces to allow for zero-configuration. 
 </p>
@@ -38,7 +38,7 @@ A Device's features are accessed using remote procedure calls called [[Bowler RP
 
 <h1>Asynchronous</h1>
 
-<p>Once a link is established, the device can send packets to the host without the host initiating the transaction. These are [[Bowler_Transactions#Asynchronous_Transactions | Asynchronous Transactions]] consisting of one [[ Bowler_Packets#Direction_Flag | Upstream Bowler Packet]] and are used to inform the host of device state updates.
+<p>Once a link is established, the device can send packets to the host without the host initiating the transaction. These are <a href="http://wiki.neuronrobotics.com/Bowler_Transactions#Asynchronous_Transactions">Asynchronous Transactions</a>  consisting of one <a href="http://wiki.neuronrobotics.com/Bowler_Packets#Direction_Flag">Upstream Bowler Packet</a>  and are used to inform the host of device state updates.
 </p>
 
 <h>Formatting</h1>
