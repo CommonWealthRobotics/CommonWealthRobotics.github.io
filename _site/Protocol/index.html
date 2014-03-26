@@ -71,28 +71,12 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 	<div>
-	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar" style="margin:0;padding:0;text-align:left;width:15%;">
+	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar">
 
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
+          <ul id="sidebarlist"class="nav nav-sidebar">
           </ul>
         </div>
-		<div style="float:right;width:85%;padding-right:10px;">
+		<div id="content" class="content">
          
         		<h1>Protocol</h1>
 
@@ -131,25 +115,8 @@ Subjects found here are for experienced users
 
 <!-- SmartMenus jQuery Bootstrap Addon -->
 <script type="text/javascript" src="/jquery.smartmenus.bootstrap.min.js"></script>
+<!-- Personal Sidebar jQuery Addon -->
+<script type="text/javascript" src="/sidebar.js"></script>
 	</div>
-	<script>
-		$(document).ready(function () {
- 		 $(window).scroll(function (event) {
-		    // what the y position of the scroll is
-		    var y = $(window).scrollTop();
-			var offset = $(window).scrollTop()-150;
-			
-		    // whether that's below the form
-		    if (y >= 150) {
-		      // if so, ad the fixed class
-		      $("#sidebar").css("postion","fixed");
-			$("#sidebar").css("top", offset);
-		    } else {
-		      // otherwise remove it
-		      $("#sidebar").css("postion","relative");
-			$("#sidebar").css("top", "0");
-		    }
-		  });
-});</script>
     </body>
 </html>
