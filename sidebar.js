@@ -20,7 +20,9 @@ $(document).ready(function () {
 	
 });
 
-$("#content").find(":header").each(function(){		
+$("#content").find(":header").each(function(){	
+		var cnt = 1;
+		this.attr(id,"header"+cnt);	
 		var currId = this.id;
 		var currHtml = this.innerHTML;
 		$("#sidebarlist").append("<li><a href=\"#"+currId+"\">"+currHtml+"</a></li>");
