@@ -55,10 +55,19 @@ body{
 	background-repeat: no-repeat;
 	background-size:100% 100%;
 }
+.col-sm-3, .col-md-2, .sidebar{
+	position:relative; 
+	width:15%;
+	float:left;
+	text-align:left
+	margin:0;
+	padding:0;
+}
 .content{
 	position:relative; 
-	width:100%;
-	max-width:960px;
+	width:85%;
+	padding-right:10px;
+	float:right;
 	margin:0;
 	padding:0;
 }
