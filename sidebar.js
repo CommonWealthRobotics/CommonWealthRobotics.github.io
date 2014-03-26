@@ -16,13 +16,13 @@ $(document).ready(function () {
 			$("#sidebar").css("top", "0");
 		}
 	});
-	
-	$("#content").find(":header").each(function(){	
-		var cnt = 1;
+	var cnt = 1;
+	$("#content").find(":header").each(function(){		
 		$(this).attr("id","header"+cnt);	
 		var currId = this.id;
 		var currHtml = this.innerHTML;
 		$("#sidebarlist").append("<li><a href=\"#"+currId+"\">"+currHtml+"</a></li>");
+		cnt++;
 	});	
 });
 
