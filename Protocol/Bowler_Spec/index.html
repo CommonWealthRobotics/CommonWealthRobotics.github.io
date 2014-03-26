@@ -1,8 +1,52 @@
 ---
-layout: default
-title: "Bowler Spec"
+layout: info
+title: "Bowler_Protocol"
 date: 2014-03-17 18:24:20 
 categories: jekyll update 
 ---
 
-STUB
+<h1>Architecture</h1>
+<p>The Bowler communication system is designed to be a distributed processing system for micro-controllers and OS based computers.
+A Device's features are accessed using remote procedure calls called <a href="http://wiki.neuronrobotics.com/Bowler_RPCs">Bowler RPC's</a> . These RPCs are then grouped together into <a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a>  which serve as an interface to a specific sets of functionality( For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
+
+<p>The protocol allows for the host to query a device for implemented name-spaces to allow for zero-configuration. 
+</p>
+
+<p>The  network topology is an asymmetric star, with one host (Client) to N devices (Server). The connection between these elements is called a link.
+</p>
+
+<ul>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_Host">Bowler Host</a> </li>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_Device">Bowler Device</a> </li>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_Link">Bowler Link</a> </li>
+</ul>
+
+
+<h1>Communication</h1>
+<p>Communicating with the Bowler Communication System consists of sending packets from host to device to establish a link, then packets can be sent in either direction. 
+</p>
+
+<ul>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_Transactions">Bowler Transactions</a> </li>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_Packets">Bowler Packets</a> </li>
+</ul>
+
+<h1>Synchronous</h1>
+
+<p>A synchronous communication is a transaction initiated by the host and responded to by the device. 
+</p>
+
+<h1>Asynchronous</h1>
+
+<p>Once a link is established, the device can send packets to the host without the host initiating the transaction. These are <a href="http://wiki.neuronrobotics.com/Bowler_Transactions#Asynchronous_Transactions">Asynchronous Transactions</a>  consisting of one <a href="http://wiki.neuronrobotics.com/Bowler_Packets#Direction_Flag">Upstream Bowler Packet</a>  and are used to inform the host of device state updates.
+</p>
+
+<h>Formatting</h1>
+
+<p>The structure of the bowler packets makes use of "Remote Procedure Calls" or RPC's. An RPC is defined within a namespace, or collection of RPC's. The RPC is a code that will define how the raw data in the data section of the packet is formatted. This formatting needs to be known by both host and device. The Host will use the list of namespaces, that the device reposts back as implementing, to determine compatibility. This allows the application to check the device for the functionality it needs. 
+</p>
+<ul>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_RPC">Bowler RPC</a> </li>
+<li><a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a> </li>
+</ul>
+
