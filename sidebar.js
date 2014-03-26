@@ -1,4 +1,12 @@
 $(document).ready(function () {
+	//Set nav bar to height of window
+	limit = $(this).height();
+	$("#sidebar").css("max-height",limit);
+	//Set nav bar to height of window on resize
+	$(window).resize(function () {
+		limit = $(this).height();
+		$("#sidebar").css("max-height",limit);
+	});
 	//Make side bar scroll with window
 	$(window).scroll(function (event) {
 		// what the y position of the scroll is
