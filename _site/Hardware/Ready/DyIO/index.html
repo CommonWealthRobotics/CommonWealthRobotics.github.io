@@ -72,35 +72,27 @@
 		</nav>
 	<div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar" style="margin:0;padding:0;text-align:left;width:20%;">
 =======
 	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar" style="margin:0;padding:0;text-align:left;width:15%;">
 >>>>>>> 73fe41b1a3d6332c4cbe6b202869310bb4232b03
+=======
+	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar">
+>>>>>>> a6f6db90b1514c74643823c4738608aad70d8293
 
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
+          <ul id="sidebarlist"class="nav nav-sidebar">
           </ul>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 		<div style="float:right;width:80%;">
 =======
 		<div style="float:right;width:85%;padding-right:10px;">
 >>>>>>> 73fe41b1a3d6332c4cbe6b202869310bb4232b03
+=======
+		<div id="content" class="content">
+>>>>>>> a6f6db90b1514c74643823c4738608aad70d8293
          
         		<h1>Welcome to Bowler.io's DyIO "How To's" and videos</h1>
 
@@ -426,25 +418,8 @@ These <b>Channel Control Widgets</b> are displayed in a list by numerical order 
 
 <!-- SmartMenus jQuery Bootstrap Addon -->
 <script type="text/javascript" src="/jquery.smartmenus.bootstrap.min.js"></script>
+<!-- Personal Sidebar jQuery Addon -->
+<script type="text/javascript" src="/sidebar.js"></script>
 	</div>
-	<script>
-		$(document).ready(function () {
- 		 $(window).scroll(function (event) {
-		    // what the y position of the scroll is
-		    var y = $(window).scrollTop();
-			var offset = $(window).scrollTop()-150;
-			
-		    // whether that's below the form
-		    if (y >= 150) {
-		      // if so, ad the fixed class
-		      $("#sidebar").css("postion","fixed");
-			$("#sidebar").css("top", offset);
-		    } else {
-		      // otherwise remove it
-		      $("#sidebar").css("postion","relative");
-			$("#sidebar").css("top", "0");
-		    }
-		  });
-});</script>
     </body>
 </html>
