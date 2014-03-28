@@ -1,11 +1,11 @@
 $(document).ready(function () {
 	//Set nav bar to height of window
 	limit = $(this).height();
-	$("#sidebar").css("max-height",limit);
+	$("#sidebar").css("height",limit);
 	//Set nav bar to height of window on resize
 	$(window).resize(function () {
 		limit = $(this).height();
-		$("#sidebar").css("max-height",limit);
+		$("#sidebar").css("height",limit);
 	});
 	//Make side bar scroll with window
 	$(window).scroll(function (event) {

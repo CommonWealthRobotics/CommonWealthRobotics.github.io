@@ -3,7 +3,7 @@
 /* Custom Bits
 /*
 /*****************************************************************************/
-/*Nav Bar*/
+/*Top Nav Bar*/
  .navbar-inner{
 	background-color:#AD0516;
 	background-image: none;
@@ -41,11 +41,8 @@
 .nav .navbar-nav .navbar-right{
 	margin:0;
 }
-.container{
-	width:100%;
-	margin:0;
-	padding:0;
-}
+
+/*End Top Nav*/
 
 /* Body */
 body{
@@ -55,14 +52,10 @@ body{
 	background-repeat: no-repeat;
 	background-size:100% 100%;
 }
-.col-sm-3, .col-md-2, .sidebar{
-	position:relative; 
-	width:15%;
-	float:left;
-	text-align:left;
+.container{
+	width:100%;
 	margin:0;
 	padding:0;
-	overflow-y:scroll;
 }
 .content{
 	position:relative; 
@@ -70,8 +63,48 @@ body{
 	padding-right:10px;
 	float:right;
 	margin:0;
-	padding:0;
+	padding:0px 5px 0px 10px;
+	text-align:left;
 }
+.content ol,.content ul{
+	padding:0px 5px 0px 10px;
+}
+.content h1,.content h2,.content h3{
+	text-align:center;
+}
+/*End Body*/
+/*Side Nav*/
+.col-sm-3, .col-md-2, .sidebar{
+	position:relative; 
+	width:15%;
+	float:left;
+	text-align:left;
+	margin:0;
+	padding:0;
+	overflow-y:auto;
+}
+.nav-sidebar a{
+	color:#0000FF;
+	padding:0;
+	margin:0;
+	}
+.nav-sidebar a:hover,.nav-sidebar a:visited:hover{
+	color:#FFFFFF;
+	padding:10px 15px 10px 18px;
+	margin:0;
+	-moz-box-shadow: 3px 3px 4px #444;
+	-webkit-box-shadow: 3px 3px 4px #444;
+	box-shadow: 3px 3px 4px #444;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+	
+	}
+.nav-sidebar a:visited{
+	padding:0;
+	margin:0;
+	color:#191970;
+	}
+/*End Side Nav*/
 .footer{
 	position:relative; 
 	width:100%;
