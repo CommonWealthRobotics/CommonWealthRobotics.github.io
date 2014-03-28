@@ -3,7 +3,7 @@
 /* Custom Bits
 /*
 /*****************************************************************************/
-/*Nav Bar*/
+/*Top Nav Bar*/
  .navbar-inner{
 	background-color:#AD0516;
 	background-image: none;
@@ -41,11 +41,8 @@
 .nav .navbar-nav .navbar-right{
 	margin:0;
 }
-.container{
-	width:100%;
-	margin:0;
-	padding:0;
-}
+
+/*End Top Nav*/
 
 /* Body */
 body{
@@ -55,14 +52,10 @@ body{
 	background-repeat: no-repeat;
 	background-size:100% 100%;
 }
-.col-sm-3, .col-md-2, .sidebar{
-	position:relative; 
-	width:15%;
-	float:left;
-	text-align:left;
+.container{
+	width:100%;
 	margin:0;
 	padding:0;
-	overflow-y:scroll;
 }
 .content{
 	position:relative; 
@@ -70,8 +63,38 @@ body{
 	padding-right:10px;
 	float:right;
 	margin:0;
+	padding:0px 5px 0px 10px;
+}
+.content p{
+	text-align:left;
+}
+/*End Body*/
+/*Side Nav*/
+.col-sm-3, .col-md-2, .sidebar{
+	position:relative; 
+	width:15%;
+	float:left;
+	text-align:left;
+	margin:0;
 	padding:0;
 }
+.nav-sidebar a{
+	color:800000;
+	}
+.nav-sidebar a:hover{
+	color:#FFFFFF;
+	padding-left:18px;
+	-moz-box-shadow: 3px 3px 4px #444;
+	-webkit-box-shadow: 3px 3px 4px #444;
+	box-shadow: 3px 3px 4px #444;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+	
+	}
+.nav-sidebar a:visited{
+	color:#191970;
+	}
+/*End Side Nav*/
 .footer{
 	position:relative; 
 	width:100%;
