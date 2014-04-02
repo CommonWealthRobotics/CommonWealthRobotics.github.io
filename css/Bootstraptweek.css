@@ -83,15 +83,14 @@ body{
 	padding:0;
 	overflow-y:auto;
 }
-.nav-sidebar a{
+.nav-example a{
 	color:#0000FF;
-	padding:0;
 	margin:0;
 	}
-.nav-sidebar a:hover,.nav-sidebar a:visited:hover{
+.nav-example a:hover,.nav-example a:visited:hover,.nav-example li.active>a{
 	color:#FFFFFF;
-	padding:10px 15px 10px 18px;
-	margin:0;
+	background-color:#858585;
+	margin:0;	
 	-moz-box-shadow: 3px 3px 4px #444;
 	-webkit-box-shadow: 3px 3px 4px #444;
 	box-shadow: 3px 3px 4px #444;
@@ -99,10 +98,18 @@ body{
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
 	
 	}
-.nav-sidebar a:visited{
-	padding:0;
+.nav-example a:visited{
 	margin:0;
 	color:#191970;
+	}
+.nav-example>ul>li.active{
+	padding:4px;
+	}
+.nav-example li ul{
+	display:none;
+	}
+.nav-example li.active ul{
+	display:block;
 	}
 /*End Side Nav*/
 .footer{
