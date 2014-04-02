@@ -1,52 +1,333 @@
 ---
-layout: default
+layout: info
 title: "Bowler_Protocol"
 date: 2014-03-17 18:24:20 
 categories: jekyll update 
 ---
+<div class="section">
+<h2>Bowler <b>Remote Procedure Call</b>(RPCs)</h2>
 
-<h1>Architecture</h1>
-<p>The Bowler communication system is designed to be a distributed processing system for micro-controllers and OS based computers.
-A Device's features are accessed using remote procedure calls called <a href="http://wiki.neuronrobotics.com/Bowler_RPCs">Bowler RPC's</a> . These RPCs are then grouped together into <a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a>  which serve as an interface to a specific sets of functionality( For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
+<p>In the bowler protocol a "RPC" is a 4 byte code (usually ascii, but not necessarily) that is used to identify the command that the packet represents. The device will read this RPC and determine how to read the data coming with it (parameters) and how to format the packet it returns (returns). This is similar in structure to a function call in any programming language. The function will take parameters and return data. This is where the name Remote Procedure Call comes from. RPCs are unique to their namespace. However, If two name spaces are implemented on a device, the Bowler [[Namespace collision resolution]] mechanism must be used. Invalid characters for use as an rpc include:</p> 
+ "."
+ ";"
+ "*"
+<p>These 4 bytes are arranged in  the packet with the first element of the string going first, then the second and so on. </p>
 
-<p>The protocol allows for the host to query a device for implemented name-spaces to allow for zero-configuration. 
-</p>
+<p>All the RPC's in the bowler system must fall inside a namespace. Each namespace contains a group of RPC's that the device implements. These RPC's must be either implemented in the BCS wiki, or must be documented on a web page URL that is passed to the application from the device at runtime. All bowler devices MUST implement all of "bcs.core". For details on how the namespaces work and a list of namespaces see:</p>
 
-<p>The  network topology is an asymmetric star, with one host (Client) to N devices (Server). The connection between these elements is called a link.
-</p>
+<p><b>Bowler_Communications_System_Namespaces</b></p>
+
+<h3>note</h3>
+When the 4 bytes are read as an int in a little endian system, the byte order appears reversed. Be careful about your byte order when checking the RPC in a single compare.
+
+<h2>Bowler Namespaces</h2>
+
+<p>The idea behind the BCS Namespaces is to allow for the grouping of RPC's into services that a Bowler device implements. All valid Bowler devices must at least implement the [[bcs-core| bcs.core]] namespace.</p>
+
+
+<h3>Usage</h3>
+<p>The way to use the namespaces is to list on the device what namespace is implemented, what RPC's out of that namespace are implemented, what protocol revision the namespace list refers to, and optionally a URL to where to find documentation on the namespace. The syntax is to have all of that information in a string that the device sends one at a time to the application, separated by semicolons. If all RPC's are implemented in a namespace, then the '*' is used to indicate "all are implemented". Alternately, single rpc's can be named as implemented;</p>
+
+<p> <namespace>.<which rpc's>;<revision>;<url></p>
+
+<p>For the <b>bcs-core</b> namespace the string looks like:
+ "bcs.core.*;0.3;http://neuronrobotics.com/wiki/Bcs-core;"</p>
+
+<p>It is also valid to implement a single RPC out of a namespace. For instance, the Neuron Robotics Bootloader for the DyIO implements the '_rev' RPC out of the "neuronrobotics.dyio" namespace. That string looks like:</p>
+
+<p> "neuronrobotics.dyio._rev;0.3;http://neuronrobotics.com/wiki/neuronrobotics-dyio;"</p>
+
+<h3>BCS namespaces</h3>
+
+<h4>bcs.core</h4>
+
+<b>Introduction</b>
+
+<p>This namespace is the core namespace that all valid Bowler devices MUST implement. All of the following RPC's will be available on all bowler devices:</p>
+
+<h5>_PNG</h5>
+
+<p>The purpose of this RPC is to determine if the device is a Bowler Device. If a packet is returned after this is sent, then there is a valid bowler device on the link.</p>
+
+<h5>RPC</h5>
+
+<p>The ascii representation of this RPC is:</p>
+<p>_png</p>
+
+<p>On little endian systems the int representation of the RPC is:</p>
+<p> 0x67 6E 70 5F</p>
+
+<h5>GET method</h5>
 
 <ul>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_Host">Bowler Host</a> </li>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_Device">Bowler Device</a> </li>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_Link">Bowler Link</a> </li>
+<li>params</li>
+<p>This RPC takes no paramaters.</p>
+<li>return</li>
+<p>This RPC returns no paramaters.</p>
+<li>effect</li>
+<p>This RPC will not effect the state of the device.</p>
 </ul>
 
 
-<h1>Communication</h1>
-<p>Communicating with the Bowler Communication System consists of sending packets from host to device to establish a link, then packets can be sent in either direction. 
-</p>
+<h5>_NMS</h5>
+
+<p>The purpose of this RPC is to both get the number of namespaces on the device, and also get each of the namespace strings.
+<h5>RPC</h5>
+
+<p>The ascii representation of this RPC is:</p>
+ <p>_nms</p>
+ 
+<p>On little endian systems the int representation of the RPC is:</p>
+ <p>0x73 6d 6e 5f</p>
+
+<h5>GET method 1</h5>
 
 <ul>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_Transactions">Bowler Transactions</a> </li>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_Packets">Bowler Packets</a> </li>
+<li>params</li>
+<p>No paramaters.</p>
+<li>return</li>
+<p>1 BYTE representing the number of namespace strings.</p>
+<li>effect</li>
+<p>This RPC will not effect the state of the device.</p>
 </ul>
 
-<h1>Synchronous</h1>
-
-<p>A synchronous communication is a transaction initiated by the host and responded to by the device. 
-</p>
-
-<h1>Asynchronous</h1>
-
-<p>Once a link is established, the device can send packets to the host without the host initiating the transaction. These are <a href="http://wiki.neuronrobotics.com/Bowler_Transactions#Asynchronous_Transactions">Asynchronous Transactions</a>  consisting of one <a href="http://wiki.neuronrobotics.com/Bowler_Packets#Direction_Flag">Upstream Bowler Packet</a>  and are used to inform the host of device state updates.
-</p>
-
-<h>Formatting</h1>
-
-<p>The structure of the bowler packets makes use of "Remote Procedure Calls" or RPC's. An RPC is defined within a namespace, or collection of RPC's. The RPC is a code that will define how the raw data in the data section of the packet is formatted. This formatting needs to be known by both host and device. The Host will use the list of namespaces, that the device reposts back as implementing, to determine compatibility. This allows the application to check the device for the functionality it needs. 
-</p>
+<h5>GET method 2</h5>
 <ul>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_RPC">Bowler RPC</a> </li>
-<li><a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a> </li>
+<li>params</li>
+<p>1 BYTE representing the index of the namespace string that is desired to be returned.</p>
+<li>return</li>
+<p>A string representing the namespace string at the requested index.</p>
+<li>effect</li>
+<p>This RPC will not effect the state of the device.</p>
 </ul>
 
+<h5>_RDY</h5>
+<p>Generic ready acknowledgement.</p> 
+<h5>RPC</h5>
+
+<p>The ascii representation of this RPC is;</p>
+<p> _rdy</p>
+ 
+<p>On little endian systems the int representation of the RPC is:</p>
+ <p>0x7964725f</p>
+
+<h5>_ERR</h5>
+<p>Generic error response.</p>
+<h5>RPC</h5>
+<p>The ascii representation of this RPC is;</p>
+<p>_err</p>
+<p>On little endian systems the int representation of the RPC is:</p>
+ <p>0x7272655f</p>
+
+
+<h4>bcs-io</h4>
+
+<h5>Channel Modes</h5>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>No Change</td>
+    <td>0x00 </td>
+  </tr>
+  <tr>
+    <td>High Impedence/off</td>
+    <td>0x01</td>
+  </tr>
+  <tr>
+    <td>Digital In</td>
+    <td>0x02</td>
+  </tr>
+  <tr>
+    <td>Digital Out </td>
+    <td>0x03</td>
+  </tr>
+  <tr>
+    <td>Analog In</td>
+    <td>0x04</td>
+  </tr>
+  <tr>
+    <td>Analog Out </td>
+    <td>0x05</td>
+  </tr>
+  <tr>
+    <td>PWM Out </td>
+    <td>0x06</td>
+  </tr>
+  <tr>
+    <td>Servo Out </td>
+    <td>0x07</td>
+  </tr>
+  <tr>
+    <td>UART Tx</td>
+    <td>0x07</td>
+  </tr>
+  <tr>
+    <td>UART Rx </td>
+    <td>0x08</td>
+  </tr>
+  <tr>
+    <td>SPI MOSI</td>
+    <td>0x0A</td>
+  </tr>
+  <tr>
+    <td>SPI MISO</td>
+    <td>0x0B</td>
+  </tr>
+  <tr>
+    <td>SPI Serial Clock</td>
+    <td>0x0C</td>
+  </tr>
+  <tr>
+    <td>SPI Slave Select</td>
+    <td>0x0D</td>
+  </tr>
+  <tr>
+    <td>Counter In Interrupt</td>
+    <td>0x0E</td>
+  </tr>
+  <tr>
+    <td>Counter In Direction</td>
+    <td>0x0F</td>
+  </tr>
+  <tr>
+    <td>Counter In Home</td>
+    <td>0x10</td>
+  </tr>
+  <tr>
+    <td>Counter Out Interrupt</td>
+    <td>0x11</td>
+  </tr>
+  <tr>
+    <td>Counter Out Direction </td>
+    <td>0x12</td>
+  </tr>
+  <tr>
+    <td>Counter Out Home</td>
+    <td>0x13</td>
+  </tr>
+  <tr>
+    <td>DC Motor Velocity </td>
+    <td>0x14</td>
+  </tr>
+  <tr>
+    <td>DC Motor Direction </td>
+    <td>0x15</td>
+  </tr>
+
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+
+<h5>GCHM</h5>
+Get channel mode.
+<h5>GACM</h5>
+Get all channel modes.
+<h5>SCHV</h5>
+Set channel value.
+<h5>SACV</h5>
+Set all channel values.
+<h5>GCHV</h5>
+Get channel value.
+<h5>GACV</h5>
+Get all channel values.
+<h5>CCHN</h5>
+Configure channel.
+<h5>ASYN</h5>
+Get and set a channel into asynchronous mode.
+
+<h4>bcs-io-setmode</h4>
+
+<h5>SCHM</h5>
+Set a channel mode.
+<h5>SACM</h5>
+Set all channel modes.
+
+<h4>bcs-pid</h4>
+
+<h5>Synchronous </h5>
+<h5>CPID Config the PID controller</h5>
+<p>This command is used to configure the PIC controller. The syntax for a config command is:</p>
+
+<ul>
+<li>1 Byte the PID group you want to alter</li>
+<li>1 Byte enabled</li>
+<li> 1 Byte inverted</li>
+<li>1 Byte async</li>
+</ul>
+
+<p>The PID constants are sent as a fixed point number (a 100x multiplier is used to generate fix point scaling)</p>
+<ul>
+<li>4 Bytes 100xKP</li>
+<li>4 Bytes 100xKI</li>
+<li>4 Bytes 100xKD</li>
+</ul>
+<h5>_PID Control the PID controller</h5>
+<p>This command is for sending set points to the PID controller.</p>
+<ul>
+<li>1 Byte the PID group you want to alter</li>
+<li> 4 bytes is the set point</li>
+<li>4 bytes is the number of milliseconds for this command to take (Velocity parameter)</li>
+</ul>
+<h5>APID Control All PID Controllers </h5>
+<p>This is a command for setting all PID controller values at once</p>
+
+<ul>
+<li> 1 Byte the PID group you want to alter</li>
+<li> 4 bytes is the number of milliseconds for this command to take (Velocity parameter)</li>
+<li> 4xNumber of controllers bytes for all the setpoints</li>
+</ul>
+<h5>RPID Reset the PID controller</h5>
+<p>This command resets the PID controllers homing information. </p>
+
+<ul>
+<li>1 Byte the PID group you want to alter</li>
+<li> 4 bytes is the value to tell the PID controller it is currently at.</li>
+</ul>
+<h5>Asynchronous </h5>
+<h5> PIDL PID Limit event </h5>
+
+<ul>
+<li> 1 Byte channel</li>
+<li> 1 Byte Limit source</li>
+<ul>
+<li> 0x00 Home limit</li>
+<li> 0x01 Upper Limit</li>
+<li>0x02 Lower Limit</li>
+</ul>
+<li> 4 Bytes current position</li>
+<li> 4 Bytes current time (in ms)</li>
+</ul>
+
+<h5> _PID PID Limit event </h5>
+
+<ul>
+<li> 1 Byte channel</li>
+<li> 4 Bytes current position</li>
+<li> 4 Bytes current time (in ms)</li>
+<li>4 Bytes current velocity since last packet (in ticks/second)</li>
+</ul>
+
+<h4>bcs-pid-dypid</h4>
+
+<h5>DPID</h5>
+
+<h3>Neuron Robotics Product namespaces</h3>
+
+<h4>neuronrobotics-dyio</h4>
+
+<h4>neuronrobotics-bootloader</h4>
+
+<h3>Third Party namespaces</h3>
+
+<b>WPI Robotics Engineering</b>
+<ul>
+<li><h5>wpi-3002</h5></li>
+
+<li><h5>wpi-aim</h5></li>
+</ul>
+</div>

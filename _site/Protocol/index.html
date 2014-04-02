@@ -84,7 +84,7 @@
 <div class="section">
 <h2>Architecture</h2>
 <p>The Bowler communication system is designed to be a distributed processing system for micro-controllers and OS based computers.
-A Device's features are accessed using<b>Bowler Remote Procedure Call<b> (RPCs). These RPCs are then grouped together into <b>Bowler Namespaces<b> which serve as an interface to a specific sets of functionality(For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
+A Device's features are accessed using<b>Bowler Remote Procedure Call</b> (RPCs). These RPCs are then grouped together into <b>Bowler Namespaces</b> which serve as an interface to a specific sets of functionality(For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
 
 <p>The protocol allows for the host to query a device for implemented name-spaces to allow for zero-configuration. 
 </p>
@@ -127,7 +127,7 @@ Packets sent over a TCP socket, In this implementation the socket server would b
 <p> missing wiki info </p>
 
 </div>
-
+<div class="section">
 <h2>Communication</h2>
 
 <p>Communicating with the Bowler Communication System consists of sending packets from host to device to establish a link, then packets can be sent in either direction. 
@@ -182,28 +182,65 @@ Communication on a <b>Bowler Link</b> consists of the exchange of <b>Bowler Pack
 
 The following table defines the structure of a Bowler Packet
 
-{| class="wikitable"
-|- 
-!width="50"|Size !! width="100"|Name !! width="250"|Description
-|-
-| 1b || Protocol Revision || The revision of the Bowler protocol to use
-|-
-| 6b || Target Device ID || The IEEE OUI-48 MAC address of the recipient device 
-|-
-| 1b || Packet Type || Metadata pertaining to how the packet will affect device state. (POST,GET,STATUS,CRITICAL)
-|-
-| 1bit || Direction Flag || Indicates the packet as a request or a response. 
-|-
-| 7bit || Namespace Collision Resolution || Used to resolve namespace collisions.
-|-
-| 8bit || Data Length || The length of data to come including the RPC
-|-
-| 1b || Header Checksum || The checksum to determine the validity of the packet 
-|-
-| 4b  || RPC || The [[Bowler RPC]] call identifier
-|-
-| 0b - 251b || Data || The rest of the data
-|}
+<table border="1">
+  <tr>
+    <th>Size</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>1b</td>
+    <td>Protocol Revision </td>
+    <td>	The revision of the Bowler protocol to use  </td>
+  </tr>
+  <tr>
+    <td>6b </td>
+    <td>Target Device ID  </td>
+    <td>The IEEE OUI-48 MAC address of the recipient device </td>
+  </tr>
+  <tr>
+    <td>1b </td>
+    <td>Packet Type </td>
+    <td>Metadata pertaining to how the packet will affect device state. (POST,GET,STATUS,CRITICAL)  </td>
+  </tr>
+  <tr>
+    <td>1bit </td>
+    <td>Direction Flag  </td>
+    <td>Indicates the packet as a request or a response.  </td>
+  </tr>
+  <tr>
+    <td>7bit /td>
+    <td>Namespace Collision Resolution </td>
+    <td>Used to resolve namespace collisions </td>
+  </tr>
+  <tr>
+    <td>8bit </td>
+    <td>Data Length </td>
+    <td>The length of data to come including the RPC  </td>
+  </tr>
+  <tr>
+    <td>1b </td>
+    <td>Header Checksum </td>
+    <td>The checksum to determine the validity of the packet  </td>
+  </tr>
+  <tr>
+    <td>4b</td>
+    <td>RPC  </td>
+    <td>The Bowler RPC call identifier  </td>
+  </tr>
+  <tr>
+    <td>0b - 251b </td>
+    <td>Data </td>
+    <td>The rest of the data  </td>
+  </tr>
+ 
+
+  <tr>
+    <td colspan="3"></td>
+  </tr>
+</table>
+
+<p></p>
 
 <h4> Protocoll Revision </h4>
 This field contains a version number that allows a bowler device to determine if it will understand the incoming message.
@@ -324,65 +361,11 @@ The packet payload. Depends on the RPC. Can be empty.
 <h2>Formatting</h2>
 
 <p>The structure of the bowler packets makes use of "Remote Procedure Calls" or RPC's. An RPC is defined within a namespace, or collection of RPC's. The RPC is a code that will define how the raw data in the data section of the packet is formatted. This formatting needs to be known by both host and device. The Host will use the list of namespaces, that the device reposts back as implementing, to determine compatibility. This allows the application to check the device for the functionality it needs. 
-<h3>Bowler RPC</h3>
+<h4> <a href="https://NeuronRobotics.github.io/Protocol/Formatting">Bowler RPC</a></h4>
 
-<h4>Bowler <b>Remote Procedure Call</b>(RPCs)</h4>
+<h4> <a href="https://NeuronRobotics.github.io/Protocol/Formatting">Bowler Namespaces</a></h4>
 
-<p>In the bowler protocol a "RPC" is a 4 byte code (usually ascii, but not necessarily) that is used to identify the command that the packet represents. The device will read this RPC and determine how to read the data coming with it (parameters) and how to format the packet it returns (returns). This is similar in structure to a function call in any programming language. The function will take parameters and return data. This is where the name Remote Procedure Call comes from. RPCs are unique to their namespace. However, If two name spaces are implemented on a device, the Bowler [[Namespace collision resolution]] mechanism must be used. Invalid characters for use as an rpc include:</p> 
- "."
- ";"
- "*"
-<p>These 4 bytes are arranged in  the packet with the first element of the string going first, then the second and so on. </p>
-
-<p>All the RPC's in the bowler system must fall inside a namespace. Each namespace contains a group of RPC's that the device implements. These RPC's must be either implemented in the BCS wiki, or must be documented on a web page URL that is passed to the application from the device at runtime. All bowler devices MUST implement all of "bcs.core". For details on how the namespaces work and a list of namespaces see:</p>
-
-<p><b>Bowler_Communications_System_Namespaces</b></p>
-
-<h4>note</h4>
-When the 4 bytes are read as an int in a little endian system, the byte order appears reversed. Be careful about your byte order when checking the RPC in a single compare.
-
-<h3>Bowler Namespaces</h3>
-
-<p>The idea behind the BCS Namespaces is to allow for the grouping of RPC's into services that a Bowler device implements. All valid Bowler devices must at least implement the [[bcs-core| bcs.core]] namespace.</p>
-
-
-<h4>Usage</h4>
-<p>The way to use the namespaces is to list on the device what namespace is implemented, what RPC's out of that namespace are implemented, what protocol revision the namespace list refers to, and optionally a URL to where to find documentation on the namespace. The syntax is to have all of that information in a string that the device sends one at a time to the application, separated by semicolons. If all RPC's are implemented in a namespace, then the '*' is used to indicate "all are implemented". Alternately, single rpc's can be named as implemented;</p>
-
-<p> <namespace>.<which rpc's>;<revision>;<url></p>
-
-<p>For the <b>bcs-core</b> namespace the string looks like:
- "bcs.core.*;0.3;http://neuronrobotics.com/wiki/Bcs-core;"</p>
-
-<p>It is also valid to implement a single RPC out of a namespace. For instance, the Neuron Robotics Bootloader for the DyIO implements the '_rev' RPC out of the "neuronrobotics.dyio" namespace. That string looks like:</p>
-
-<p> "neuronrobotics.dyio._rev;0.3;http://neuronrobotics.com/wiki/neuronrobotics-dyio;"</p>
-
-<h4>BCS namespaces</h4>
-
-<h5>bcs.core</h5>
-
-<h5>bcs-io</h5>
-
-<h5>bcs-io-setmode</h5>
-
-<h5>bcs-pid</h5>
-
-<h5>bcs-pid-dypid</h5>
-
-<h4>Neuron Robotics Product namespaces</h4>
-
-<h5>neuronrobotics-dyio</h5>
-
-<h5>neuronrobotics-bootloader</h5>
-
-<h4>Third Party namespaces</h4>
-
-<b>WPI Robotics Engineering</b>
-
-<h5>wpi-3002</h5>
-
-<h5>wpi-aim</h5>
+</div>
 
 
 		</div>
