@@ -83,10 +83,16 @@ body{
 	padding:0;
 	overflow-y:auto;
 }
-.nav-example a{
+a{
 	color:#0000FF;
 	margin:0;
 	}
+a:visited{
+	color:#191970;
+	}
+a:hover{
+	color:#FFFFFF;
+}
 .nav-example a:hover,.nav-example a:visited:hover,.nav-example li.active>a{
 	color:#FFFFFF;
 	background-color:#858585;
@@ -98,10 +104,7 @@ body{
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
 	
 	}
-.nav-example a:visited{
-	margin:0;
-	color:#191970;
-	}
+
 .nav-example>ul>li.active{
 	padding:4px;
 	}
