@@ -28,7 +28,7 @@
     <![endif]-->
   </head>
 
-  <body  data-spy="scroll" data-target=".nav-example">
+  <body>
 	<div class="container">
 		<img src="/bowler.gif" alt ="No Image" style="height:100px;"/>
 		<nav class="navbar navbar-inverse" role="navigation">
@@ -41,7 +41,7 @@
 			<li><a href="/Protocol/">Protocol</a></li>
 			<li><a href="/Examples/">Examples</a></li>
 			<li class="dropdown">
-			<a href="/Hardware/">Hardware</a>
+			<a href="/Hardware/" class="dropdown-toggle" data-toggle="dropdown">Hardware</a>
 			  <ul class="dropdown-menu">
 			    <li><a href="/Hardware/Ready/">Ready</a></li>
 			    <li><a href="/Hardware/In_Progress/">In Progress</a></li>
@@ -50,7 +50,7 @@
 			  </ul>
 			</li>
 			<li class="dropdown">
-			<a href="/SDK/">SDK </a>
+			<a href="/SDK/" class="dropdown-toggle" data-toggle="dropdown">SDK</a>
 			  <ul class="dropdown-menu">
 			    <li><a href="/SDK/C_Bowler/">C Bowler</a></li>
 				<li><a href="/SDK/C_Sharp/">C#</a></li>
@@ -65,21 +65,14 @@
 		
 		      </ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="https://github.com/NeuronRobotics" target="_blank">GitHub</a></li>
+			<li><a href="https://github.com/NeuronRobotics/" target="_blank">GitHub</a></li>
 		</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-	<div>
-	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar">
-	<div class="nav-example">
-          <ul id="sidebarlist"class="nav nav-tabs nav-stacked nav-list">
-          </ul>
-	</div>
-        </div>
-		<div id="content" class="content">
-         
-        		<h1>Architecture</h1>
+
+		<div class="container">
+		  <h1>Architecture</h1>
 <p>The Bowler communication system is designed to be a distributed processing system for micro-controllers and OS based computers.
 A Device's features are accessed using remote procedure calls called <a href="http://wiki.neuronrobotics.com/Bowler_RPCs">Bowler RPC's</a> . These RPCs are then grouped together into <a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a>  which serve as an interface to a specific sets of functionality( For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
 
@@ -125,9 +118,8 @@ A Device's features are accessed using remote procedure calls called <a href="ht
 </ul>
 
 
-
 		</div>
-	<div>
+
 		  <div class="footer">
 		    <div class="contact" style="float:right">
 		      <p>
@@ -151,8 +143,6 @@ A Device's features are accessed using remote procedure calls called <a href="ht
 
 <!-- SmartMenus jQuery Bootstrap Addon -->
 <script type="text/javascript" src="/jquery.smartmenus.bootstrap.min.js"></script>
-<!-- Personal Sidebar jQuery Addon -->
-<script type="text/javascript" src="/sidebar.js"></script>
 	</div>
     </body>
 </html>
