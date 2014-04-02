@@ -32,7 +32,7 @@ $(document).ready(function () {
 	var dropcheck = 0;
 	$("#content").find(".section").each(function(){
 		$(this).attr("id","section"+cnt);
-		$(this).find("h1").each(function(){
+		$(this).find("h2").each(function(){
 			var currHtml = this.innerHTML;
 			var currId = currHtml.replace(/\s+/g,'');
 			$(this).attr("id",currId);	

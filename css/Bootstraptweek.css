@@ -108,7 +108,7 @@ body{
 .nav-example li ul{
 	display:none;
 	}
-.nav-example li.active ul{
+.nav-example li.active ul,.nav-example li:hover ul{
 	display:block;
 	}
 /*End Side Nav*/
