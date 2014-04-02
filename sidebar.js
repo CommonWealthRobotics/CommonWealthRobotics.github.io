@@ -24,15 +24,15 @@ $(document).ready(function () {
 			$("#sidebar").css("top", "0");
 		}
 	});
-/****************************
-CHANGE THE SIDE BAR TO MATCH BOOTSTRAP CLASSES ON GETBOOTSTRAP.IO
-**********************************/
+/********************************
+	Dynamic sidebar builder
+*********************************/
 	var cnt = 1;
 	var cnt2 = 1;
 	var dropcheck = 0;
 	$("#content").find(".section").each(function(){
 		$(this).attr("id","section"+cnt);
-		$(this).find("h1").each(function(){
+		$(this).find("h2").each(function(){
 			var currHtml = this.innerHTML;
 			var currId = currHtml.replace(/\s+/g,'');
 			$(this).attr("id",currId);	
@@ -46,7 +46,7 @@ CHANGE THE SIDE BAR TO MATCH BOOTSTRAP CLASSES ON GETBOOTSTRAP.IO
 			var SEC = "secitem"+cnt;
 			var dropid = "drop"+cnt;
 			if(dropcheck == 0){
-				$("#"+SEC).append("<ul class=\"nav nav-tabs nav-stacked nav-list\" id=\""+dropid+"\"></ul>");
+				$("#"+SEC).append("<ul class=\"nav nav-list nav-stacked\" id=\""+dropid+"\"></ul>");
 				dropcheck = 1;
 				}
 			$("#"+dropid).append("<li><a href=\"#"+currId+"\">"+currHtml+"</a></li>");

@@ -28,7 +28,11 @@
     <![endif]-->
   </head>
 
+<<<<<<< HEAD
   <body>
+=======
+  <body  data-spy="scroll" data-target=".nav-example" data-offset="10">
+>>>>>>> e18ffef8f75fd7c5867736c04978ce163ee03dbc
 	<div class="container">
 		<img src="/bowler.gif" alt ="No Image" style="height:100px;"/>
 		<nav class="navbar navbar-inverse" role="navigation">
@@ -70,9 +74,22 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
+<<<<<<< HEAD
 
 		<div class="container">
 		  <h1>Architecture</h1>
+=======
+	<div>
+	<div id= "sidebar" class="col-sm-3 col-md-2 sidebar">
+	<div class="nav-example">
+          <ul id="sidebarlist"class="nav nav-list nav-stacked">
+          </ul>
+	</div>
+        </div>
+		<div id="content" class="content">
+         
+        		<h1>Architecture</h1>
+>>>>>>> e18ffef8f75fd7c5867736c04978ce163ee03dbc
 <p>The Bowler communication system is designed to be a distributed processing system for micro-controllers and OS based computers.
 A Device's features are accessed using remote procedure calls called <a href="http://wiki.neuronrobotics.com/Bowler_RPCs">Bowler RPC's</a> . These RPCs are then grouped together into <a href="http://wiki.neuronrobotics.com/Bowler_Namespaces">Bowler Namespaces</a>  which serve as an interface to a specific sets of functionality( For example, IO manipulation and PID control) Each device is addressable using a IEEE standard MAC address that is unique to that device.<p>
 
@@ -121,7 +138,7 @@ A Device's features are accessed using remote procedure calls called <a href="ht
 		</div>
 
 		  <div class="footer">
-		    <div class="contact" style="float:right">
+		    <div class="contact pull-right">
 		      <p>
 			<a href="https://NeuronRobotics.com">Neuron Robotics<a><br />
 			Phone: +1 (877)474-6038<br/>
