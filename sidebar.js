@@ -34,7 +34,7 @@ $(document).ready(function () {
 		$(this).attr("id","section"+cnt);
 		$(this).find("h2").each(function(){
 			var currHtml = this.innerHTML;
-			var currId = currHtml.replace(/\s+/g,'');
+			var currId = currHtml.replace(/[^a-z0-9\s]/gi,'').replace(/\s+/g,'');
 			$(this).attr("id",currId);	
 			$("#sidebarlist").append("<li id=\"secitem"+cnt+"\"><a id=\"seclink"+cnt+"\" href=\"#"+currId+"\">"+currHtml+"</a></li>");
 		});
