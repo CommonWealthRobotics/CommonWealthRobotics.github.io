@@ -113,6 +113,7 @@ a:hover{
 	}
 .nav-example li.active ul,.nav-example li:hover ul{
 	display:block;
+	margin-left:5px;
 	}
 /*End Side Nav*/
 .footer{
