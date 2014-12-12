@@ -1,0 +1,11 @@
+# .travis.yml
+
+language: ruby
+install:
+    - bundle install
+
+script: bundle exec rake site:deploy --quiet
+
+env:
+    global:
+        secure: BHpQVjl3q+xpQy0XfCui6wacmf1VWafUisTSUvZfUW1Xk/wuIo6tWeMeAg9xT+O0nrcedybEeb5JWUrAebmpwSHGtM4kPsjxwyMVmEIkRnlo8M/i3BzgVaxcnzuV/WO9k1InItXSDFWrpq9FozUDYp6oS3T9lTlkhzg0DD8RMLE=
