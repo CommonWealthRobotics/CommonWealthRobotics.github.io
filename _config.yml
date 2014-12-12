@@ -17,3 +17,5 @@ username: NeuronRobotics
 repo: NeuronRobotics.github.io
 branch: source
 permalink: /:categories/:title
+
+gems: [jekyll-category-aware-prev-next]
