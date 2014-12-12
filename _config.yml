@@ -16,4 +16,4 @@ destination: ../EXAMPLE/
 username: NeuronRobotics
 repo: NeuronRobotics.github.io
 branch: source
-permalink: pretty
+permalink: /:categories/:title
