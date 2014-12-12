@@ -1,1 +1,84 @@
-<html><body><h1> hello! </h1></body></html>
+---
+layout: default
+title: Welcome
+---
+{% for category in site.categories %}
+
+{% endfor %}
+
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">
+  {% assign words = category | first | split: ' ' %}
+    {% for word in words %}
+        {{ word | capitalize | replace: 'The','the' |   replace: 'Dyio','DyIO' }}
+    {% endfor %}</a>
+    <ul>
+    {% for posts in category  %}
+      {% for post in posts reversed %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 ">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="row">
+            <div class="col-xs-6 col-lg-4">
+              <h2>DyIO First Steps</h2>
+			  <img data-src="holder.js/100%x180" alt="...">
+              <p>So, You bought a DyIO and want to know how to get started? 
+			  This tutorial will get you set up and coding on mac, windows, and Linux.</p>
+			  
+			  <p> This lesson includes the following steps:</p>
+			  <ol>
+				<li><a href="#">Installing Software</a></li>
+				<li><a href="#">Testing With NR-Console</a></li>
+				<li><a href="#">Setting up a project in Processing</a></li>
+				<li><a href="#">Setting up a project in Eclipse</a></li>
+			  </ol>
+              <p><a class="btn btn-default" href="#" role="button">Start Lesson &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Getting to Know the DyIO</h2>
+			  <img data-src="holder.js/100%x180" alt="...">
+              <p>What Exactly is the DyIO? What do all these switchers do? How do I blink a light, Move a motor? Allt hese and more explained in this tutorial. </p>
+			  <p> This lesson includes the following steps:</p>
+			  <ol>
+				<li><a href="#">Anatomy of the DyIO</a></li>
+				<li><a href="#">Reading Switches, sensors and Inputs</a></li>
+				<li><a href="#">Moving motors and Blinking Lights</a></li>
+				<li><a href="#">Advanced Features</a></li>
+			  </ol>
+              <p><a class="btn btn-default" href="#" role="button">Start Lesson &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Code Examples</h2>
+			  <img data-src="holder.js/100%x180" alt="...">
+              <p>What Exactly is the DyIO? What do all these switchers do? How do I blink a light, Move a motor? Allt hese and more explained in this tutorial. </p>
+              <p><a class="btn btn-default" href="#" role="button">Start Tutorial &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">Start Tutorial &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">Start Tutorial &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">Start Tutorial &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+      </div><!--/row-->
+
+
