@@ -69,21 +69,36 @@
             </strong></a>
             {% capture category_name %}{{ page.categories | limit:1 }}{% endcapture %}
             {% for post in site.categories[category_name] reversed  %}
+            {% if post.iscategory == nil%}
             <a href="{{ post.url }}" class="list-group-item ">
                 {% if post.title == page.title %}
                     <span class="paperclip"></span>
                 {% endif %}
                 {{ post.title }}
             </a>
+            {% endif %}
             {% endfor %}
+            
+
+            {% if page.cat_previous.iscategory %}
+            
+            
+            {% elsif page.cat_previous.url == nil %}
+            
+            
+            {% else %}
 			<a href="{{page.cat_previous.url}}" class="btn btn-default navbtn pull-left" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
 			</a>
+			{% endif %}
+
+			{% if page.cat_next.url %}
 			<a href="{{page.cat_next.url}}" class="btn btn-default navbtn pull-right" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			</a>
+			{% endif %}
 
           </div>
 		  
