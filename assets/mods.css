@@ -12,7 +12,7 @@
   left: -20px;
   top: 0px;
   float: left;
-  width: 30px;
+  width: 15px;
   height: 20px;
   background-color: #BFDC7A;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
@@ -48,3 +48,69 @@
 	margin-top: 10px;
 	width: 100px;
 }
+
+.lessonside {
+    width: 400px;
+    
+}
+/*
+.tut {
+    
+      height: 100%;
+
+      
+}
+
+.tutpad {
+    background-color: #dddddd;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      
+
+}
+
+.tuth {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+ 
+}
+
+.test {
+    margin-top: -20px;
+    height:400px;
+    background-color: #770000;
+    margin-bottom: 20px;
+    box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+    }
+
+.tuth {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    background-color: #999999;
+ 
+}
+
+.tuthribbon{
+}
+
+.tuth:before{
+        content: 'b';
+        position: absolute;
+        left: -10px;
+
+
+
+
+
+
+
+.container{
+    
+    
+} */
