@@ -6,7 +6,7 @@
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 .full {
-//background: url('diagmonds.png');/* no-repeat center center fixed;*/
+//background: url('/assets/diagmonds.png');/* no-repeat center center fixed;*/
 //background-repeat: repeat;
 /*-webkit-background-size: cover;
 -moz-background-size: cover;

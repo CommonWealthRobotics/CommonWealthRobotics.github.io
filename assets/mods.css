@@ -53,7 +53,46 @@
     width: 400px;
     
 }
+
+.bs-docs-container {
+      min-height: 100%;
+  height: auto !important;
+  height: 100%;
+    margin: 0 auto -250px;
+}
+
+html,body {
+    height: 100%;
+}
+.tut {
+    margin-bottom: 10px;
+}
+.steps {
+    overflow-y: auto;
+    max-height: 100px;
+    
+}
+.tuth {
+    margin-top: 10px;
+    //padding-top: 0px;
+    //margin-bottom: 0px;
+    //padding-bottom: 0px;
+ 
+}
+.menuhr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 /*
+.test {
+    margin-top: -20px;
+    height:400px;
+    background-color: #770000;
+    margin-bottom: 20px;
+    box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+    }
+    
+
 .tut {
     
       height: 100%;
@@ -71,21 +110,9 @@
 
 }
 
-.tuth {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
- 
-}
 
-.test {
-    margin-top: -20px;
-    height:400px;
-    background-color: #770000;
-    margin-bottom: 20px;
-    box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
-    }
+
+
 
 .tuth {
     margin-top: 0px;
