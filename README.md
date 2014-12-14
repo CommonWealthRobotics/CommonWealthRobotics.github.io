@@ -3,6 +3,14 @@ NeuronRobotics.github.io
 
 The Website for the Bowler System
 
+## How this thing works ##
+* The content directory will become the root of the website.
+  - content/foo.md will become http://domain.com/foo/
+  - content/folder/thing.md will become http://domain.com/folder/thing/
+  - ...etc
+* the script takes all the .md files, shoves them into templates and hosts them
+* some files/folders have special metadata that the script used to populate the front page
+
 ## Adding A Tutorial ##
 A tutorial consists of a *Folder* in the *Content Directory* with one `index.md` file containing the tutorial info and multiple other `.md` files containg the steps.
 
