@@ -7,7 +7,7 @@ def get_ordered_steps(tut)
         st = Array.new(tut.children)
         st.each do |a|
             if a.binary?
-                puts a
+                #puts a
                 st.delete a
             end
         end
@@ -104,5 +104,13 @@ def get_image(me)
         return relative_path_to(me)+me[:image]
     end
     ""
+    end
+    
+def get_title(me)
+    if me[:title] != nil
+        return me[:title]
+    else
+        return me.raw_filename
+    end
     end
     

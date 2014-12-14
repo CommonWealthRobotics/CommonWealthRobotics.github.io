@@ -61,10 +61,10 @@
         <div class="col-md-3">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                 <ul class="nav bs-docs-sidenav">
-                <li><strong><%=item.parent[:title]%></strong><hr class="menuhr" /></li>
+                <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
                 <%get_my_steps(item).each do |s|%>
                     <li <%if item==s%>class="active"<%end%> >
-                         <a href="<%=relative_path_to(s)%>"><%= s[:title]%></a></li>
+                         <a href="<%=relative_path_to(s)%>"><%= get_title(s)%></a></li>
                     
                 <%end%>      
                 </ul> <!-- nav bs-docs-sidenav -->
