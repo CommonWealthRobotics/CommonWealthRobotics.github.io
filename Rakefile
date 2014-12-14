@@ -212,7 +212,7 @@ namespace :site do
 
     # Generate the site
     sh "bundle exec nanoc"#"bundle exec jekyll build"
-    sh "mv output .."
+    sh "mv nrsite .."
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
