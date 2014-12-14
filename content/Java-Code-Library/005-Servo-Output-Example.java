@@ -58,7 +58,7 @@ public class ServoTest implements IServoPositionUpdateListener{
 
 	@Override
 	public void onServoPositionUpdate(ServoChannel srv, int position,double time) {
-		System.out.println("Servo Position update = "+ position+ " time= "+time );
+		System.out.println("Async Servo Position update = "+ position+ " time= "+time );
 	}
 
 }
