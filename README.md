@@ -7,6 +7,7 @@ The Website for the Bowler System
 * The content directory will become the root of the website.
   - content/foo.md will become http://domain.com/foo/
   - content/folder/thing.md will become http://domain.com/folder/thing/
+  - content/folder/image.jpg will become http://domain.com/folder/image.jpg
   - ...etc
 * the script takes all the .md files, shoves them into templates and hosts them
 * some files/folders have special metadata that the script used to populate the front page
