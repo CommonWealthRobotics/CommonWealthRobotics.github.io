@@ -1,5 +1,5 @@
 source "http://production.cf.rubygems.org/"
 
-gem "rake", "~> 10.1.1"
+gem 'nanoc', '~> 3.7.4'
+gem 'rainbow', '~> 2.0.0'
 gem "github-pages", "~> 15"
-gem 'jekyll-category-aware-prev-next', '~> 0.0.1'
