@@ -1,12 +1,10 @@
-package com.neuronrobotics.test.dyio;
-
 import com.neuronrobotics.sdk.common.Log;
 import com.neuronrobotics.sdk.dyio.DyIO;
 import com.neuronrobotics.sdk.dyio.peripherals.DigitalInputChannel;
 import com.neuronrobotics.sdk.dyio.peripherals.DigitalOutputChannel;
 import com.neuronrobotics.sdk.ui.ConnectionDialog;
 
-public class DIgitalOutputTest {
+public class DigitalOutputTest {
 
 	/**
 	 * @param args
