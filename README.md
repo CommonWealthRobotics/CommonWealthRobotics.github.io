@@ -51,3 +51,32 @@ this is a paragraph
 ... etc/
 
 ```
+
+## Adding Normal Pages ##
+not everything has to be a tutorial, it can be a page.
+
+example
+```
+not-a-tutorial/
+  not-a-step.md
+  random-image.jpg
+```
+
+The tutorial logic will ignore anything without the tutorial meta data and just put em in as pages
+
+You can still use metadata though. like give it a title, set a layout other then default by adding a frontmatter section
+
+```
+---
+title: This is just a vanilla page
+layout: myawesometemplate
+---
+## just a normal page ##
+
+nothing to see here
+
+1. just
+2. really
+3. normal
+4. seriosuly
+```
