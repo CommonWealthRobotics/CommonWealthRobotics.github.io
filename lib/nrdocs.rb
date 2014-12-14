@@ -4,7 +4,14 @@ require 'rainbow'
 
 def get_ordered_steps(tut)
     begin
-        tut.children.sort { |a,b| a[:step] <=> b[:step] }
+        st = Array.new(tut.children)
+        st.each do |a|
+            if a.binary?
+                puts a
+                st.delete a
+            end
+        end
+        st.sort { |a,b| a[:step] <=> b[:step] }
     rescue ArgumentError
         puts Rainbow("Failed to order ").red.bright+"'#{Rainbow(tut[:title]).yellow}' Make sure you added Step numbers!"
         return tut.children
@@ -83,5 +90,19 @@ def has_last(me)
         return true
     end
     false
+    end
+    
+def has_image(me)
+    if me[:image] != nil
+        return true
+    end
+    false
+    end
+    
+def get_image(me)
+    if me[:image] != nil
+        return relative_path_to(me)+me[:image]
+    end
+    ""
     end
     
