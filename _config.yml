@@ -2,8 +2,8 @@
 markdown: rdiscount
 pygments: true
 permalink: /:title
-relative_source: ../output/
-destination: ../output/
+relative_source: ../nrsite/
+destination: ../nrsite/
 # Settings for deploy rake task
 # Username and repo of Github repo, e.g.
 # https://github.com/USERNAME/REPO.git
