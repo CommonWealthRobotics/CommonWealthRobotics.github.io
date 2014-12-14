@@ -1,65 +1,54 @@
-Crashlog created at 2014-12-14 01:51:50 -0500
+Crashlog created at 2014-12-14 15:22:28 -0500
 
 ===== MESSAGE:
 
-NoMethodError: undefined method `path_to' for #<Nanoc::Context:0x00000004905098>
+NoMethodError: undefined method `[]' for nil:NilClass
 
 ===== COMPILATION STACK:
 
-  (empty)
+  - [item]   /Java-Code-Library/032-Java-Bowler-Advanced-Features/ (rep default)
 
 ===== STACK TRACE:
 
-  0. lib/nrdocs.rb:104:in `get_image'
-  1. layout /front/:66:in `block in get_binding'
-  2. layout /front/:62:in `each'
-  3. layout /front/:62:in `get_binding'
-  4. /usr/lib/ruby/1.9.1/erb.rb:838:in `eval'
-  5. /usr/lib/ruby/1.9.1/erb.rb:838:in `result'
-  6. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/filters/erb.rb:34:in `run'
-  7. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/filter.rb:121:in `setup_and_run'
-  8. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/result_data/item_rep.rb:404:in `layout'
-  9. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/item_rep_proxy.rb:69:in `layout'
-  10. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/rule_context.rb:74:in `layout'
-  11. /home/acamilo/git/NeuronRobotics.github.io/Rules:29:in `block in parse'
-  12. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/rule.rb:70:in `instance_eval'
-  13. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/rule.rb:70:in `apply_to'
-  14. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:387:in `compile_rep'
-  15. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:343:in `block in compile_reps'
-  16. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:336:in `loop'
-  17. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:336:in `compile_reps'
-  18. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:89:in `run'
-  19. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/source_data/site.rb:59:in `compile'
-  20. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.3/lib/guard/nanoc.rb:65:in `block in recompile'
-  21. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.3/lib/guard/nanoc.rb:63:in `chdir'
-  22. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.3/lib/guard/nanoc.rb:63:in `recompile'
-  23. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.3/lib/guard/nanoc.rb:28:in `run_on_changes'
-  24. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:82:in `block in _supervise'
-  25. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:79:in `catch'
-  26. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:79:in `_supervise'
-  27. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:61:in `block (3 levels) in run_on_changes'
-  28. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:56:in `each'
-  29. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:56:in `block (2 levels) in run_on_changes'
-  30. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:119:in `block (2 levels) in _run_group_plugins'
-  31. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:117:in `each'
-  32. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:117:in `block in _run_group_plugins'
-  33. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:116:in `catch'
-  34. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:116:in `_run_group_plugins'
-  35. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:54:in `block in run_on_changes'
-  36. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:53:in `each'
-  37. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/runner.rb:53:in `run_on_changes'
-  38. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/internals/queue.rb:23:in `process'
-  39. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/commander.rb:42:in `start'
-  40. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/cli.rb:243:in `_start'
-  41. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/cli.rb:108:in `start'
-  42. /var/lib/gems/1.9.1/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
-  43. /var/lib/gems/1.9.1/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
-  44. /var/lib/gems/1.9.1/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
-  45. /var/lib/gems/1.9.1/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
-  46. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/aruba_adapter.rb:32:in `execute'
-  47. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib/guard/aruba_adapter.rb:19:in `execute!'
-  48. /var/lib/gems/1.9.1/gems/guard-2.10.2/bin/guard:11:in `<top (required)>'
-  49. /usr/local/bin/guard:23:in `load'
+  0. lib/nrdocs.rb:110:in `get_title'
+  1. layout /post/:64:in `get_binding'
+  2. /usr/lib/ruby/1.9.1/erb.rb:838:in `eval'
+  3. /usr/lib/ruby/1.9.1/erb.rb:838:in `result'
+  4. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/filters/erb.rb:34:in `run'
+  5. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/filter.rb:121:in `setup_and_run'
+  6. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/result_data/item_rep.rb:404:in `layout'
+  7. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/item_rep_proxy.rb:69:in `layout'
+  8. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/rule_context.rb:74:in `layout'
+  9. /home/acamilo/git/NeuronRobotics.github.io/Rules:29:in `block in parse'
+  10. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/rule.rb:70:in `instance_eval'
+  11. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/rule.rb:70:in `apply_to'
+  12. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:387:in `compile_rep'
+  13. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:343:in `block in compile_reps'
+  14. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:336:in `loop'
+  15. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:336:in `compile_reps'
+  16. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  17. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/base/source_data/site.rb:59:in `compile'
+  18. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/commands/compile.rb:397:in `block in run'
+  19. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/commands/compile.rb:438:in `run_listeners_while'
+  20. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/commands/compile.rb:396:in `run'
+  21. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  22. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/error_handler.rb:74:in `handle_while'
+  23. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  24. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/command_runner.rb:13:in `call'
+  25. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command_dsl.rb:223:in `block in runner'
+  26. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command.rb:298:in `call'
+  27. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command.rb:298:in `run_this'
+  28. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command.rb:251:in `run'
+  29. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/commands/nanoc.rb:39:in `block in define'
+  30. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command.rb:298:in `call'
+  31. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command.rb:298:in `run_this'
+  32. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib/cri/command.rb:251:in `run'
+  33. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli.rb:59:in `block in run'
+  34. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/error_handler.rb:74:in `handle_while'
+  35. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  36. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib/nanoc/cli.rb:57:in `run'
+  37. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/bin/nanoc:25:in `<top (required)>'
+  38. /usr/local/bin/nanoc:23:in `load'
 
 ===== VERSION INFORMATION:
 
@@ -109,8 +98,7 @@ Linux Turnover 3.13.0-36-lowlatency #63-Ubuntu SMP PREEMPT Wed Sep 3 21:56:12 UT
 BUNDLE_BIN_PATH => "/usr/share/rubygems-integration/1.9.1/gems/bundler-1.3.5/bin/bundle"
 BUNDLE_GEMFILE => "/home/acamilo/git/NeuronRobotics.github.io/Gemfile"
 COLORTERM => "xfce4-terminal"
-COLUMNS => "131"
-DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-xj8WGYfqXk"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-aCzh5KvTI7"
 DEFAULTS_PATH => "/usr/share/gconf/ubuntustudio.default.path"
 DESKTOP_SESSION => "ubuntustudio"
 DISPLAY => ":0.0"
@@ -121,9 +109,6 @@ GEM_PATH => "/var/lib/gems/1.9.1:/home/acamilo/.gem/ruby/1.9.1:/usr/share/rubyge
 GLADE_CATALOG_PATH => ":"
 GLADE_MODULE_PATH => ":"
 GLADE_PIXMAP_PATH => ":"
-GUARD_NOTIFIERS => "---\n- :name: :notifysend\n  :options:\n    :silent: true\n- :name: :terminal_title\n  :options:\n    :silent: true\n"
-GUARD_NOTIFY_ACTIVE => "true"
-GUARD_NOTIFY_PID => "5412"
 HOME => "/home/acamilo"
 IM_CONFIG_PHASE => "1"
 INSTANCE => ""
@@ -133,33 +118,32 @@ LANG => "en_US.UTF-8"
 LANGUAGE => "en_US"
 LESSCLOSE => "/usr/bin/lesspipe %s %s"
 LESSOPEN => "| /usr/bin/lesspipe %s"
-LINES => "54"
 LOGNAME => "acamilo"
 LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
 MANDATORY_PATH => "/usr/share/gconf/ubuntustudio.mandatory.path"
 MANPATH => "/var/lib/gems/1.9.1/gems/kramdown-1.5.0/man"
-OLDPWD => "/home/acamilo/nanoctest/tutorial"
+OLDPWD => "/home/acamilo/git"
 PATH => "/var/lib/gems/1.9.1/bin:/opt/microchip/xc32/v1.00/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/microchip/xc32/v1.33/bin:/home/acamilo/gradle-1.12/bin"
 PWD => "/home/acamilo/git/NeuronRobotics.github.io"
 RUBYOPT => "-I/usr/lib/ruby/vendor_ruby -rbundler/setup"
 SELINUX_INIT => "YES"
 SESSION => "ubuntustudio"
 SESSIONTYPE => ""
-SESSION_MANAGER => "local/Turnover:@/tmp/.ICE-unix/1441,unix/Turnover:/tmp/.ICE-unix/1441"
+SESSION_MANAGER => "local/Turnover:@/tmp/.ICE-unix/1360,unix/Turnover:/tmp/.ICE-unix/1360"
 SHELL => "/bin/bash"
 SHLVL => "1"
 SSH_AGENT_LAUNCHER => "upstart"
-SSH_AGENT_PID => "1339"
-SSH_AUTH_SOCK => "/tmp/ssh-4N4V7R6Oq2vf/agent.1306"
+SSH_AGENT_PID => "1275"
+SSH_AUTH_SOCK => "/tmp/ssh-vyOErn1s6cWp/agent.1245"
 TERM => "xterm"
 TEXTDOMAIN => "im-config"
 TEXTDOMAINDIR => "/usr/share/locale/"
 UPSTART_EVENTS => "started xsession"
 UPSTART_INSTANCE => ""
 UPSTART_JOB => "startxfce4"
-UPSTART_SESSION => "unix:abstract=/com/ubuntu/upstart-session/1000/1192"
+UPSTART_SESSION => "unix:abstract=/com/ubuntu/upstart-session/1000/1130"
 USER => "acamilo"
-WINDOWID => "56623108"
+WINDOWID => "58720260"
 XAUTHORITY => "/home/acamilo/.Xauthority"
 XDG_CONFIG_DIRS => "/etc/xdg/xdg-ubuntustudio:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg"
 XDG_CURRENT_DESKTOP => "XFCE"
@@ -172,8 +156,7 @@ XDG_SEAT_PATH => "/org/freedesktop/DisplayManager/Seat0"
 XDG_SESSION_ID => "c1"
 XDG_SESSION_PATH => "/org/freedesktop/DisplayManager/Session0"
 XDG_VTNR => "7"
-_ => "/usr/bin/bundle"
-_ORIGINAL_GEM_PATH => "/var/lib/gems/1.9.1:/home/acamilo/.gem/ruby/1.9.1:/usr/share/rubygems-integration/1.9.1:/usr/share/rubygems-integration/all"
+_ => "/usr/local/bin/nanoc"
 
 ===== GEMFILE.LOCK:
 
@@ -253,42 +236,43 @@ DEPENDENCIES
 
 ===== LOAD PATHS:
 
-  0. /var/lib/gems/1.9.1/gems/rspec-3.1.0/lib
-  1. /var/lib/gems/1.9.1/gems/rspec-mocks-3.1.3/lib
-  2. /var/lib/gems/1.9.1/gems/rspec-expectations-3.1.2/lib
-  3. /var/lib/gems/1.9.1/gems/rspec-core-3.1.7/lib
-  4. /var/lib/gems/1.9.1/gems/rspec-support-3.1.2/lib
-  5. /var/lib/gems/1.9.1/gems/rainbow-2.0.0/lib
-  6. /var/lib/gems/1.9.1/gems/kramdown-1.5.0/lib
-  7. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.3/lib
-  8. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib
-  9. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib
-  10. /var/lib/gems/1.9.1/gems/thor-0.19.1/lib
-  11. /var/lib/gems/1.9.1/gems/pry-0.10.1/lib
-  12. /var/lib/gems/1.9.1/gems/slop-3.6.0/lib
-  13. /var/lib/gems/1.9.1/gems/method_source-0.8.2/lib
-  14. /var/lib/gems/1.9.1/gems/lumberjack-1.0.9/lib
-  15. /var/lib/gems/1.9.1/gems/listen-2.8.3/lib
-  16. /var/lib/gems/1.9.1/gems/rb-inotify-0.9.5/lib
-  17. /var/lib/gems/1.9.1/gems/rb-fsevent-0.9.4/lib
-  18. /var/lib/gems/1.9.1/gems/formatador-0.2.5/lib
-  19. /var/lib/gems/1.9.1/gems/ffi-1.9.6/lib
-  20. /var/lib/gems/1.9.1/gems/diff-lcs-1.2.5/lib
-  21. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib
-  22. /var/lib/gems/1.9.1/gems/colored-1.2/lib
-  23. /var/lib/gems/1.9.1/gems/coderay-1.1.0/lib
-  24. /var/lib/gems/1.9.1/gems/celluloid-0.16.0/lib
-  25. /var/lib/gems/1.9.1/gems/timers-4.0.1/lib
-  26. /var/lib/gems/1.9.1/gems/hitimes-1.2.2/lib
-  27. /usr/share/rubygems-integration/1.9.1/gems/bundler-1.3.5/lib
-  28. /var/lib/gems/1.9.1/gems/adsf-1.2.0/lib
-  29. /var/lib/gems/1.9.1/gems/rack-1.5.2/lib
-  30. /var/lib/gems/1.9.1/gems/rake-10.4.2/lib
-  31. /usr/lib/ruby/vendor_ruby
+  0. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib
+  1. /var/lib/gems/1.9.1/gems/rspec-3.1.0/lib
+  2. /var/lib/gems/1.9.1/gems/rspec-mocks-3.1.3/lib
+  3. /var/lib/gems/1.9.1/gems/rspec-expectations-3.1.2/lib
+  4. /var/lib/gems/1.9.1/gems/rspec-core-3.1.7/lib
+  5. /var/lib/gems/1.9.1/gems/rspec-support-3.1.2/lib
+  6. /var/lib/gems/1.9.1/gems/rainbow-2.0.0/lib
+  7. /var/lib/gems/1.9.1/gems/kramdown-1.5.0/lib
+  8. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.3/lib
+  9. /var/lib/gems/1.9.1/gems/nanoc-3.7.4/lib
+  10. /var/lib/gems/1.9.1/gems/guard-2.10.2/lib
+  11. /var/lib/gems/1.9.1/gems/thor-0.19.1/lib
+  12. /var/lib/gems/1.9.1/gems/pry-0.10.1/lib
+  13. /var/lib/gems/1.9.1/gems/slop-3.6.0/lib
+  14. /var/lib/gems/1.9.1/gems/method_source-0.8.2/lib
+  15. /var/lib/gems/1.9.1/gems/lumberjack-1.0.9/lib
+  16. /var/lib/gems/1.9.1/gems/listen-2.8.3/lib
+  17. /var/lib/gems/1.9.1/gems/rb-inotify-0.9.5/lib
+  18. /var/lib/gems/1.9.1/gems/rb-fsevent-0.9.4/lib
+  19. /var/lib/gems/1.9.1/gems/formatador-0.2.5/lib
+  20. /var/lib/gems/1.9.1/gems/ffi-1.9.6/lib
+  21. /var/lib/gems/1.9.1/gems/diff-lcs-1.2.5/lib
+  22. /var/lib/gems/1.9.1/gems/cri-2.6.1/lib
+  23. /var/lib/gems/1.9.1/gems/colored-1.2/lib
+  24. /var/lib/gems/1.9.1/gems/coderay-1.1.0/lib
+  25. /var/lib/gems/1.9.1/gems/celluloid-0.16.0/lib
+  26. /var/lib/gems/1.9.1/gems/timers-4.0.1/lib
+  27. /var/lib/gems/1.9.1/gems/hitimes-1.2.2/lib
+  28. /usr/share/rubygems-integration/1.9.1/gems/bundler-1.3.5/lib
+  29. /var/lib/gems/1.9.1/gems/adsf-1.2.0/lib
+  30. /var/lib/gems/1.9.1/gems/rack-1.5.2/lib
+  31. /var/lib/gems/1.9.1/gems/rake-10.4.2/lib
   32. /usr/local/lib/site_ruby/1.9.1
   33. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
   34. /usr/local/lib/site_ruby
   35. /usr/lib/ruby/vendor_ruby/1.9.1
   36. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
-  37. /usr/lib/ruby/1.9.1
-  38. /usr/lib/ruby/1.9.1/x86_64-linux
+  37. /usr/lib/ruby/vendor_ruby
+  38. /usr/lib/ruby/1.9.1
+  39. /usr/lib/ruby/1.9.1/x86_64-linux
