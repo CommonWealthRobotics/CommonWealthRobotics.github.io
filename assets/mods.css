@@ -87,6 +87,11 @@ html,body {
 .tutpad{
     min-height: 237px
 }
+
+.bs-docs-sidenav{
+    max-height:500px;
+    overflow-y: auto;
+}
 /*
 .test {
     margin-top: -20px;
