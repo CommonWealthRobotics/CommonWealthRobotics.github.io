@@ -41,7 +41,7 @@ image: foo.jpeg
 * `title: "some string"` tutorial title. will be displayed on tutorials page
 * `order: #` defines the order in which it will apear on the tutorials page. smaller numbers float to beginning of list. you can have duplicate numbers or skipped numbers or negative numbers.
 * `image: file.jpeg` the image associated with the tutorial that will be displayed on the tutorials page. if omitted a plaeholder image will be used. image should be in the same directory as the index.md file
-* '[tutorial description]' The text for the tutorial that appears after the image and before the list of steps on the tutorial page
+* `tutorial description` The text for the tutorial that appears after the image and before the list of steps on the tutorial page
 
 
 The `*.md` content files look like this
