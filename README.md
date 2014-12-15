@@ -27,24 +27,29 @@ content/
     image2.jpg
 ```
 
-The `index.md` file looks like this
+The `index.md` describes a tutorial and looks like this
 ```
 ---
 tutorial: true
-title: [tutorial title]
-order: [order they pop up on the page, higher number pops up later.]
-image: [  tutorial image filename. image must be in same 
-          directory as tutorial and is optional. if no image is provided a placehodler will be generated]
+title: "My Simple Tutorial"
+order: 2
+image: foo.jpeg
 ---
 [tutorial description]
 ```
+* `tutorial: true` markes this folder as a tutorial. if omitted it will be omitted from the tutorials page
+* `title: "some string"` tutorial title. will be displayed on tutorials page
+* `order: #` defines the order in which it will apear on the tutorials page. smaller numbers float to beginning of list. you can have duplicate numbers or skipped numbers or negative numbers.
+* `image: file.jpeg` the image associated with the tutorial that will be displayed on the tutorials page. if omitted a plaeholder image will be used. image should be in the same directory as the index.md file
+* '[tutorial description]' The text for the tutorial that appears after the image and before the list of steps on the tutorial page
+
 
 The `*.md` content files look like this
 
 ```
 ---
-title: [step title]
-step: [the step order, smaller numbers come first]
+title: "my step"
+step: 2
 layout: post
 ---
 [after this point, this is the content of the tutorial in markdown]
@@ -60,6 +65,10 @@ this is a paragraph
 ... etc/
 
 ```
+
+* `title: "some title"` the name of the current step
+* `step: #` Same as menu order smaller steps come sooner.
+* `layout: post` sets the page layout. should always be post for steps.
 
 ## Adding Normal Pages ##
 not everything has to be a tutorial, it can be a page.
@@ -89,3 +98,18 @@ nothing to see here
 3. normal
 4. seriosuly
 ```
+
+## Menus ##
+
+To add a page (or tutorial) to the menu bar use these tags
+``` markdown
+menu: true
+menuorder: 0
+menuname: "Home"
+```
+* `menu: true` will cause the page to get put into the site's main nav menu
+* `menuorder: #` is used to sort the menu. if omitted the item will be placed last
+* `menuname: "Name"` is the label for the menu item to be used in place of the page title. If title is omitted too it will be the file name.
+
+
+
