@@ -1,5 +1,5 @@
 ---
-title: PPM RC Signal Reader Channle Example
+title: PPM RC Signal Reader Channel Example
 step: 13
 layout: post
 ---
