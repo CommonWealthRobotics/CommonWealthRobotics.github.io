@@ -37,14 +37,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Neuron Robotics</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-                        <%get_menu().each do |m| %>
-            <li><a href="<%=relative_path_to(m)%>"><%=get_menu_name(m)%></a></li>
+            <%get_menu().each do |m| %>
+            <li  <%if item==m %>class="active"<%end%>><a href="<%=relative_path_to(m)%>">
+            <%=get_menu_name(m)%></a></li>
             
             <%end%>
           </ul>

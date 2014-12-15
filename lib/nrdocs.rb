@@ -49,7 +49,7 @@ def tuts_list
         puts Rainbow("   [#{Rainbow(tut[:ordering]).red}]: ").bright+"'#{Rainbow(tut[:title]).yellow}'"
     end
     
-    get_menu.sort {|a,b| a[:menuorder] <=> b[:menuorder] }
+    $menuitems=$menuitems.sort {|a,b| a[:menuorder] <=> b[:menuorder] }
     puts Rainbow("\nMenu bar Contents are").yellow.bright
     get_menu.each do |men|
         puts Rainbow("   [#{Rainbow(men[:menuorder]).red}]: ").bright+"[#{Rainbow(get_menu_name(men)).white}] '#{Rainbow(men[:title]).yellow}'"
