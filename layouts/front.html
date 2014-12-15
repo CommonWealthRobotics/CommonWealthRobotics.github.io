@@ -75,11 +75,11 @@
                     <p><%= tut.raw_content %></p>
                 <ol class="steps">
                     <% get_ordered_steps(tut).each do | step |%>
-                    <li><a href="<%=relative_path_to(step)%>"><%= step[:title] %></a></li> 
+                    <li><a href="<%=relative_path_to(tut)%>"><%= step[:title] %></a></li> 
                     <% end %>
                 </ol>
 
-             <a class="btn btn-default" href="" role="button">Start Lesson &raquo;</a>
+             <a class="btn btn-default" href="<%= relative_path_to(get_first(tut))%>" role="button">Start Lesson &raquo;</a>
            </div>
          </div><!--/.col-xs-6.col-lg-4-->
             <% end %>

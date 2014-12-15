@@ -114,3 +114,10 @@ def get_title(me)
     end
     end
     
+def get_first(me)
+    steps = get_ordered_steps(me)
+    if steps.first != nil
+        return steps.first
+    end
+    me.parent
+    end
