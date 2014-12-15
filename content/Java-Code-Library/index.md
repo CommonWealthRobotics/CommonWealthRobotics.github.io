@@ -1,7 +1,7 @@
 ---
 title: Java Code Examples
 tutorial: true
-ordering: 3
+ordering: 2
 layout: post
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Getting to Know the DyIO
 tutorial: true
-ordering: 2
+ordering: 4
 layout: post
 ---
 
