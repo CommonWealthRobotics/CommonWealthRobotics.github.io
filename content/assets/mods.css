@@ -83,6 +83,10 @@ html,body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.tutpad{
+    min-height: 237px
+}
 /*
 .test {
     margin-top: -20px;
