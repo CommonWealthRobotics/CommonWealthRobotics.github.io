@@ -22,6 +22,7 @@ def tuts_list
     puts "\n\n\n"+Rainbow("Building NR Tutorials and Documentation Site").yellow.bright
     puts "============================================"
     sorted_tuts = []
+    $menuitems = []
     @items.each do |p|
     if p[:tutorial] !=nil
             puts "\n#{Rainbow('Found Tutorial:').green.bright} '#{Rainbow(p[:title]).yellow}'"
@@ -33,8 +34,13 @@ def tuts_list
             sorted_tuts.push(p)
             
 #        pa.push p
+    elsif p[:menu] != nil
+        p[:menuorder] == 999 if p[:menuorder]==nil
+        $menuitems.push(p)
+        
     end
     end
+
     sorted_tuts = sorted_tuts.sort {|a,b| a[:ordering] <=> b[:ordering] }
     
     puts Rainbow("\nFinal Tutorial Ordering").yellow.bright
@@ -42,8 +48,13 @@ def tuts_list
     sorted_tuts.each do |tut|
         puts Rainbow("   [#{Rainbow(tut[:ordering]).red}]: ").bright+"'#{Rainbow(tut[:title]).yellow}'"
     end
+    
+    get_menu.sort {|a,b| a[:menuorder] <=> b[:menuorder] }
+    puts Rainbow("\nMenu bar Contents are").yellow.bright
+    get_menu.each do |men|
+        puts Rainbow("   [#{Rainbow(men[:menuorder]).red}]: ").bright+"[#{Rainbow(get_menu_name(men)).white}] '#{Rainbow(men[:title]).yellow}'"
+    end
 
-    puts sorted_tuts[0].identifier
     puts "\n\n"
     return sorted_tuts
    end
@@ -120,4 +131,16 @@ def get_first(me)
         return steps.first
     end
     me.parent
+    end
+    
+def get_menu()
+    $menuitems
+    end
+    
+def get_menu_name(me)
+    if me[:menuname] == nil
+        return get_title me
+    else
+        return me[:menuname]
+    end
     end

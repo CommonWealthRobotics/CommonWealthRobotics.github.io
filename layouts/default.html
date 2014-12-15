@@ -43,7 +43,10 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+                        <%get_menu().each do |m| %>
+            <li><a href="<%=relative_path_to(m)%>"><%=get_menu_name(m)%></a></li>
+            
+            <%end%>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
