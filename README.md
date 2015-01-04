@@ -3,6 +3,8 @@ NeuronRobotics.github.io
 
 The Website for the Bowler System
 
+http://neuronrobotics.github.io/
+
 ## How this thing works ##
 * The content directory will become the root of the website.
   - content/foo.md will become http://domain.com/foo/
