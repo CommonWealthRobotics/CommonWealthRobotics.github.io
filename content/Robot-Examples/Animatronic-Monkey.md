@@ -2,7 +2,6 @@
 tutorial: true
 title: "Animatronic Monkey"
 order: 2
-
 ---
 
 ## Halloween Animatronic Monkey ##
