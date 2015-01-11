@@ -23,11 +23,11 @@ title: Legal Terms and Conditions
 # You must not:
 
 #### republish material from this website (including republication on another website);
-sell, rent or sub-license material from the website;
-show any material from the website in public;
-reproduce, duplicate, copy or otherwise exploit material on this website for a commercial purpose;
-edit or otherwise modify any material on the website; or
-redistribute material from this website except for content specifically and expressly made available for redistribution.
+#### sell, rent or sub-license material from the website;
+#### show any material from the website in public;
+#### reproduce, duplicate, copy or otherwise exploit material on this website for a commercial purpose;
+#### edit or otherwise modify any material on the website; or
+#### redistribute material from this website except for content specifically and expressly made available for redistribution.
 
 #### Where content is specifically made available for redistribution, it may only be redistributed within your organisation.
 
@@ -46,7 +46,7 @@ redistribute material from this website except for content specifically and expr
 #### Without prejudice to the generality of the foregoing paragraph, Neuron Robotics Cooperative, Inc. does not warrant that:
 
 #### this website will be constantly available, or available at all; or
-the information on this website is complete, true, accurate or non-misleading.
+#### the information on this website is complete, true, accurate or non-misleading.
 
 # Limitations of liability
 
@@ -57,8 +57,7 @@ for any business losses, loss of revenue, income, profits or anticipated savings
 
 # Reasonableness
 
-#### By using this website, you agree that the exclusions and limitations of liability set out in this website disclaimer are reasonable.  
-If you do not think they are reasonable, you must not use this website.
+#### By using this website, you agree that the exclusions and limitations of liability set out in this website disclaimer are reasonable.  If you do not think they are reasonable, you must not use this website.
 
 # Breaches of these terms and conditions
 
@@ -78,7 +77,7 @@ If you do not think they are reasonable, you must not use this website.
 
 # Law and jurisdiction
 
-## These terms and conditions will be governed by and construed in accordance with the laws of the Commonwealth of Massachusetts, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of the Commonwealth of Massacusetts.
+#### These terms and conditions will be governed by and construed in accordance with the laws of the Commonwealth of Massachusetts, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of the Commonwealth of Massacusetts.
 
 # Neuron Robotics Cooperative, Inc. details
 
