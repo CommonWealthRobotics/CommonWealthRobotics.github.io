@@ -1,15 +1,24 @@
 ---
+title: "Neuron Robotics Documentation"
+menu: true
+menuorder: 3
+menuname: "Legal"
+layout: front
+---
+
+---
 title: Legal Terms and Conditions
 ---
-Introduction
+# Introduction
 
-These terms and conditions govern your use of this website; by using this website, you accept these terms and conditions in full.   If you disagree with these terms and conditions or any part of these terms and conditions, you must not use this website. 
 
-License to use website
+## These terms and conditions govern your use of this website; by using this website, you accept these terms and conditions in full.   If you disagree with these terms and conditions or any part of these terms and conditions, you must not use this website. 
 
-Unless otherwise stated, Neuron Robotics Cooperative, Inc. and/or its licensors own the intellectual property rights in the website and material on the website.  Subject to the license below, all these intellectual property rights are reserved.
+# License to use website
 
-You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.  
+## Unless otherwise stated, Neuron Robotics Cooperative, Inc. and/or its licensors own the intellectual property rights in the website and material on the website.  Subject to the license below, all these intellectual property rights are reserved.
+
+## You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.  
 
 You must not:
 
