@@ -53,7 +53,7 @@ title: Legal Terms and Conditions
 #### Neuron Robotics Cooperative, Inc. will not be liable to you whether under the law of contact, the law of torts or otherwise in relation to the contents of, or use of, or otherwise in connection with, this website:
 
 #### for any indirect, special or consequential loss; or
-for any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data.
+#### for any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data.
 
 # Reasonableness
 
