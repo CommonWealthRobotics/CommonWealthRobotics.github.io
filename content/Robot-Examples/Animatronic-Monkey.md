@@ -1,6 +1,6 @@
 ---
 tutorial: true
-title: "Animatronic Monkey"
+title: Animatronic Monkey
 order: 2
 ---
 
