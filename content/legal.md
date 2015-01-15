@@ -3,7 +3,7 @@ title: "Neuron Robotics Documentation"
 menu: true
 menuorder: 3
 menuname: "Legal"
-layout: front
+layout: default
 ---
 
 ---
