@@ -6,9 +6,7 @@ menuname: "Legal"
 layout: default
 ---
 
----
-title: Legal Terms and Conditions
----
+
 # Introduction
 
 
