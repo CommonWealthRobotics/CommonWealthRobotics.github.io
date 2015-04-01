@@ -10,12 +10,11 @@ A Digital Input Channel is a channel on the DyIO set to Digital Input mode. Some
 
 All channels on the DyIO may be set to Digital Input mode, and all channels in Digital Input mode can read input in either synchronous or asynchronous mode.
 
-Channels on the DyIO set to Digital Input mode will read the voltage between the signal pin of that channel and a ground - usually the ground pin of that channel (see Figure 1: DyIO Pin Layout).
+Channels on the DyIO set to Digital Input mode will read the voltage between the signal pin of that channel and a ground - usually the ground pin of that channel.
 
 The DyIO then will return that input as either a "high" or "low" value:
 
     Input over 2.5 volts is considered high, otherwise it is considered low.
-        This is done via a Schmitt trigger.
     When coding in Java using the DyIO, "high" is given as a boolean true value ("low" is given as a boolean false).
 
 
