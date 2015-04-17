@@ -69,10 +69,22 @@
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
                 
-<p>Devices like the DyIO are passed to scripts using the name found on the connections tab. All currently connected devices are passed to each script. For more detailed DyIO scripting, head over to the <a href="http://neuronrobotics.github.io/Java-Code-Library/Digital-Input-Example-Simple/">Java Tutorials</a>.</p>
+<p>BowlerStudio integrates OpenCV’s new Java bindings to add full power and full speed image processing to your robotic project. 
+Image processing objects can be chained together to form processing pipelines. All default Haar cascades are bundled in the application, and the full API is available in the scripting interface to add custom image processors. </p>
 
-<script src="https://gist.github.com/madhephaestus/5da47af65fbc1f991821.js"></script>
+<script src="https://gist.github.com/madhephaestus/4db9defef935e2905690.js"></script>
 
+<p>Other processors include: </p>
+
+<p>haarcascade_eye_tree_eyeglasses.xml   haarcascade_mcs_eyepair_big.xml    haarcascade_profileface.xml
+haarcascade_eye.xml                   haarcascade_mcs_eyepair_small.xml  haarcascade_righteye_2splits.xml
+haarcascade_frontalface_alt2.xml      haarcascade_mcs_leftear.xml        haarcascade_smile.xml
+haarcascade_frontalface_alt_tree.xml  haarcascade_mcs_lefteye.xml        haarcascade_upperbody.xml
+haarcascade_frontalface_alt.xml       haarcascade_mcs_mouth.xml          lbpcascade_frontalface.xml
+haarcascade_frontalface_default.xml   haarcascade_mcs_nose.xml           lbpcascade_profileface.xml
+haarcascade_fullbody.xml              haarcascade_mcs_rightear.xml       lbpcascade_silverware.xml
+haarcascade_lefteye_2splits.xml       haarcascade_mcs_righteye.xml
+haarcascade_lowerbody.xml             haarcascade_mcs_upperbody.xml</p>
  
             </div>
         </div>
@@ -86,32 +98,30 @@
                          <a href="../Welcome-To-BowlerStudio/">Welcome to BowlerStudio</a></li>
                     
                 
-                    <li class="active" >
-                         <a href="./">DyIO scripting</a></li>
+                    <li  >
+                         <a href="../DyIOScripting/">DyIO scripting</a></li>
                     
                 
                     <li  >
                          <a href="../JavaCad/">JavaCad</a></li>
                     
                 
-                    <li  >
-                         <a href="../Cameras/">BowlerStudio Cameras</a></li>
+                    <li class="active" >
+                         <a href="./">BowlerStudio Cameras</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
                 
-                <a href="../Welcome-To-BowlerStudio/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+                <a href="../JavaCad/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
 			</a>
 
             
-			<a href="../JavaCad/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
-				Next
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				
-				
-			</a>
+			<a href="/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+				More
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+			
             </div> <!-- bs-docs-sidebar -->
         </div> <!-- col-md-3 -->
     </div> <!-- row -->
