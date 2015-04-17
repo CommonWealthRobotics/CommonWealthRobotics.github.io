@@ -1,5 +1,5 @@
 ---
-title: Welcome to BowlerStudio
+title: JavaCad
 step: 2
 layout: post
 ---
