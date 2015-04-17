@@ -1,5 +1,5 @@
 ---
-title: BowlerStudio Cameras
+title: BowlerStudio Cameras UI
 step: 6
 layout: post
 ---
