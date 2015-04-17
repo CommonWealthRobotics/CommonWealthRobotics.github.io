@@ -1,7 +1,7 @@
 ---
 title: Robot Examples
 tutorial: true
-ordering: 5
+ordering: 4
 layout: post
 ---
 
