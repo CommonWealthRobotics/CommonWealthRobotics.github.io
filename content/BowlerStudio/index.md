@@ -1,7 +1,7 @@
 ---
-title: BowlerStudio Scripting
+title: BowlerStudio
 tutorial: true
-ordering: 3
+ordering: 1
 layout: post
 ---
 
