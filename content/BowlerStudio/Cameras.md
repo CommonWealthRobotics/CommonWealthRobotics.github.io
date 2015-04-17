@@ -1,6 +1,6 @@
 ---
 title: BowlerStudio Cameras
-step: 2
+step: 4
 layout: post
 ---
 
