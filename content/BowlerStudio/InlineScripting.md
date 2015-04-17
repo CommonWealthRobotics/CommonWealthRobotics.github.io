@@ -1,6 +1,6 @@
 ---
-title: Kinematics Cad
-step: 7
+title: Inline Scripting
+step: 8
 layout: post
 ---
 
