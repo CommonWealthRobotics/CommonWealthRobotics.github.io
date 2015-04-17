@@ -1,5 +1,5 @@
 ---
-title: BowlerStudio Cameras
+title: Using Tabs
 step: 5
 layout: post
 ---

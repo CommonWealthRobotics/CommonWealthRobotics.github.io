@@ -1,5 +1,5 @@
 ---
-title: BowlerStudio Cameras UI
+title: Device Tabs UI
 step: 6
 layout: post
 ---
