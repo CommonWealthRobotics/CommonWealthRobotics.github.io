@@ -9,6 +9,10 @@ Tabs can include threads if the thread is linked to the tab. These threaded tabs
 <script src="https://gist.github.com/madhephaestus/c399746171d7185a5c08.js"></script>
 
 
-You can modify this tab to make your own with this script:
+You can modify this Image processor to make your own with this script:
+
+<script src="https://gist.github.com/madhephaestus/5710335a15f159d79e14.js"></script>
+
+You can also modify the image display tab with custom code using this script:
 
 <script src="https://gist.github.com/madhephaestus/d0f5f61517249097a359.js"></script>
