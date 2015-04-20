@@ -50,6 +50,21 @@ route '*' do
   elsif item[:extension] == 'js'
     # Write item with identifier /foo/ to /foo.css
     item.identifier.chop + '.js'
+  elsif item[:extension] == 'svg'
+    # Write item with identifier /foo/ to /foo.css
+    item.identifier.chop + '.svg'
+  elsif item[:extension] == 'ttf'
+    # Write item with identifier /foo/ to /foo.css
+    item.identifier.chop + '.ttf'
+  elsif item[:extension] == 'otf'
+    # Write item with identifier /foo/ to /foo.css
+    item.identifier.chop + '.otf'
+  elsif item[:extension] == 'wof'
+    # Write item with identifier /foo/ to /foo.css
+    item.identifier.chop + '.wof'
+  elsif item[:extension] == 'eot'
+    # Write item with identifier /foo/ to /foo.css
+    item.identifier.chop + '.eot'
   elsif item[:extension] == nil
     # so it doesnt explode when someone drops a file without an extention in
     item.identifier.chop
