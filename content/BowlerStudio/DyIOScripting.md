@@ -1,6 +1,6 @@
 ---
 title: DyIO scripting
-step: 3
+step: 2
 layout: post
 ---
 
