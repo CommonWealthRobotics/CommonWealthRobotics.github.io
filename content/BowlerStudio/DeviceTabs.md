@@ -1,5 +1,5 @@
 ---
-title: Device Tabs UI
+title: Camera Display
 step: 6
 layout: post
 ---

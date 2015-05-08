@@ -1,6 +1,6 @@
 ---
 title: Using Tabs
-step: 5
+step: 6
 layout: post
 ---
 

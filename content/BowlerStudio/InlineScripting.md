@@ -1,5 +1,5 @@
 ---
-title: Inline Scriptingyeah
+title: Inline Scripting
 step: 8
 layout: post
 ---

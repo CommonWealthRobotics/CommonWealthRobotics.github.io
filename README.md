@@ -117,5 +117,13 @@ menuname: "Home"
 * `menuorder: #` is used to sort the menu. if omitted the item will be placed last
 * `menuname: "Name"` is the label for the menu item to be used in place of the page title. If title is omitted too it will be the file name.
 
+## Updating download links ##
 
+On the new landing page the download links come from the frontmatter in the `index.md` file.
+Update them by comitting a new index.md file with updated links to this repo.
+```
+winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/Windows-nrdk-3.13.1.exe"
+linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/Ubuntu-nrdk-3.13.1.deb"
+macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/MacOSX-nrdk-3.13.1.zip"
+```
 
