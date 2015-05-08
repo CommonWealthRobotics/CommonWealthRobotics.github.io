@@ -122,8 +122,8 @@ menuname: "Home"
 On the new landing page the download links come from the frontmatter in the `index.md` file.
 Update them by comitting a new index.md file with updated links to this repo.
 ```
-winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/Windows-nrdk-3.13.1.exe"
-linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/Ubuntu-nrdk-3.13.1.deb"
-macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/MacOSX-nrdk-3.13.1.zip"
+winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/*.*.*/Windows-nrdk-*.*.*.exe"
+linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/*.*.*/Ubuntu-nrdk-*.*.*.deb"
+macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/*.*.*/MacOSX-nrdk-*.*.*.zip"
 ```
 

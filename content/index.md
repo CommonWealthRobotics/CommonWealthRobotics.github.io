@@ -4,8 +4,8 @@ menu: true
 menuorder: 0
 menuname: "Home"
 layout: landing
-winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/Windows-nrdk-3.13.1.exe"
-linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/Ubuntu-nrdk-3.13.1.deb"
-macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.3/MacOSX-nrdk-3.13.1.zip"
+winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.4/Windows-nrdk-3.13.2.exe"
+linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.4/Ubuntu-nrdk-3.13.2.deb"
+macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.2.4/MacOSX-nrdk-3.13.2.zip"
 ---
 
