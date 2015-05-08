@@ -50,7 +50,7 @@
                                 <a href="http://kickstarter.com" class="btn btn-default btn-lg"><i class=""></i> <span class="network-name">Kickstarter</span></a>
                             </li>
                             <li>
-                                <a href="/tutorials/" class="btn btn-default btn-lg"><i class=""></i> <span class="network-name">Get Started</span></a>
+                                <a href="#downloads" class="btn btn-default btn-lg"><i class=""></i> <span class="network-name">Get Started</span></a>
                             </li>
                         </ul>
                     </div>
@@ -123,8 +123,55 @@
 
     </div>
     <!-- /.content-section-b -->
+    
+    	<a  name="downloads"></a>
+        <div class="content-section-a">
 
-	<a  name="contact"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <h2 class="section-heading text-center">Choose your Platform</h2>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-4">
+
+                    <img class="img-responsive" src="img/windows_logo.png" alt="" size="80%" style="margin-left: auto; margin-right: auto;">
+                    <h3 class="text-center"><a href="<%=@item[:winInstaller]%>">Windows</a></h3>
+                    <p class="lead">Run Installer and double click on Bowler Studio shortcut on yout desktop.</p>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    
+                    <img class="img-responsive" src="img/tux.png" alt="" style="margin-left: auto; margin-right: auto;">
+                    <h3 class="text-center"><a href="<%=@item[:linInstaller]%>">Linux</a></h3>
+                    
+                    
+                    <p class="lead text-center">Open with in "Ubuntu Software Center" an click "Install".
+                    <img class="img-responsive" src="img/open_linux.png" style="margin-left: auto; margin-right: auto;">
+                    </p>
+                    
+                    <p class="lead text-center"> When complete you should be able to select bowler studio in your programs menu (under "other")
+                    <img class="img-responsive" src="img/locate_linux.png" style="margin-left: auto; margin-right: auto;">
+                    </p>
+                    <p class="lead text-center">You may also run it from the command line
+                    <img src="img/terminal_linux.png" class="img-responsive" style="margin-left: auto; margin-right: auto;">
+                    </p>
+                    
+                </div>
+                <div class="col-lg-4 col-sm-4">
+
+                    <img class="img-responsive" src="img/Apple_logo.png" alt="" style="margin-left: auto; margin-right: auto;">
+                    <h3 class="text-center"><a href="<%=@item[:macInstaller]%>">Mac</a></p><p class="lead">Extract ZIP file and double click on <code>bowlerstudio</code> to run</h3>
+                </div>
+            
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+
     <div class="banner">
 
         <div class="container">
