@@ -1,6 +1,6 @@
 ---
 title: Welcome to BowlerStudio
-step: 1
+step: 0
 layout: post
 ---
 
