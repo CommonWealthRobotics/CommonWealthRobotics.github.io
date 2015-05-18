@@ -10,4 +10,4 @@ BowlerStudio can load code from any Github Gist just by navagating to a website 
 
 If the Gist is not yours, hit fork.
 
-Once you are looking at your own Gist, hit edit and edit the code in the browser.
+Once you are looking at your own Gist, hit edit and edit the code in the browser. When your don, hit the update gist button. Your new code is read to run in BowlerStudio!
