@@ -1,6 +1,6 @@
 ---
 title: Inline Scripting
-step: 8
+step: 9
 layout: post
 ---
 

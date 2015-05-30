@@ -1,6 +1,6 @@
 ---
 title: Game Controllers
-step: 10
+step: 7
 layout: post
 ---
 
