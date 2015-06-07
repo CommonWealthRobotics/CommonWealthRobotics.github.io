@@ -55,10 +55,6 @@
             About</a></li>
             
             
-            <li  ><a href="../../legal/">
-            Legal</a></li>
-            
-            
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -69,6 +65,65 @@
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
                 
+<h2 id="dyio-at-a-glance">DyIO At a Glance</h2>
+
+<p>Starting at the top we see the <code>Bowler Connection</code> which is a 5v level serial port, the <code>External Power Connection</code> which is where you connect an external battery, and the <code>USB Connection</code> where you connect the DyIO to your PC, Phone, or Board.</p>
+
+<p>Moving down we see the <code>bank power Jumpers/Switches</code> which control the power flowing to the banks and the two <code>Channel Banks</code> which is where all your sensors and motors get connected.</p>
+
+<p>Finally, we see the <code>Status LED</code> which shows you what the DyIO is thinking, the <code>Reset Switch</code> which is used for firmware upgrades, and finally the <code>Power Mode LEDs</code> which show you the voltage of each bank’s center row of pins.</p>
+
+<p><img src="/img/Dyio-layout.png" class="img-responsive" /></p>
+
+<p>Status LED Key:</p>
+
+<ul>
+  <li>Blue: Device is connected to an application and communicating.</li>
+  <li>Teal (both Blue and Green): Device is not connected to an application or not communicating.</li>
+  <li>Purple (both Blue and Red): Battery voltage fluctuation error (the voltage on a bank set to</li>
+  <li>Motors power mode is fluctuating). This is usually caused by the connected battery pack being close to dead or dead, and will update every 10 seconds.</li>
+  <li>Red: Error condition. Try re-flashing the firmware or shooting us an email.</li>
+  <li>Red to Green slow flashing: Error condition. Try re-flashing the firmware.</li>
+</ul>
+
+<h2 id="banks-and-power">Banks and Power</h2>
+<div class="bs-callout bs-callout-info">
+
+  <h4 id="servos-and-usb">Servos and USB</h4>
+
+  <p>The DyIO won’t let you run Servoes off of a bank with a Green voltage by default. Computer USB ports are picky and too many servoes could result in damage or odd behavior if powered from USB. If you know what you’re doing then you can disable “Safe Mode” through code or in the DyIO tab to disable this behavior.</p>
+</div>
+
+<div class="bs-callout bs-callout-warning">
+
+  <h4 id="servo-brownouts-and-low-batteries">Servo Brownouts and Low batteries</h4>
+
+  <p>The DyIO will Disable Servos if the voltage dips below 5v when trying to move servoes to prevent damage to batteries. You can recover from this by configuring the channel again or commanding another position.</p>
+</div>
+
+<p>You’ve probably noticed the jumpers or switches above each of the two banks.
+These connect the banks to either 5v from the PC’s USB port or the connected battery.</p>
+
+<p>The Lights at the bottom of each bank indicate it’s voltage.</p>
+
+<ul>
+  <li>RED indicates Servo/Battery Voltage (5.5 or greater)</li>
+  <li>Yellow indicates no voltage</li>
+  <li>Green indicates Sensor Voltage (5v)</li>
+</ul>
+
+<p>Moving the Jumper/Switch to the “Sensors” position connects the entire bank to 5v from the USB.
+Moving the Jumper/Switch to the “Motors” position connects the entire bank to the external Battery.</p>
+
+<p><img src="/img/Dyio-leds-without-power.png" class="img-responsive" /></p>
+
+<h2 id="inputs-and-outputs">Inputs and Outputs</h2>
+<p>The DyIO has 24, 3-pin channels that are grouped into two banks with 12 channels each These channels are used to connect sensors, actuators (i.e. servos) or other peripherals to the DyIO. </p>
+
+<p>Each channel has a number of possible modes that change the behavior of the pin and give the user access to different functionality.</p>
+
+<p><img src="/img/channels.png" class="img-responsive" /></p>
+
  
             </div>
         </div>
@@ -78,20 +133,16 @@
                 <ul class="nav bs-docs-sidenav">
                 <li><strong>DyIO First Steps</strong><hr class="menuhr" /></li>
                 
-                    <li  >
-                         <a href="../Installing-Software-and-Drivers/">Installing Software and Drivers</a></li>
-                    
-                
                     <li class="active" >
                          <a href="./">Anatomy of the DyIO</a></li>
                     
                 
                     <li  >
-                         <a href="../Reading-Switches-Sensors-and-Inputs/">Reading Switches, Sensors, and Inputs</a></li>
+                         <a href="../Installing-Software-and-Drivers/">Installing Software and Drivers</a></li>
                     
                 
                     <li  >
-                         <a href="../Testing-With-NR-Console/">Testing with NR-Console</a></li>
+                         <a href="../Testing-With-NR-Console/">Testing with the DyIO Tab in Bowler Studio</a></li>
                     
                 
                     <li  >
@@ -99,26 +150,18 @@
                     
                 
                     <li  >
-                         <a href="../Moving-Motors-and-Blinking-Lights/">Moving Motors and Blinking Lights</a></li>
-                    
-                
-                    <li  >
                          <a href="../Setting-up-an-eclipse-project/">Setting up an Eclipse Project</a></li>
                     
                 
                     <li  >
-                         <a href="../Advanced-Features/">Advanced Features</a></li>
+                         <a href="../Where-to-go-from-here/">Where to go next</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
                 
-                <a href="../Installing-Software-and-Drivers/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				Previous
-			</a>
 
             
-			<a href="../Reading-Switches-Sensors-and-Inputs/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+			<a href="../Installing-Software-and-Drivers/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				

@@ -55,10 +55,6 @@
             About</a></li>
             
             
-            <li  ><a href="../../legal/">
-            Legal</a></li>
-            
-            
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -70,20 +66,12 @@
             <div class="bs-docs-section">
                 
 <h2 id="installing-software-and-drivers">Installing Software and Drivers</h2>
-<p>Before you can use the DyIO you’ll need to install The Java SDK, Drivers and NR-Console for your computer. Click the link for your platform below.</p>
-
-<ul>
-  <li><a href="#Windows">Windows</a></li>
-  <li><a href="#Mac">Mac</a></li>
-  <li><a href="#Linux">Linux</a></li>
-  <li><a href="#Pi-embed">Raspberry Pi and Embedded Linux</a></li>
-</ul>
-
-<h3 id="Windows">Installing On Windows</h3>
+<p>Before you can use the DyIO you’ll need to install Bowler Studio for your computer.
+Even if you plan to use Eclipse, Processing, or some other language entirely it is still a good idea to install BowlerStudio for your platform because it also installs drivers for the DyIO itself.</p>
 
 <div class="bs-callout bs-callout-danger">
 
-  <h4 id="install-drivers-before-plugging-in-dyio">Install Drivers before Plugging In DyIO</h4>
+  <h4 id="do-not-plug-in-dyio-on-windows-before-installing-drivers">Do not plug in DyIO on Windows before installing drivers.</h4>
 
   <p>On a windows computer it is important to run the installer before plugging in the DyIO. This prevents windows from auto-installing a correct driver.</p>
 
@@ -99,15 +87,29 @@
 
 </div>
 
-<p>First, Make sure you have the most recent version of java. Click on <a href="https://java.com/en/download/index.jsp">This Link</a> to go to Oracle’s Website and download the latest version of Java. If you already have Java installed you can skip this step. If you’re not sure then click on <a href="https://java.com/en/download/installed.jsp?detect=jre&amp;try=1">This Link</a> to check your instalation.</p>
+<h2 id="making-sure-everything-works">Making sure everything works</h2>
 
-<p>Once Java is installed then download the Neuron Robotics Windows Installer by clicking <a href="https://github.com/NeuronRobotics/java-bowler/releases/download/3.8.9/Windows-nrdk-3.8.9.exe">This Link</a> and open it.</p>
+<div class="bs-callout bs-callout-info">
 
-<h3 id="Mac">Installing On Mac OS X</h3>
+  <h4 id="try-using-bowlerstudio">Try Using BowlerStudio</h4>
 
-<h3 id="Linux">Installing On Linux</h3>
+  <p>IF you’re viewing this in a web browser thats cool but it will make more sense in BowlerStudio because you can just click “Run” and get instant gratification.</p>
+</div>
 
-<h3 id="Pi-embed">Installing On Linux</h3>
+<p>We’re gonna use this simple groovy script to check the status of our DyIO.
+If you don’t have a DyIO plugged in BowlerStudio should prompt you when you try and run the gist below. If everything worked out you should see the status of all the DyIO’s channels, its Serial Number, and some additional information.</p>
+
+<p>If everything’s kosher feel free to move onto additional steps.</p>
+
+<script src="https://gist.github.com/madhephaestus/5da47af65fbc1f991821.js"></script>
+
+<h2 id="custom-installs-and-special-cases">Custom installs and special cases</h2>
+
+<h3 id="just-the-udev-rules-please">Just the UDEV rules please</h3>
+
+<h3 id="java-on-the-raspberry-pi">Java on the Raspberry Pi</h3>
+
+<h3 id="java-on-the-beagle-bone-black">Java on the Beagle Bone Black</h3>
 
  
             </div>
@@ -118,20 +120,16 @@
                 <ul class="nav bs-docs-sidenav">
                 <li><strong>DyIO First Steps</strong><hr class="menuhr" /></li>
                 
+                    <li  >
+                         <a href="../Anatomy-of-the-DyIO/">Anatomy of the DyIO</a></li>
+                    
+                
                     <li class="active" >
                          <a href="./">Installing Software and Drivers</a></li>
                     
                 
                     <li  >
-                         <a href="../Anatomy-of-the-DyIO/">Anatomy of the DyIO</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Reading-Switches-Sensors-and-Inputs/">Reading Switches, Sensors, and Inputs</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Testing-With-NR-Console/">Testing with NR-Console</a></li>
+                         <a href="../Testing-With-NR-Console/">Testing with the DyIO Tab in Bowler Studio</a></li>
                     
                 
                     <li  >
@@ -139,22 +137,22 @@
                     
                 
                     <li  >
-                         <a href="../Moving-Motors-and-Blinking-Lights/">Moving Motors and Blinking Lights</a></li>
-                    
-                
-                    <li  >
                          <a href="../Setting-up-an-eclipse-project/">Setting up an Eclipse Project</a></li>
                     
                 
                     <li  >
-                         <a href="../Advanced-Features/">Advanced Features</a></li>
+                         <a href="../Where-to-go-from-here/">Where to go next</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
                 
+                <a href="../Anatomy-of-the-DyIO/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				Previous
+			</a>
 
             
-			<a href="../Anatomy-of-the-DyIO/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+			<a href="../Testing-With-NR-Console/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				
