@@ -64,7 +64,7 @@
             <div class="col-xs-6 col-lg-4 tut">
                 <!--<img data-src="holder.js/100%x180" alt="...">-->
                 <% if has_image(tut) %>
-                 <img src="<%=get_image(tut)%>" width="100%">
+                 <img src="<%=get_image(tut)%>" width="100%" style="height: 180px; overflow: hidden; ">
                 
                 <%else%>
                <img src="http://lorempixel.com/400/200/abstract/<%= tut[:ordering] %>" width="100%">

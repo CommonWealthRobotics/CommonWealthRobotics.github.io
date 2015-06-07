@@ -1,11 +1,12 @@
 ---
-title: Testing with NR-Console
+title: Testing with the DyIO Tab in Bowler Studio
 step: 2
 layout: post
 ---
-##  Nulla elementum luctus ##
- Nulla elementum luctus urna eget dignissim. Sed tempus consectetur leo, at fermentum purus feugiat ac. Nullam dignissim dignissim suscipit. Aliquam erat volutpat. Integer quis diam quis lectus sagittis finibus. Proin sed dolor scelerisque, viverra nibh eu, pellentesque orci. In id laoreet urna, vitae sagittis nisi. Aenean id congue leo. Mauris ac augue at velit consectetur eleifend. Ut in nisi in ligula gravida venenatis in sit amet eros. Proin at libero non augue fringilla dictum. Aliquam pharetra metus vel libero facilisis scelerisque.
- 
+##  The DyIO Tab ##
+This tab allows you to manipulate the channels of your DyIO without writing any code. Veteran users may recognize this tab as the DyIO tab from NR-Console.
+
+
 <div class="bs-callout bs-callout-info" markdown="1">
 
 #### Asparagus required ####
