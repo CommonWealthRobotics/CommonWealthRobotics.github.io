@@ -43,6 +43,13 @@ If everything's kosher feel free to move onto additional steps.
 <script src="https://gist.github.com/madhephaestus/5da47af65fbc1f991821.js"></script>
 
 
+## Common MAC problems ##
+
+### Wrong Java Version ###
+Sometimes, especially if you're using an older mac, the version of java is pretty old and needs to be updated. If you're getting the error below then you need to click on this link and install java version 8 or newer.
+
+<img src="/img/mac-old-java.png" class="img-responsive">
+
 
 
 ## Custom installs and special cases ##
