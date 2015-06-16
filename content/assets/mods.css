@@ -66,6 +66,7 @@ html,body {
 }
 .tut {
     margin-bottom: 10px;
+	height: 440px;
 }
 .steps {
     overflow-y: auto;
