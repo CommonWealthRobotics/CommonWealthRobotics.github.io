@@ -5,4 +5,4 @@ ordering: 1
 layout: post
 ---
 
-Get to know bowler studio
+BowlerStudio is a robot development application that combines scripting and device management with powerful control and processing features.
