@@ -9,6 +9,8 @@ Build monitor:
 
 https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
 
+[![Build Status](https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io.svg?branch=source)](https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io)
+
 ## How this thing works ##
 * The content directory will become the root of the website.
   - content/foo.md will become http://domain.com/foo/
