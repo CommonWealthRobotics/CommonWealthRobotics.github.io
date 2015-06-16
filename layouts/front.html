@@ -53,12 +53,6 @@
     </div>
     <div class="container">
         <%= yield %> 
-         <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
           <div class="row">
                       <% $tutorial_list.each do |tut| %>
             <div class="col-xs-6 col-lg-4 tut">
@@ -79,8 +73,8 @@
                     <li><a href="<%=relative_path_to(step)%>"><%= step[:title] %></a></li> 
                     <% end %>
                 </ol>
-
-             <a class="btn btn-default" href="<%= relative_path_to(get_first(tut))%>" role="button">Start Lesson &raquo;</a>
+				
+             <a class="btn btn-default" style="vertical-align: bottom;" href="<%= relative_path_to(get_first(tut))%>" role="button">Start Tutorial &raquo;</a>
            </div>
          </div><!--/.col-xs-6.col-lg-4-->
             <% end %>
@@ -93,8 +87,7 @@
 
 
           </div><!--/row-->
-        </div><!--/.col-xs-12.col-sm-9-->
-      </div><!--/row-->
+
 
     </div>
     <!-- Bootstrap core JavaScript
