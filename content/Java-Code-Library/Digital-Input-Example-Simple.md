@@ -4,7 +4,7 @@ step: 2
 layout: post
 ---
 
-<iframe width="280" height="150" src="//www.youtube.com/embed/A88uCyVGOHs?list=PL7668517BD22B5BA1" frameborder="0" allowfullscreen></iframe>
+<iframe width="280" height="150" src="http://www.youtube.com/embed/A88uCyVGOHs" frameborder="0" allowfullscreen></iframe>
 
 A Digital Input Channel is a channel on the DyIO set to Digital Input mode. Some common sensors that are typically used in Digital Input mode include limit switches and buttons.
 
