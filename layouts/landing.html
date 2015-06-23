@@ -101,7 +101,7 @@
 
     </div>
     <!-- /.content-section-a -->
-
+	<a  name="BowlerStudio"></a>
     <div class="content-section-b">
 
         <div class="container">
@@ -116,7 +116,11 @@
                     scripting and device management with powerful control and processing features. </p>
                     
                     <p class="lead">BowlerStudio brings the full power 
-					of The OpenCV image processing library, a Configurable kinematics engine based on D-H parameters, A Fully Featured JCSG based Cad and 3d Modeling engine, and a Built in WebKit browser capable of viewing documentation and executing code directly from Github Gists.
+					of The OpenCV image processing library, a Configurable 
+					kinematics engine based on D-H parameters, 
+					A Fully Featured JCSG based Cad and 3d Modeling engine, 
+					and a Built in WebKit browser capable of viewing documentation 
+					and executing code directly from Github Gists.
 </p><p class="lead">
 
 					Scripts can be loaded from the Local File System and edited using a editor of your choice or loaded from Github gists for a truly "backed up in the cloud" coding experience.
@@ -148,14 +152,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-
-                    <img class="img-responsive" src="img/windows_logo.png" alt="" size="80%" style="margin-left: auto; margin-right: auto;">
+					<a href="<%=@item[:winInstaller]%>">
+                    	<img class="img-responsive" src="img/windows_logo.png" alt="" size="80%" style="margin-left: auto; margin-right: auto;">
+                    </a>
                     <h3 class="text-center"><a href="<%=@item[:winInstaller]%>">Windows</a></h3>
                     <p class="lead">Run Installer and double click on Bowler Studio shortcut on your desktop.</p>
                 </div>
                 <div class="col-lg-4 col-sm-4">
-                    
-                    <img class="img-responsive" src="img/tux.png" alt="" style="margin-left: auto; margin-right: auto;">
+                    <a href="<%=@item[:linInstaller]%>">
+                    	<img class="img-responsive" src="img/tux.png" alt="" style="margin-left: auto; margin-right: auto;">
+                    </a>
                     <h3 class="text-center"><a href="<%=@item[:linInstaller]%>">Linux</a></h3>
                     
                     
@@ -172,15 +178,16 @@
                     
                 </div>
                 <div class="col-lg-4 col-sm-4">
-
-                    <img class="img-responsive" src="img/Apple_logo.png" alt="" style="margin-left: auto; margin-right: auto;">
+					<a href="<%=@item[:macInstaller]%>">
+                    	<img class="img-responsive" src="img/Apple_logo.png" alt="" style="margin-left: auto; margin-right: auto;">
+                    </a>
                     <h3 class="text-center"><a href="<%=@item[:macInstaller]%>">Mac</a></p><p class="lead">Extract ZIP file and double click on <code>bowlerstudio</code> to run</h3>
                 </div>
             
             </div>
         </div>
         <!-- /.container -->
-
+		</div>
     </div>
     <!-- /.content-section-a -->
 
