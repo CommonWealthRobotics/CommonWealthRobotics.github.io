@@ -43,3 +43,16 @@ or the space between the two curly braces `{}`, we can do something similar to w
 
 You can see in the body we print out i and then increment it by two so that when the loop runs again it will print out
 3, 5, 7, and so on. 
+
+###Do-While Loops###
+We can do the same thing with do-while loops, which are very similar to while loops.
+
+        int i = 1;
+        do
+        {
+            System.out.println(i);
+            i+=2;
+        } while (i <= 1001);
+
+So instead of putting the information of what to do inside the body of a while loop, you use a do statement, which is 
+looped over until the condition of the while loop is no longer true.
