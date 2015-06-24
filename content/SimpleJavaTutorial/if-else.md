@@ -32,5 +32,10 @@ So now that you can see how an if statement works lets, why dont you try a quick
             System.out.println("Does this work?");
         }
 
+What will the above codes do? Which will print out the statement? 
 
-        
+**Hint:** `%` is modulation, it returns 0 if there is no remainder and a 1 if there is.
+
+**Answers:** 
+: Does not print out the statement
+: Does print out the statement
