@@ -36,6 +36,6 @@ What will the above codes do? Which will print out the statement?
 
 **Hint:** `%` is modulation, it returns 0 if there is no remainder and a 1 if there is.
 
-**Answers:** 
+**Answers** 
 : Does not print out the statement
 : Does print out the statement
