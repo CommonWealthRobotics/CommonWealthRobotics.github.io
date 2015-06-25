@@ -1,5 +1,18 @@
 ---
-tutorial: true
-title: "Java Primative Types"
-order: 1
+title: "Primitave Types"
+step: 2
+layout: post
 ---
+##Caveman Java##
+###The 8 Primitave Types###
+####Integers####
+There are 4 Integer types in Java, which account for half the primitave types. The types are long, int, short, byte.
+
+| Integer  |   Size  |                               Explination                            |
+| :------: | :-----: | :------------------------------------------------------------------: |
+|   long   | 8 bytes |  Stores a value between -9223372036854775808 and 9223372036854775807 |
+|   int    | 4 bytes |        Stores a value between -2147483648 and 2147483647             |
+|   short  | 2 bytes |            Stores a value between -32768 and 32767                   |
+|   byte   | 1 bytes |            Stores an integer between -128 and 127                    |
+
+####Other Primitaves####
