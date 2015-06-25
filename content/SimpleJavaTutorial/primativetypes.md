@@ -16,3 +16,10 @@ There are 4 Integer types in Java, which account for half the primitave types. T
 |   byte   | 1 bytes |            Stores an integer between -128 and 127                    |
 
 ####Other Primitaves####
+
+|    Type    |   Size  |                               Explination                            |
+| :--------: | :-----: | :------------------------------------------------------------------  |
+|   double   | 8 bytes |  An IEEE 754 double precision number. It stores a value between -1.7976931348623157E308 and 1.7976931348623157E308 |
+|   float    | 4 bytes | An IEEE 754 floating point number. It stores a value between -3.4028235E38 and 3.4028235E38 |
+|   char     | 2 bytes |                            A two–byte Unicode character                                     |
+|   boolean  | 1 bytes |                             It holds a true or false                                       | 
