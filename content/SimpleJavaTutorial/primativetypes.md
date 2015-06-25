@@ -1,6 +1,6 @@
 ---
 title: "Primitave Types"
-step: 2
+step: 1
 layout: post
 ---
 ##Caveman Java##
