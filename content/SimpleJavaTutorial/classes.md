@@ -37,3 +37,4 @@ shares the name as the class.
             }
         }
 
+Constructors are often used. But now you know the very basics of java and can start putting everything you have learned together.
