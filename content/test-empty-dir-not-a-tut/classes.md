@@ -23,7 +23,7 @@ run, a `main` class is neccessary. All `main` methods are written as seen above:
             //Do something here
         }
 
-Sometimes there is a constructor staement, which is intialized in the main method. The construcor is a public method that
+Sometimes there is a constructor statement, which is intialized in the main method. The construcor is a public method that
 shares the name as the class.
 
         public class HelloWorld
