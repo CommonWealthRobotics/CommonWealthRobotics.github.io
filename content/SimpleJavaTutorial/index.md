@@ -1,6 +1,7 @@
 ---
-tutorial: true
 title: A Simple Java Tutorial
-order: 5
+tutorial: true
+ordering: 5
+layout: post
 ---
 A simple tutorial teaching the basics of java programming.
