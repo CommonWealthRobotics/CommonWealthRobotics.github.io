@@ -13,3 +13,27 @@ classes work. Make a document and save it as `HelloWorld.java`.
         System.out.println("Hello World");
       }
     }
+
+The class name `HelloWorld` should match the name of the file (e.g. `HelloWorld.java`). For any program that you want to 
+run, a `main` class is neccessary. All `main` methods are written as seen above:
+
+        public static void main(String[] args)
+        {
+            //Do something here
+        }
+
+Sometimes there is a constructor staement, which is intialized in the main method. The construcor is a public method that
+shares the name as the class.
+
+        public class HelloWorld
+        {
+            public void HelloWorld()
+            {
+                System.out.println("Hello World");
+            }
+            public static void main(String[] args)
+            {
+                HelloWorld hw = new HelloWorld();
+            }
+        }
+
