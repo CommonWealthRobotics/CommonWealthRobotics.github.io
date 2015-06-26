@@ -1,3 +1,7 @@
+menu: true
+menuorder: 3
+menuname: "Java Basics"
+
 ---
 tutorial: true
 title: "A Simple Java Tutorial"
