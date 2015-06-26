@@ -20,7 +20,7 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 
 |    Type    |   Size  |                               Explination                            |
 | :--------: | :-----: | :------------------------------------------------------------------  |
-|   double   | 8 bytes |  An IEEE 754 double precision number. It stores a value between -1.7976931348623157E308 and 1.7976931348623157E308 |
-|   float    | 4 bytes | An IEEE 754 floating point number. It stores a value between -3.4028235E38 and 3.4028235E38 |
+|   double   | 8 bytes |  An IEEE 754 double precision number. It stores a value between -1.7976931348623157 E308 and 1.7976931348623157 E308 |
+|   float    | 4 bytes | An IEEE 754 floating point number. It stores a value between -3.4028235 E38 and 3.4028235 E38 |
 |   char     | 2 bytes |                            A two–byte Unicode character                                     |
 |   boolean  | 1 bytes |                             It holds a true or false                                       | 
