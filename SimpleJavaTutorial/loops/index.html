@@ -43,15 +43,15 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             
-            <li  ><a href="../">
+            <li  ><a href="../../">
             Home</a></li>
             
             
-            <li  ><a href="../tutorials/">
+            <li  ><a href="../../tutorials/">
             Tutorials</a></li>
             
             
-            <li  ><a href="../about/">
+            <li  ><a href="../../about/">
             About</a></li>
             
             
@@ -65,8 +65,63 @@
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
                 
-<p>An exhaustive list of all the cool things you can do with the DyIO complete with example code</p>
+<h2 id="lets-learn-loops">Let’s Learn Loops!</h2>
+<p>###The For Loop###
+To begin learning for loops in Java let’s start a simple project to help you see some applications for for loops. 
+We will be looking at how a for loop can help us list all odd numbers between 1 - 1001. To do this we need to set an
+integer, or i, to equal 1, and make sure the for loop stops looping when our condition, i equals 1001, is met, but not 
+before, and to make sure that only the odd numbers are being recorded we need to increment i by 2 each time.</p>
 
+<pre><code>for (int i = 1; i &lt;= 1001; i += 2)
+{
+  System.out.println(i);
+}
+</code></pre>
+
+<p>We now hav created a for loop that prints out all odd numbers between 1 and 1001. <code>int i = 1</code> sets the value of <code>integer</code>
+i to 1. <code>i &lt;= 1001</code> sets our condition for the for loop. It means that as long as <code>integer</code> i is less than or equal to
+1001 the foor loop will continue to run and will stop as soon as that condition is no longer true. <code>i+=2</code> will increment
+<code>integer</code> i by 2, so that when the for loop runs once the value of i will now be 3, then 5, then 7, and so on, allowing 
+for only the odd numbers to be printed.</p>
+
+<h3 id="a-while-loop">A While Loop</h3>
+<p>We will use the same project we did in the for loop example to learn how while loops work. So like in the for loop we 
+need to have a conditional that need to be met <code>while</code> the loop runs. We can use the same condition we used in the 
+previous example.</p>
+
+<pre><code>    int i = 1;
+    while (int i &lt;= 1001)
+    {
+    }
+</code></pre>
+
+<p>Now we cant just print out i, or it will not do anything other than print out 1 forever, but in the body of the loop,
+or the space between the two curly braces <code>{}</code>, we can do something similar to what we did above with the for loops.</p>
+
+<pre><code>    int i = 1;
+    while (int i &lt;= 1001)
+    {
+        System.out.println(i);
+        i+=2;
+    }
+</code></pre>
+
+<p>You can see in the body we print out i and then increment it by two so that when the loop runs again it will print out
+3, 5, 7, and so on. </p>
+
+<h3 id="do-while-loops">Do-While Loops</h3>
+<p>We can do the same thing with do-while loops, which are very similar to while loops.</p>
+
+<pre><code>    int i = 1;
+    do
+    {
+        System.out.println(i);
+        i+=2;
+    } while (i &lt;= 1001);
+</code></pre>
+
+<p>So instead of putting the information of what to do inside the body of a while loop, you use a do statement, which is 
+looped over until the condition of the while loop is no longer true.</p>
  
             </div>
         </div>
@@ -74,57 +129,33 @@
         <div class="col-md-3">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                 <ul class="nav bs-docs-sidenav">
-                <li><strong>Neuron Robotics Documentation</strong><hr class="menuhr" /></li>
+                <li><strong>A Simple Java Tutorial</strong><hr class="menuhr" /></li>
                 
                     <li  >
-                         <a href="../tutorials/">Neuron Robotics Documentation</a></li>
-                    
-                
-                    <li  >
-                         <a href="../legal/">Neuron Robotics Documentation</a></li>
-                    
-                
-                    <li  >
-                         <a href="../kickstarter/">Kickstarter</a></li>
-                    
-                
-                    <li  >
-                         <a href="../about/">About me and my cats</a></li>
-                    
-                
-                    <li  >
-                         <a href="../SimpleJavaTutorial/">A Simple Java Tutorial</a></li>
+                         <a href="../primativetypes/">Primitive Types</a></li>
                     
                 
                     <li class="active" >
-                         <a href="./">Java Code Examples</a></li>
+                         <a href="./">Lets Learn Loops</a></li>
                     
                 
                     <li  >
-                         <a href="../DyIO-First-Steps/">DyIO First Steps</a></li>
+                         <a href="../if-else/">If/Else Statements</a></li>
                     
                 
                     <li  >
-                         <a href="../BowlerStudio/">BowlerStudio</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Bowler-Protocol/">Bowler Protocol</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Blog/">Neuron Robotics Cooperative Blog</a></li>
+                         <a href="../classes/">Clases</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
                 
-                <a href="../SimpleJavaTutorial/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+                <a href="../primativetypes/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
 			</a>
 
             
-			<a href="../DyIO-First-Steps/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+			<a href="../if-else/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				

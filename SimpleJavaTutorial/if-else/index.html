@@ -43,15 +43,15 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             
-            <li  ><a href="../">
+            <li  ><a href="../../">
             Home</a></li>
             
             
-            <li  ><a href="../tutorials/">
+            <li  ><a href="../../tutorials/">
             Tutorials</a></li>
             
             
-            <li  ><a href="../about/">
+            <li  ><a href="../../about/">
             About</a></li>
             
             
@@ -65,8 +65,78 @@
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
                 
-<p>An exhaustive list of all the cool things you can do with the DyIO complete with example code</p>
+<h2 id="ifelse-statements">If/Else Statements</h2>
+<p>###If Statements###
+If statements check to see if a conditional statement is true or not, and if it does it executes the code within its
+body. Lets look at a very quick example.</p>
 
+<pre><code>int i = 1;
+if (i &lt; 2)
+{
+  System.out.println("This is an if statement that works");
+}
+int i = 4;
+if (i &lt; 2)
+{
+  System.out.println("This is an if statement that doesn't works");
+}
+</code></pre>
+
+<p>So now that you can see how an if statement works lets, why dont you try a quick quiz.</p>
+
+<pre><code>    inx x = 2**2;
+    if(x &gt; 4)
+    {
+        System.out.println("Does this work?");
+    }
+    int i = 9;
+    if(i % 2 == 1)
+    {
+        System.out.println("Does this work?");
+    }
+</code></pre>
+
+<p>What will the above codes do? Which will print out the statement? </p>
+
+<p><strong>Hint:</strong> <code>%</code> is modulation, it returns 0 if there is no remainder and a 1 if there is.</p>
+
+<p><strong>Answers:</strong> 
++ Problem 1 -&gt; Does not print out the statement
++ Problem 2 -&gt; Does print out the statement</p>
+
+<h3 id="else-if-statements">Else If Statements</h3>
+<p>Else if statements are used as a fall back for if statements. When an if statements is false the else if statements 
+are now evaluated for wether or not they are true. </p>
+
+<pre><code>    inx x = 2**2;
+    if(x &gt; 4)
+    {
+        System.out.println("Does this work?");
+    }
+    else if(x % 2 == 0)
+    {
+        System.out.println("Does this work?");
+    }
+</code></pre>
+
+<h3 id="else-statements">Else Statements</h3>
+<p>Else statements are used as a fall back for if statements. When an if statements is false and the else if statements 
+are also false the else statement is always evaluated as true and what is in the body is always run.</p>
+
+<pre><code>    inx x = 2**2;
+    if(x &gt; 4)
+    {
+        System.out.println("Does this work?");
+    }
+    else if(x % 2 == 1)
+    {
+        System.out.println("Does this work?");
+    }
+    else 
+    {
+        System.out.println("Does this work?");
+    }
+</code></pre>
  
             </div>
         </div>
@@ -74,57 +144,33 @@
         <div class="col-md-3">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                 <ul class="nav bs-docs-sidenav">
-                <li><strong>Neuron Robotics Documentation</strong><hr class="menuhr" /></li>
+                <li><strong>A Simple Java Tutorial</strong><hr class="menuhr" /></li>
                 
                     <li  >
-                         <a href="../tutorials/">Neuron Robotics Documentation</a></li>
+                         <a href="../primativetypes/">Primitive Types</a></li>
                     
                 
                     <li  >
-                         <a href="../legal/">Neuron Robotics Documentation</a></li>
-                    
-                
-                    <li  >
-                         <a href="../kickstarter/">Kickstarter</a></li>
-                    
-                
-                    <li  >
-                         <a href="../about/">About me and my cats</a></li>
-                    
-                
-                    <li  >
-                         <a href="../SimpleJavaTutorial/">A Simple Java Tutorial</a></li>
+                         <a href="../loops/">Lets Learn Loops</a></li>
                     
                 
                     <li class="active" >
-                         <a href="./">Java Code Examples</a></li>
+                         <a href="./">If/Else Statements</a></li>
                     
                 
                     <li  >
-                         <a href="../DyIO-First-Steps/">DyIO First Steps</a></li>
-                    
-                
-                    <li  >
-                         <a href="../BowlerStudio/">BowlerStudio</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Bowler-Protocol/">Bowler Protocol</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Blog/">Neuron Robotics Cooperative Blog</a></li>
+                         <a href="../classes/">Clases</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
                 
-                <a href="../SimpleJavaTutorial/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+                <a href="../loops/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
 			</a>
 
             
-			<a href="../DyIO-First-Steps/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+			<a href="../classes/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				

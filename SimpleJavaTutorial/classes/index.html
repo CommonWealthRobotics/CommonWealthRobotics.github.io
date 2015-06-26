@@ -43,15 +43,15 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             
-            <li  ><a href="../">
+            <li  ><a href="../../">
             Home</a></li>
             
             
-            <li  ><a href="../tutorials/">
+            <li  ><a href="../../tutorials/">
             Tutorials</a></li>
             
             
-            <li  ><a href="../about/">
+            <li  ><a href="../../about/">
             About</a></li>
             
             
@@ -65,8 +65,44 @@
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
                 
-<p>An exhaustive list of all the cool things you can do with the DyIO complete with example code</p>
+<p>Classes are what contains all your executeable code in Java. We will make HelloWorld as a beginning example of how 
+classes work. Make a document and save it as <code>HelloWorld.java</code>.</p>
 
+<pre><code>public class HelloWorld
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Hello World");
+  }
+}
+</code></pre>
+
+<p>The class name <code>HelloWorld</code> should match the name of the file (e.g. <code>HelloWorld.java</code>). For any program that you want to 
+run, a <code>main</code> class is neccessary. All <code>main</code> methods are written as seen above:</p>
+
+<pre><code>    public static void main(String[] args)
+    {
+        //Do something here
+    }
+</code></pre>
+
+<p>Sometimes there is a constructor statement, which is intialized in the main method. The construcor is a public method that
+shares the name as the class.</p>
+
+<pre><code>    public class HelloWorld
+    {
+        public void HelloWorld()
+        {
+            System.out.println("Hello World");
+        }
+        public static void main(String[] args)
+        {
+            HelloWorld hw = new HelloWorld();
+        }
+    }
+</code></pre>
+
+<p>Constructors are often used. But now you know the very basics of java and can start putting everything you have learned together.</p>
  
             </div>
         </div>
@@ -74,62 +110,36 @@
         <div class="col-md-3">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                 <ul class="nav bs-docs-sidenav">
-                <li><strong>Neuron Robotics Documentation</strong><hr class="menuhr" /></li>
+                <li><strong>A Simple Java Tutorial</strong><hr class="menuhr" /></li>
                 
                     <li  >
-                         <a href="../tutorials/">Neuron Robotics Documentation</a></li>
+                         <a href="../primativetypes/">Primitive Types</a></li>
                     
                 
                     <li  >
-                         <a href="../legal/">Neuron Robotics Documentation</a></li>
+                         <a href="../loops/">Lets Learn Loops</a></li>
                     
                 
                     <li  >
-                         <a href="../kickstarter/">Kickstarter</a></li>
-                    
-                
-                    <li  >
-                         <a href="../about/">About me and my cats</a></li>
-                    
-                
-                    <li  >
-                         <a href="../SimpleJavaTutorial/">A Simple Java Tutorial</a></li>
+                         <a href="../if-else/">If/Else Statements</a></li>
                     
                 
                     <li class="active" >
-                         <a href="./">Java Code Examples</a></li>
-                    
-                
-                    <li  >
-                         <a href="../DyIO-First-Steps/">DyIO First Steps</a></li>
-                    
-                
-                    <li  >
-                         <a href="../BowlerStudio/">BowlerStudio</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Bowler-Protocol/">Bowler Protocol</a></li>
-                    
-                
-                    <li  >
-                         <a href="../Blog/">Neuron Robotics Cooperative Blog</a></li>
+                         <a href="./">Clases</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
                 
-                <a href="../SimpleJavaTutorial/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+                <a href="../if-else/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
 			</a>
 
             
-			<a href="../DyIO-First-Steps/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
-				Next
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				
-				
-			</a>
+			<a href="/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+				More
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+			
             </div> <!-- bs-docs-sidebar -->
         </div> <!-- col-md-3 -->
     </div> <!-- row -->
