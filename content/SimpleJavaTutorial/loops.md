@@ -1,8 +1,9 @@
 ---
-title: "Lets Learn Loops"
+title: Lets Learn Loops
 step: 2
 layout: post
 ---
+
 ##Let's Learn Loops!##
 ###The For Loop###
 To begin learning for loops in Java let's start a simple project to help you see some applications for for loops. 
