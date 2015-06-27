@@ -5,11 +5,11 @@ layout: post
 ---
 
 ##Caveman Java##
-###The 8 Primitave Types###
+###The 8 Primitive Types###
 ####Integers####
 There are 4 Integer types in Java, which account for half the primitive types. The types are long, int, short, byte.
 
-| Integer  |   Size  |                               Explination                            |
+| Integer  |   Size  |                               Explanation                            |
 | :------: | :-----: | :------------------------------------------------------------------: |
 |   long   | 8 bytes |  Stores a value between -9223372036854775808 and 9223372036854775807 |
 |   int    | 4 bytes |        Stores a value between -2147483648 and 2147483647             |
@@ -18,7 +18,7 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 
 ####Other Primitaves####
 
-|    Type    |   Size  |                               Explination                            |
+|    Type    |   Size  |                               Explanation                            |
 | :--------: | :-----: | :------------------------------------------------------------------  |
 |   double   | 8 bytes |  An IEEE 754 double precision number. It stores a value between -1.7976931348623157 E308 and 1.7976931348623157 E308 |
 |   float    | 4 bytes | An IEEE 754 floating point number. It stores a value between -3.4028235 E38 and 3.4028235 E38 |
