@@ -16,7 +16,7 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 |   short  | 2 bytes |            Stores a value between -32768 and 32767                   |
 |   byte   | 1 bytes |            Stores an integer between -128 and 127                    |
 
-####Other Primitaves####
+####Other Primitives####
 
 |    Type    |   Size  |                               Explanation                            |
 | :--------: | :-----: | :------------------------------------------------------------------  |
