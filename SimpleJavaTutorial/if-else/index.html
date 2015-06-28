@@ -67,34 +67,21 @@
                 
 <h2 id="ifelse-statements">If/Else Statements</h2>
 <p>###If Statements###
-If statements check to see if a conditional statement is true or not, and if it does it executes the code within its
-body. Lets look at a very quick example.</p>
+If statements check to see if a conditional statement is true or false. If the result of a conditional statement
+returns true, it executes the code within its body. Lets look at a very quick example.</p>
 
-<pre><code>int i = 1;
-if (i &lt; 2)
-{
-  System.out.println("This is an if statement that works");
-}
-int i = 4;
-if (i &lt; 2)
-{
-  System.out.println("This is an if statement that doesn't works");
-}
-</code></pre>
+<script src="https://gist.github.com/MrMepper/d657bc18471be68a7a43.js"></script>
 
-<p>So now that you can see how an if statement works lets, why dont you try a quick quiz.</p>
+<p>First, integer variable i is initialized to the value of 1. We then create an if statement that compares
+the value of i to the value of 2. Since i holds 1, which is less than two, the if statement executes the code within
+its block.</p>
 
-<pre><code>    inx x = 2**2;
-    if(x &gt; 4)
-    {
-        System.out.println("Does this work?");
-    }
-    int i = 9;
-    if(i % 2 == 1)
-    {
-        System.out.println("Does this work?");
-    }
-</code></pre>
+<p>Following this we assign to i the value of 4 and execute the if statement with the same exact conditions as the one
+before. Since the comparison “i &lt; 2” returns false, the if statement does not run the code within its block.</p>
+
+<p>So now that you can see how an if statement works, why don’t we try a quick quiz?</p>
+
+<script src="https://gist.github.com/MrMepper/488759f4f73554f96735.js"></script>
 
 <p>What will the above codes do? Which will print out the statement? </p>
 
@@ -106,37 +93,22 @@ if (i &lt; 2)
 
 <h3 id="else-if-statements">Else If Statements</h3>
 <p>Else if statements are used as a fall back for if statements. When an if statements is false the else if statements 
-are now evaluated for wether or not they are true. </p>
+are now evaluated for whether or not they are true.</p>
 
-<pre><code>    inx x = 2**2;
-    if(x &gt; 4)
-    {
-        System.out.println("Does this work?");
-    }
-    else if(x % 2 == 0)
-    {
-        System.out.println("Does this work?");
-    }
-</code></pre>
+<script src="https://gist.github.com/MrMepper/3df051b87c8dcff0f255.js"></script>
+
+<p>We initiate the value of x to “2**2”, which is equal to 4. Since the comparison “x &gt; 4” evaluates to false(because
+4 &gt; 4 is not true), the if statement passes on to the following else if statement.</p>
+
+<p>Since “4 % 2 == 0” evaluates to true, the code block of the else if is executed.</p>
 
 <h3 id="else-statements">Else Statements</h3>
-<p>Else statements are used as a fall back for if statements. When an if statements is false and the else if statements 
-are also false the else statement is always evaluated as true and what is in the body is always run.</p>
+<p>Else statements are used as a fall back for all if and else if statements. When an if statement is false,
+and the else if statements are also false, the else statement is always evaluated as true and what is in the body will
+always run.</p>
 
-<pre><code>    inx x = 2**2;
-    if(x &gt; 4)
-    {
-        System.out.println("Does this work?");
-    }
-    else if(x % 2 == 1)
-    {
-        System.out.println("Does this work?");
-    }
-    else 
-    {
-        System.out.println("Does this work?");
-    }
-</code></pre>
+<script src="https://gist.github.com/MrMepper/0a39c7a463f24e8ebece.js"></script>
+
  
             </div>
         </div>
@@ -159,7 +131,7 @@ are also false the else statement is always evaluated as true and what is in the
                     
                 
                     <li  >
-                         <a href="../classes/">Clases</a></li>
+                         <a href="../classes/">Classes</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
