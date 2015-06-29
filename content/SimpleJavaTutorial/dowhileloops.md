@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Let's Learn Loops!##
+
 ###Do-While Loops###
+
 We can do the same thing with do-while loops, which are very similar to while loops.
 
 <script src="https://gist.github.com/MrMepper/4115a1e6fcee1738d210.js"></script>

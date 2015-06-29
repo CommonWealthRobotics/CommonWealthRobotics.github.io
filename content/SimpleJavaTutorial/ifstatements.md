@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Conditional Statements##
+
 ###If Statements###
+
 If statements check to see if a conditional statement is true or false. If the result of a conditional statement
 returns true, it executes the code within its body. Lets look at a very quick example.
 

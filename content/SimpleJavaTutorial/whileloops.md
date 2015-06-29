@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Let's Learn Loops!##
+
 ###A While Loop###
+
 We will use the same project we did in the for loop example to learn how while loops work. So like in the for loop we
 need to have a conditional that needs to be met `while` the loop runs. We can use the same condition we used in the
 previous example.

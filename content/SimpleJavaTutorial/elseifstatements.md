@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Conditional Statements##
+
 ###Else If Statements###
+
 Else if statements are used as a fall back for if statements. When an if statements is false the else if statements
 are now evaluated for whether or not they are true.
 

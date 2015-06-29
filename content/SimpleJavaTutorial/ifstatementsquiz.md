@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Conditional Statements##
+
 ###If statements Quiz###
+
 So now that you can see how an if statement works, why don't we try a quick quiz?
 
 <script src="https://gist.github.com/MrMepper/488759f4f73554f96735.js"></script>

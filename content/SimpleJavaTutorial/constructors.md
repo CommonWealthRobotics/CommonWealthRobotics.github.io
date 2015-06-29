@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Classes##
+
 ###Constructors###
+
 Sometimes there is a constructor statement, which is initialized in the main method. The constructor is a public method that
 shares the name as the class.
 

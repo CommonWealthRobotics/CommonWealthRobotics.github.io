@@ -5,7 +5,9 @@ layout: post
 ---
 
 ##Classes##
+
 ###Basic Class###
+
 Classes are what contains all your executable code in Java. We will make HelloWorld as a beginning example of how
 classes work.
 
