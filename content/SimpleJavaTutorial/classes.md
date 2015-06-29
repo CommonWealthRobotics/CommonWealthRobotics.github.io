@@ -1,6 +1,6 @@
 ---
 title: Classes
-step: 4
+step: 7
 layout: post
 ---
 
