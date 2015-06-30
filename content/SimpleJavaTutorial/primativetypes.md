@@ -5,8 +5,11 @@ layout: post
 ---
 
 ##Caveman Java##
+
 ###The 8 Primitive Types###
+
 ####Integers####
+
 There are 4 Integer types in Java, which account for half the primitive types. The types are long, int, short, byte.
 
 | Integer  |   Size  |                               Explanation                            |
