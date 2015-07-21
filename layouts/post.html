@@ -62,15 +62,7 @@
             <!-- menu -->
         <div class="col-md-3">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-                <ul class="nav bs-docs-sidenav">
-                <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
-                <%get_my_steps(item).each do |s|%>
-                    <li <%if item==s%>class="active"<%end%> >
-                         <a href="<%=relative_path_to(s)%>"><%= get_title(s)%></a></li>
-                    
-                <%end%>      
-                </ul> <!-- nav bs-docs-sidenav -->
-                <%if has_last(item)%>
+            	<%if has_last(item)%>
                 <a href="<%=relative_path_to(last_step(item))%>" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
@@ -87,6 +79,15 @@
 				More
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 			<%end%>
+                <ul class="nav bs-docs-sidenav">
+                <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
+                <%get_my_steps(item).each do |s|%>
+                    <li <%if item==s%>class="active"<%end%> >
+                         <a href="<%=relative_path_to(s)%>"><%= get_title(s)%></a></li>
+                    
+                <%end%>      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
             </div> <!-- bs-docs-sidebar -->
         </div> <!-- col-md-3 -->
     </div> <!-- row -->
