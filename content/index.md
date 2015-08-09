@@ -4,8 +4,8 @@ menu: true
 menuorder: 0
 menuname: "Home"
 layout: landing
-winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.4.1/Windows-BowlerStudio-0.4.1.exe"
-linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.4.1/Ubuntu-BowlerStudio-0.4.1.deb"
-macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.4.1/MacOSX-BowlerStudio-0.4.1.zip"
+winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.4.2/Windows-BowlerStudio-0.4.2.exe"
+linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.4.2/Ubuntu-BowlerStudio-0.4.2.deb"
+macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.4.2/MacOSX-BowlerStudio-0.4.2.zip"
 ---
 
