@@ -26,7 +26,11 @@ To compile the source locally and see the rendered changes, run:
 
  nanoc view & guard
 
-and navagete to http://localhost:3000/ to view the local build. As you make changes, it will automatically compile continously. 
+and navagete to 
+
+ http://localhost:3000/
+
+to view the local build. As you make changes, it will automatically compile continously. 
 
 ## Adding A Tutorial ##
 A tutorial consists of a *Folder* in the *Content Directory* with one `index.md` file containing the tutorial info and multiple other `.md` files containg the steps.
