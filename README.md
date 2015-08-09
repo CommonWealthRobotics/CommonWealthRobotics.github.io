@@ -28,7 +28,7 @@ To compile the source locally and see the rendered changes, run:
 
 and navagete to 
 
- http://localhost:3000/
+http://localhost:3000/
 
 to view the local build. As you make changes, it will automatically compile continously. 
 
