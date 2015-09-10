@@ -66,4 +66,4 @@ Each channel has a number of possible modes that change the behavior of the pin 
 
 
 <img src="/img/channels.png" class="img-responsive"/>
-
+<img src="/img/dyioposter_had.png" class="img-responsive"/>
