@@ -22,6 +22,8 @@ BowlerStudio is an application to connect your devices together with scripts. Sc
 
 <script src="https://gist.github.com/madhephaestus/d4312a0787456ec27a2a.js"></script>
 
+<img src="/img/bowlerstudioscreengrab/scriptRun.png" alt="BowlerStudio Screen Cap" width="800">
+
  
 
 
