@@ -202,26 +202,34 @@ sudo scp /path/to/java/archive root@192.168.7.2:/path/to/user/home
 
 <p><code>shell
 gunzip jdk-8-linux-arm-vfp-hflt.tar.gz
-</code>
-5. Copy Upack the tar into the /usr directory:</p>
+</code></p>
+
+<ol>
+  <li>Copy Upack the tar into the /usr directory:</li>
+</ol>
 
 <p><code>shell
  sudo tar xf jdk-8-linux-arm-vfp-hflt.tar -C /usr
-</code>
-6. Next update the Java path by adding the following lines to the .bashrc file </p>
+</code></p>
+
+<ol>
+  <li>Next update the Java path by adding the following lines to the .bashrc file </li>
+</ol>
 
 <p><code>shell
 sudo nano ~/.bash_profile
-</code>
-Add the follownig to the ~/.bash_profile and save it</p>
+</code></p>
+
+<p>Add the follownig to the ~/.bash_profile and save it</p>
 
 <p><code>shell
 #### JAVA 1.8.0 #######################
     export JAVA_HOME=/usr/jdk1.8.0_60
     export PATH=$PATH:$JAVA_HOME/bin
  #### JAVA 1.8.0 #######################
-</code>
-Then Run</p>
+</code></p>
+
+<p>Then Run</p>
 
 <p><code>
 source ~/.bash_profile
@@ -261,8 +269,11 @@ unzip gradle-2.4-all.zip
 sudo mkdir -p /opt/gradle/2.4
 sudo mv gradle-2.4/* /opt/gradle/2.4/
 sudo ln -s /opt/gradle/2.4/ /opt/gradle/current
-</code>
-5. Now to add the proper PATH, open your bash profile:</p>
+</code></p>
+
+<ol>
+  <li>Now to add the proper PATH, open your bash profile:</li>
+</ol>
 
 <p><code>shell
 sudo nano ~/.bash_profile
@@ -277,19 +288,21 @@ export PATH=$PATH:$GRADLE_HOME/bin
 </code></pre>
 
 <h4 id="gradle-27">GRADLE 2.7</h4>
-<p>```
-Then Run</p>
+<p>```</p>
+
+<p>Then Run</p>
 
 <p><code>
 source ~/.bash_profile
 </code></p>
 
 <ol>
-  <li>Test installation and check version:
- <code>
-gradle -version
-</code></li>
+  <li>Test installation and check version:</li>
 </ol>
+
+<p><code>
+gradle -version
+</code></p>
 
 <h3 id="installing-maven-333-on-beaglebone-blackgreen">Installing Maven 3.3.3 on Beaglebone Black/Green</h3>
 
@@ -313,15 +326,19 @@ sudo tar -xvzpf apache-maven-3.3.3-bin.tar.gz
 sudo mkdir -p /opt/maven/3.3.3
 sudo mv apache-maven-3.3.3/* /opt/maven/3.3.3/
 sudo ln -s /opt/maven/3.3.3/ /opt/maven/current
-</code>
-5. Now to add the proper PATH, open your bash profile:</p>
+</code></p>
+
+<ol>
+  <li>Now to add the proper PATH, open your bash profile:</li>
+</ol>
 
 <p><code>shell
 sudo nano ~/.bash_profile
 </code></p>
 
-<p>Add the following to the file:
-  ```shell
+<p>Add the following to the file:</p>
+
+<p>```shell
 #### MAVEN 3.3.3 #########################</p>
 
 <pre><code>export MAVEN_HOME=/opt/maven/current
@@ -335,9 +352,13 @@ export PATH=$PATH:$MAVEN_HOME/bin
 
 <p><code>
 source ~/.bash_profile
-</code>
-6. Test installation and check version:
- <code>
+</code></p>
+
+<ol>
+  <li>Test installation and check version:</li>
+</ol>
+
+<p><code>
 mvn -version
 </code></p>
 
@@ -354,9 +375,13 @@ mvn -version
         <div class="col-md-3">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
             	
+                <a href="../Anatomy-of-the-DyIO/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				Previous
+			</a>
 
             
-			<a href="../Anatomy-of-the-DyIO/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+			<a href="../Testing-With-NR-Console/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				
@@ -365,12 +390,12 @@ mvn -version
                 <ul class="nav bs-docs-sidenav">
                 <li><strong>DyIO First Steps</strong><hr class="menuhr" /></li>
                 
-                    <li class="active" >
-                         <a href="./">Installing Software and Drivers</a></li>
-                    
-                
                     <li  >
                          <a href="../Anatomy-of-the-DyIO/">Anatomy of the DyIO</a></li>
+                    
+                
+                    <li class="active" >
+                         <a href="./">Installing Software and Drivers</a></li>
                     
                 
                     <li  >
@@ -382,11 +407,11 @@ mvn -version
                     
                 
                     <li  >
-                         <a href="../Where-to-go-from-here/">Where to go next</a></li>
+                         <a href="../Setting-up-an-eclipse-project/">Setting up an Eclipse Project</a></li>
                     
                 
                     <li  >
-                         <a href="../Setting-up-an-eclipse-project/">Setting up an Eclipse Project</a></li>
+                         <a href="../Where-to-go-from-here/">Where to go next</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
