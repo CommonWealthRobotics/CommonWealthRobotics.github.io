@@ -64,27 +64,50 @@ Sometimes, especially if you're using an older mac, the version of java is prett
 Visit the getting started guide and get your Beabgleboard up and running.
 http://beagleboard.org/getting-started
 
-#### SSH Access
-It is important to have SSH access on your Beaglebone for installing Java and building BowlerStudio.
+### SSH Access
+It is important to have SSH access on your Beaglebone for installing Java and building BowlerStudio. First get SSH access on your Beaglebone Black/Green the guide below will help with that no matter which operating system you are using.
 
-Linux / UNIX
+**Linux / UNIX**
+
 1. Open a Terminal emulator
 2. Type : ssh root@192.168.7.2
 3. When prompted for a password just hit enter the root password is blank by default on the Beaglebone
 
-Windows
+**Windows**
+
 1. Download and Install PuTTY Telnet Client: http://www.putty.org/
 2. Install and Open PuTTY
 3. Select SSH in the configuration dialog, type: 192.168.7.2 for the address  and click open
 4. Type in root for the username, the password is blank by default so just hit enter
 
-Mac OS X
+**Mac OS X**
+
 1. On Mac OS X go into the /Applications/Utilities and open Terminal.app
 2. Type : sudo ssh root@192.168.7.2
 3. Type your user password
 4. When prompted for a password just hit enter the root password is blank by default on the Beaglebone
 
+### Installing Java 8 JDK
 
+**Installing on Debian** (ships with Beaglebone)
+Installing the Latest Java from Oracle is rather simple since the Beaglebone Black/Green ships with Debian which utilizes the apt-get package manager. There happens to be a repository for Java 8 so it can be isntalled easily this way.
+
+apt-get package manager method
+```shell
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+```
+
+If the package is not available alternatively try:
+```shell
+wget https://repos.rcn-ee.net/debian/pool/main/o/oracle-java8-installer/oracle-java8-installer_8u31%2b8u33arm-1~bpo70%2b20150121%2b1_all.deb
+sudo dpkg -i oracle-java8-installer_8u31%2b8u33arm-1~bpo70%2b20150121%2b1_all.deb
+```
+
+The installation will take some time to finish, when it does it will tell you that Java 8 has installed successfully. This tutorial was created using information found here: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian#Oracle_Java_8
+
+**Installing on Ubuntu**
+Coming Soon......
 
 
 
