@@ -60,5 +60,33 @@ Sometimes, especially if you're using an older mac, the version of java is prett
 
 ### Java on the Beagle Bone Black ###
 
+#### Beaglbone Black/Green Getting Started:
+Visit the getting started guide and get your Beabgleboard up and running.
+http://beagleboard.org/getting-started
+
+#### SSH Access
+It is important to have SSH access on your Beaglebone for installing Java and building BowlerStudio.
+
+Linux / UNIX
+1. Open a Terminal emulator
+2. Type : ssh root@192.168.7.2
+3. When prompted for a password just hit enter the root password is blank by default on the Beaglebone
+
+Windows
+1. Download and Install PuTTY Telnet Client: http://www.putty.org/
+2. Install and Open PuTTY
+3. Select SSH in the configuration dialog, type: 192.168.7.2 for the address  and click open
+4. Type in root for the username, the password is blank by default so just hit enter
+
+Mac OS X
+1. On Mac OS X go into the /Applications/Utilities and open Terminal.app
+2. Type : sudo ssh root@192.168.7.2
+3. Type your user password
+4. When prompted for a password just hit enter the root password is blank by default on the Beaglebone
+
+
+
+
+
 
 
