@@ -107,10 +107,10 @@ Type the following to add your new user to the sudoers file:
 sudo yournewusername sudo
 ```
 
-
-### Installing Java 8 JDK
+### Installing Java 8 JDK on Beaglebone Black/Green
 
 **From a Linux PC**
+These Instructions Require a PC Running Linux, they might work with OS X But untested
 
 **Installing on Debian** (ships with Beaglebone)
 
@@ -136,9 +136,22 @@ gunzip jdk-8-linux-arm-vfp-hflt.tar.gz
 6. Next update the Java path by adding the following lines to the .bashrc file 
 
   ```shell
- export JAVA_HOME=/usr/jdk1.8.0_60
- export PATH=$PATH:$JAVA_HOME/bin
+sudo nano ~/.bash_profile
 ```
+Add the follownig to the ~/.bash_profile and save it
+
+  ```shell
+#### JAVA 1.8.0 #######################
+    export JAVA_HOME=/usr/jdk1.8.0_60
+    export PATH=$PATH:$JAVA_HOME/bin
+ #### JAVA 1.8.0 #######################
+```
+Then Run
+
+ ```
+source ~/.bash_profile
+```
+
 7. Finally to test the install and check the Java version:
 
   ```shell
@@ -152,6 +165,94 @@ Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
 Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)
 ```
 
+### Installing Gradle 2.7 on Beaglebone Black/Green
+
+1. Open a Terminal session
+2. Access the Beaglebone over SSH under the user account you created earlier inthe tutorial
+3. Now download the latest Gradle
+
+  ```shell
+cd /tmp
+sudo wget https://services.gradle.org/distributions/gradle-2.7-all.zip
+```
+4. Now to unpack the archive, create the install directory, and move the contents of the archive tot he directory
+
+  ```shell
+unzip gradle-2.4-all.zip
+sudo mkdir -p /opt/gradle/2.4
+sudo mv gradle-2.4/* /opt/gradle/2.4/
+sudo ln -s /opt/gradle/2.4/ /opt/gradle/current
+```
+5. Now to add the proper PATH, open your bash profile:
+
+  ```shell
+sudo nano ~/.bash_profile
+```
+
+Add the following to the file:
+  ```shell
+#### GRADLE 2.7 ###########################
+
+	export GRADLE_HOME=/opt/gradle/current
+	export PATH=$PATH:$GRADLE_HOME/bin
+
+#### GRADLE 2.7 ###########################
+```
+Then Run
+
+ ```
+source ~/.bash_profile
+```
+
+6. Test installation and check version:
+ ```
+gradle -version
+```
+
+### Installing Maven 3.3.3 on Beaglebone Black/Green
+
+1. Open a Terminal session
+2. Access the Beaglebone over SSH under the user account you created earlier inthe tutorial
+3. Now download the latest Gradle
+
+  ```shell
+cd /tmp
+sudo wget http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+```
+
+4. Now to unpack the archive, create the install directory, and move the contents of the archive tot he directory
+
+  ```shell
+sudo tar -xvzpf apache-maven-3.3.3-bin.tar.gz
+sudo mkdir -p /opt/maven/3.3.3
+sudo mv apache-maven-3.3.3/* /opt/maven/3.3.3/
+sudo ln -s /opt/maven/3.3.3/ /opt/maven/current
+```
+5. Now to add the proper PATH, open your bash profile:
+
+  ```shell
+sudo nano ~/.bash_profile
+```
+
+Add the following to the file:
+  ```shell
+#### MAVEN 3.3.3 #########################
+
+	export MAVEN_HOME=/opt/maven/current
+	export PATH=$PATH:$MAVEN_HOME/bin
+
+#### MAVEN 3.3.3 #########################
+```
+
+Then Run
+
+ ```
+source ~/.bash_profile
+```
+6. Test installation and check version:
+ ```
+mvn -version
+```
 
 **Installing on Ubuntu**
 
