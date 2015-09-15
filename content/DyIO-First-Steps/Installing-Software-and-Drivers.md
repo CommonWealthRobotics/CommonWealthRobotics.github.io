@@ -87,27 +87,77 @@ It is important to have SSH access on your Beaglebone for installing Java and bu
 3. Type your user password
 4. When prompted for a password just hit enter the root password is blank by default on the Beaglebone
 
+### Setting Up a New User Account
+
+For security purposes and preventing catastrophic failures with the operating system it is good practice to make a dedicated user account for running your applications and programs on the Beaglebone Black/Green. During this part of the tutorial we will go over adding a new user to the Beaglebone Black.
+
+First Open an SSH session using the guide above. For this process we need to login as root, as mentioned before the default password for root is blank so type nothign when prompted for it.
+
+To create a new user type the following and follow the instructions on the screen:
+
+  ```shell
+sudo adduser newusername
+```
+
+Now that we have created a new user account we need to add it to the sudoers file so the user can perform tasks as administrator. 
+
+Type the following to add your new user to the sudoers file:
+
+  ```shell
+sudo yournewusername sudo
+```
+
+
 ### Installing Java 8 JDK
 
+**From a Linux PC**
+
 **Installing on Debian** (ships with Beaglebone)
-Installing the Latest Java from Oracle is rather simple since the Beaglebone Black/Green ships with Debian which utilizes the apt-get package manager. There happens to be a repository for Java 8 so it can be isntalled easily this way.
 
-apt-get package manager method
-```shell
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
+The Neuron Robotics RDK and BowlerStudio require the latest Java 8 JDK/JRE for ARM from Oracle. 
+
+1. First on your local machine download the latest Java 8 package for Linux ARM v6/v7 Hard Fload ABI found here: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+2. Copy the Java archive to the home directory of the root user on your Beaglebone Black/Green. Open up a Terminal session on your local machine and type with the following command:
+
+  ```shell
+sudo scp /path/to/java/archive root@192.168.7.2:/path/to/user/home
+```
+3. Once the file has finished copying over to the home directory of your user account on the Beaglebone open up a Terminal session and SSH into the Beaglebone
+4. Once inside the SSH session on the Beaglebone Black/Green unpack the java archive:
+
+  ```shell
+gunzip jdk-8-linux-arm-vfp-hflt.tar.gz
+```
+5. Copy Upack the tar into the /usr directory:
+
+  ```shell
+ sudo tar xf jdk-8-linux-arm-vfp-hflt.tar -C /usr
+```
+6. Next update the Java path by adding the following lines to the .bashrc file 
+
+  ```shell
+ export JAVA_HOME=/usr/jdk1.8.0_60
+ export PATH=$PATH:$JAVA_HOME/bin
+```
+7. Finally to test the install and check the Java version:
+
+  ```shell
+java -version
+```
+It should print back something like this:
+
+  ```shell
+java version "1.8.0_60"
+Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)
 ```
 
-If the package is not available alternatively try:
-```shell
-wget https://repos.rcn-ee.net/debian/pool/main/o/oracle-java8-installer/oracle-java8-installer_8u31%2b8u33arm-1~bpo70%2b20150121%2b1_all.deb
-sudo dpkg -i oracle-java8-installer_8u31%2b8u33arm-1~bpo70%2b20150121%2b1_all.deb
-```
-
-The installation will take some time to finish, when it does it will tell you that Java 8 has installed successfully. This tutorial was created using information found here: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian#Oracle_Java_8
 
 **Installing on Ubuntu**
+
 Coming Soon......
+
+**From a Mac**
 
 
 
