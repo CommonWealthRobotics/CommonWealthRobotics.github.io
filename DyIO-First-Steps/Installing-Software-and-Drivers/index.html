@@ -131,25 +131,56 @@ If you don’t have a DyIO plugged in BowlerStudio should prompt you when you tr
 <p>Visit the getting started guide and get your Beabgleboard up and running.
 http://beagleboard.org/getting-started</p>
 
-<h4 id="ssh-access">SSH Access</h4>
-<p>It is important to have SSH access on your Beaglebone for installing Java and building BowlerStudio.</p>
+<h3 id="ssh-access">SSH Access</h3>
+<p>It is important to have SSH access on your Beaglebone for installing Java and building BowlerStudio. First get SSH access on your Beaglebone Black/Green the guide below will help with that no matter which operating system you are using.</p>
 
-<p>Linux / UNIX
-1. Open a Terminal emulator
-2. Type : ssh root@192.168.7.2
-3. When prompted for a password just hit enter the root password is blank by default on the Beaglebone</p>
+<p><strong>Linux / UNIX</strong></p>
 
-<p>Windows
-1. Download and Install PuTTY Telnet Client: http://www.putty.org/
-2. Install and Open PuTTY
-3. Select SSH in the configuration dialog, type: 192.168.7.2 for the address  and click open
-4. Type in root for the username, the password is blank by default so just hit enter</p>
+<ol>
+  <li>Open a Terminal emulator</li>
+  <li>Type : ssh root@192.168.7.2</li>
+  <li>When prompted for a password just hit enter the root password is blank by default on the Beaglebone</li>
+</ol>
 
-<p>Mac OS X
-1. On Mac OS X go into the /Applications/Utilities and open Terminal.app
-2. Type : sudo ssh root@192.168.7.2
-3. Type your user password
-4. When prompted for a password just hit enter the root password is blank by default on the Beaglebone</p>
+<p><strong>Windows</strong></p>
+
+<ol>
+  <li>Download and Install PuTTY Telnet Client: http://www.putty.org/</li>
+  <li>Install and Open PuTTY</li>
+  <li>Select SSH in the configuration dialog, type: 192.168.7.2 for the address  and click open</li>
+  <li>Type in root for the username, the password is blank by default so just hit enter</li>
+</ol>
+
+<p><strong>Mac OS X</strong></p>
+
+<ol>
+  <li>On Mac OS X go into the /Applications/Utilities and open Terminal.app</li>
+  <li>Type : sudo ssh root@192.168.7.2</li>
+  <li>Type your user password</li>
+  <li>When prompted for a password just hit enter the root password is blank by default on the Beaglebone</li>
+</ol>
+
+<h3 id="installing-java-8-jdk">Installing Java 8 JDK</h3>
+
+<p><strong>Installing on Debian</strong> (ships with Beaglebone)
+Installing the Latest Java from Oracle is rather simple since the Beaglebone Black/Green ships with Debian which utilizes the apt-get package manager. There happens to be a repository for Java 8 so it can be isntalled easily this way.</p>
+
+<p>apt-get package manager method
+<code>shell
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+</code></p>
+
+<p>If the package is not available alternatively try:
+<code>shell
+wget https://repos.rcn-ee.net/debian/pool/main/o/oracle-java8-installer/oracle-java8-installer_8u31%2b8u33arm-1~bpo70%2b20150121%2b1_all.deb
+sudo dpkg -i oracle-java8-installer_8u31%2b8u33arm-1~bpo70%2b20150121%2b1_all.deb
+</code></p>
+
+<p>The installation will take some time to finish, when it does it will tell you that Java 8 has installed successfully. This tutorial was created using information found here: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian#Oracle_Java_8</p>
+
+<p><strong>Installing on Ubuntu</strong>
+Coming Soon……</p>
 
  
             </div>
