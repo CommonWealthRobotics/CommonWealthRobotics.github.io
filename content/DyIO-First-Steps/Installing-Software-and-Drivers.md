@@ -128,16 +128,19 @@ sudo scp /path/to/java/archive root@192.168.7.2:/path/to/user/home
   ```shell
 gunzip jdk-8-linux-arm-vfp-hflt.tar.gz
 ```
+
 5. Copy Upack the tar into the /usr directory:
 
   ```shell
  sudo tar xf jdk-8-linux-arm-vfp-hflt.tar -C /usr
 ```
+
 6. Next update the Java path by adding the following lines to the .bashrc file 
 
   ```shell
 sudo nano ~/.bash_profile
 ```
+
 Add the follownig to the ~/.bash_profile and save it
 
   ```shell
@@ -146,6 +149,7 @@ Add the follownig to the ~/.bash_profile and save it
     export PATH=$PATH:$JAVA_HOME/bin
  #### JAVA 1.8.0 #######################
 ```
+
 Then Run
 
  ```
@@ -183,6 +187,7 @@ sudo mkdir -p /opt/gradle/2.4
 sudo mv gradle-2.4/* /opt/gradle/2.4/
 sudo ln -s /opt/gradle/2.4/ /opt/gradle/current
 ```
+
 5. Now to add the proper PATH, open your bash profile:
 
   ```shell
@@ -198,6 +203,7 @@ Add the following to the file:
 
 #### GRADLE 2.7 ###########################
 ```
+
 Then Run
 
  ```
@@ -205,6 +211,7 @@ source ~/.bash_profile
 ```
 
 6. Test installation and check version:
+
  ```
 gradle -version
 ```
@@ -228,6 +235,7 @@ sudo mkdir -p /opt/maven/3.3.3
 sudo mv apache-maven-3.3.3/* /opt/maven/3.3.3/
 sudo ln -s /opt/maven/3.3.3/ /opt/maven/current
 ```
+
 5. Now to add the proper PATH, open your bash profile:
 
   ```shell
@@ -235,6 +243,7 @@ sudo nano ~/.bash_profile
 ```
 
 Add the following to the file:
+
   ```shell
 #### MAVEN 3.3.3 #########################
 
@@ -249,7 +258,9 @@ Then Run
  ```
 source ~/.bash_profile
 ```
+
 6. Test installation and check version:
+
  ```
 mvn -version
 ```
