@@ -220,7 +220,7 @@ gradle -version
 
 1. Open a Terminal session
 2. Access the Beaglebone over SSH under the user account you created earlier inthe tutorial
-3. Now download the latest Gradle
+3. Now download the latest Maven
 
   ```shell
 cd /tmp
