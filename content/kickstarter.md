@@ -1,12 +1,8 @@
 ---
 title: Kickstarter
-template: default
+template: ksredir
 ---
 
 ## KICKSTARTER
 
-we're gonna do a kickstarter
-
-* reason
-* another reason
-* something something dyio 
+We're Redirecting you to our kickstarter.
