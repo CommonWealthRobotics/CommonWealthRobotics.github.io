@@ -1,8 +1,10 @@
 
+    
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="full" > <!--  -->
   <head>
-    <meta http-equiv="Refresh" content="0; url=https://www.kickstarter.com/projects/neuronrobotics/wifi-dyio-robot-controller-w-24-channels?ref=nav_search" />
+  	<meta http-equiv="Refresh" content="0; url=https://www.kickstarter.com/projects/neuronrobotics/wifi-dyio-robot-controller-w-24-channels?ref=nav_search" />
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,13 +25,12 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-
-
     <!-- Custom styles for this template -->
     <link href="/assets/offcanvas.css" rel="stylesheet">
 	    <link href="/assets/docsmin.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+	    <link href="/assets/full.css" rel="stylesheet">
 	<link href="/assets/mods.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,8 +39,8 @@
     <![endif]-->
   </head>
 
-  <body data-twttr-rendered="true">
-  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -61,59 +62,15 @@
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
-  <div class="container bs-docs-container">
-    <div class="row">
-    <!-- page content -->
-        <div class="col-md-9" role="main">
-            <div class="bs-docs-section">
-                <%= yield %> 
-            </div>
-        </div>
-            <!-- menu -->
-        <div class="col-md-3">
-            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-            	<%if has_last(item)%>
-                <a href="<%=relative_path_to(last_step(item))%>" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				Previous
-			</a><%end%>
-
-            <%if has_next(item)%>
-			<a href="<%=relative_path_to(next_step(item))%>" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
-				Next
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				
-				
-			</a><%else%>
-			<a href="/" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
-				More
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-			<%end%><br>
-                <ul class="nav bs-docs-sidenav">
-                <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
-                <%get_my_steps(item).each do |s|%>
-                    <li <%if item==s%>class="active"<%end%> >
-                         <a href="<%=relative_path_to(s)%>"><%= get_title(s)%></a></li>
-                    
-                <%end%>      
-                </ul> <!-- nav bs-docs-sidenav -->
-                
-            </div> <!-- bs-docs-sidebar -->
-        </div> <!-- col-md-3 -->
-    </div> <!-- row -->
-  </div> <!-- container bs-docs-container -->
-<!--  
-<footer class="bs-docs-footer" role="contentinfo">
-  <div class="container">
-  Woo! Footer!
-  </div>
-</footer>
--->
-
+    <div class="hero-unit test">
+    </div>
+    <div class="container">
+        <%= yield %> 
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
