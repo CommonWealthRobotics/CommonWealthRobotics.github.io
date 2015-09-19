@@ -5,4 +5,6 @@ template: ksredir
 
 ## KICKSTARTER
 
+<META http-equiv="refresh" content="0;URL=https://www.kickstarter.com/projects/neuronrobotics/wifi-dyio-robot-controller-w-24-channels">
+
 We're Redirecting you to our kickstarter.
