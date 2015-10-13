@@ -65,6 +65,7 @@
 
             <!-- menu -->
         <div class="col-md-3">
+        
             <div class="bs-docs-sidebar hidden-print hidden-xs affix-top">
             	<%if has_last(item)%>
                 <a href="<%=relative_path_to(last_step(item))%>" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
@@ -73,7 +74,7 @@
 			</a><%end%>
 
             <%if has_next(item)%>
-			<a href="<%=relative_path_to(next_step(item))%>" class="btn btn-default navbtn pull-right btn-sm" aria-label="Right Align">
+			<a href="<%=relative_path_to(next_step(item))%>" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				
