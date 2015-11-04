@@ -6,6 +6,8 @@ install:
 
 script: bundle exec rake site:deploy
 
+sudo: false
+
 env:
     global:
         secure: "n2cN89iUjGyLaOcbkeax7iDiOTfGSrw4pVbxwkU4Kk6TIHslFwDIclNIyJ2h8SlUK+GYvWxlnVwP8pDILdZIjSmrGSaudTibIkGGc4jgMWQF4AbmqzCbavrnl/tYWrcfXf30byg3/vNh7wsupH4x/GRXq1xN8uZKskfPFQcEvpo="
