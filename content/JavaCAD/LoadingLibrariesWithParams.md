@@ -1,6 +1,6 @@
 ---
-title: Loading Factories (Libraries)
-step: 13
+title: Factories with Parameters
+step: 14
 layout: post
 ---
 In software sometimes we wand to separate out some code that. We may want to use it over and over again, or maybe we want to share it with other people. In JavaCAD we want to use the [Factory Pattern](https://en.wikipedia.org/wiki/Factory_method_pattern) meaning we crate a factory with the script, then call it to create objects for us. The simplest case of this is to return a CSG which we call '.clone()'. 
