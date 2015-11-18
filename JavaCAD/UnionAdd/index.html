@@ -76,83 +76,83 @@
         
             <div class="bs-docs-sidebar hidden-print affix-top">
             	
-                <a href="../DeviceTabs/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+                <a href="../Resize/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				Previous
 			</a>
 
             
-			<a href="../GameController/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+			<a href="../DifferenceSubtract/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				
 				
 			</a><br>
                 <ul class="nav bs-docs-sidenav hidden-sm hidden-xs">
-                <li><strong>BowlerStudio</strong><hr class="menuhr" /></li>
+                <li><strong>JavaCAD</strong><hr class="menuhr" /></li>
                 
                     <li  >
-                         <a href="../Welcome-To-BowlerStudio/">Welcome to BowlerStudio</a></li>
+                         <a href="../Overview/">Overview</a></li>
                     
                 
                     <li  >
-                         <a href="../GistLoading/">Gist Code Hosting</a></li>
+                         <a href="../Cube/">Cube</a></li>
                     
                 
                     <li  >
-                         <a href="../DyIOScripting/">DyIO scripting</a></li>
+                         <a href="../RoundedCube/">Rounded Cube</a></li>
                     
                 
                     <li  >
-                         <a href="../JavaCad/">JavaCad CheatSheet</a></li>
+                         <a href="../Sphere/">Sphere</a></li>
                     
                 
                     <li  >
-                         <a href="../PythonScripting/">Python scripting</a></li>
+                         <a href="../CylinderCone/">Cylinder and Cone</a></li>
                     
                 
                     <li  >
-                         <a href="../ClojureCad/">ClojureCad</a></li>
+                         <a href="../PolygonExtrude/">Polygons and Extrusion</a></li>
                     
                 
                     <li  >
-                         <a href="../Tabs/">Using Tabs</a></li>
+                         <a href="../STL/">Load/Save STL</a></li>
                     
                 
                     <li  >
-                         <a href="../DeviceTabs/">Camera Display</a></li>
+                         <a href="../MoveRotate/">Move and Rotate</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Resize/">Resize</a></li>
                     
                 
                     <li class="active" >
-                         <a href="./">BowlerStudio Cameras</a></li>
+                         <a href="./">Union (Addition)</a></li>
                     
                 
                     <li  >
-                         <a href="../GameController/">Game Controllers</a></li>
+                         <a href="../DifferenceSubtract/">Difference (Subtraction)</a></li>
                     
                 
                     <li  >
-                         <a href="../KinematicsCad/">Kinematics Cad</a></li>
+                         <a href="../IntersectAnd/">Intersection (Boolean 'AND')</a></li>
                     
                 
                     <li  >
-                         <a href="../InlineScripting/">Inline Scripting</a></li>
+                         <a href="../ColorDebugging/">Colors and Debugging</a></li>
                     
                 
                     <li  >
-                         <a href="../CustomKinematics/">Custom Kinematics</a></li>
+                         <a href="../SimpleLoadingLibraries/">Loading Libraries (Factory)</a></li>
                     
                 
                     <li  >
-                         <a href="../MovingKinematicsDevices/">Moving Kinematics Devices</a></li>
+                         <a href="../LoadingLibrariesWithParams/">Factories with Parameters</a></li>
                     
                 
                     <li  >
-                         <a href="../CustomBowlerDevices/">Custom Bowler Devices</a></li>
-                    
-                
-                    <li  >
-                         <a href="../PlayWavFile/">Play Wav File</a></li>
+                         <a href="../LinkCadToRobot/">Link Cad to Robot</a></li>
                     
                       
                 </ul> <!-- nav bs-docs-sidenav -->
@@ -163,62 +163,6 @@
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
                 
-<p>BowlerStudio integrates OpenCV’s new Java bindings to add full power and full speed image processing to your robotic project. 
-Image processing objects can be chained together to form processing pipelines. All default Haar cascades are bundled in the application, and the full API is available in the scripting interface to add custom image processors. </p>
-
-<script src="https://gist.github.com/madhephaestus/4db9defef935e2905690.js"></script>
-
-<p>Other processors include: </p>
-
-<p>haarcascade_eye_tree_eyeglasses.xml  </p>
-
-<p>haarcascade_mcs_eyepair_big.xml </p>
-
-<p>haarcascade_profileface.xml</p>
-
-<p>haarcascade_eye.xml           </p>
-
-<p>haarcascade_mcs_eyepair_small.xml  </p>
-
-<p>haarcascade_righteye_2splits.xml</p>
-
-<p>haarcascade_frontalface_alt2.xml  </p>
-
-<p>haarcascade_mcs_leftear.xml     </p>
-
-<p>haarcascade_smile.xml</p>
-
-<p>haarcascade_frontalface_alt_tree.xml  </p>
-
-<p>haarcascade_mcs_lefteye.xml        </p>
-
-<p>haarcascade_upperbody.xml</p>
-
-<p>haarcascade_frontalface_alt.xml   </p>
-
-<p>haarcascade_mcs_mouth.xml          </p>
-
-<p>lbpcascade_frontalface.xml</p>
-
-<p>haarcascade_frontalface_default.xml   </p>
-
-<p>haarcascade_mcs_nose.xml </p>
-
-<p>lbpcascade_profileface.xml</p>
-
-<p>haarcascade_fullbody.xml     </p>
-
-<p>haarcascade_mcs_rightear.xml  </p>
-
-<p>lbpcascade_silverware.xml</p>
-
-<p>haarcascade_lefteye_2splits.xml  </p>
-
-<p>haarcascade_mcs_righteye.xml</p>
-
-<p>haarcascade_lowerbody.xml     </p>
-
-<p>haarcascade_mcs_upperbody.xml</p>
  
             </div>
         </div>
