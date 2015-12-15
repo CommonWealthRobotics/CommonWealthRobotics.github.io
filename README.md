@@ -21,10 +21,26 @@ https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
 * some files/folders have special metadata that the script used to populate the front page
 
 ## Local Compile ##
+```
+  sudo apt-get install ruby2.1-dev  bundler
+  cd into NeuronRobotics.github.io
+  bundle install
+  bundle exec nanoc view && bundle exec guard
+  
+  For mac:
+  Install xcode
+  Install macports
+  sudo port install ruby19
+  sudo port install rb19-bundler
+  bundle-1.9 install
+  cd NeuronRobotics.github.io
+  bundle-1.9 exec nanoc view && bundle-1.9 exec guard
 
+
+```
 To compile the source locally and see the rendered changes, run:
 ```
- nanoc view & guard
+ bundle exec nanoc view & guard
 ```
 and navagete to 
 
