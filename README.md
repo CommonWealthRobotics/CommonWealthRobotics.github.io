@@ -23,9 +23,9 @@ https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
 ## Local Compile ##
 
 To compile the source locally and see the rendered changes, run:
-
+```
  nanoc view & guard
-
+```
 and navagete to 
 
 http://localhost:3000/
