@@ -22,6 +22,7 @@ https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
 
 ## Local Compile ##
 ```
+  git clone https://github.com/NeuronRobotics/NeuronRobotics.github.io.git
   sudo apt-get install ruby2.1-dev  bundler
   cd into NeuronRobotics.github.io
   bundle install
