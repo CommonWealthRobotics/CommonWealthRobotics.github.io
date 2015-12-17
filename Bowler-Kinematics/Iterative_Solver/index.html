@@ -133,7 +133,7 @@
 
 <p>The kinematic equivalent of this function is to have a starting pose, and ‘build the tree’ towards the desired end conditions.  Starting from a base position, shift the first link one step in either direction (clockwise and counterclockwise, forward and back, etc) and determine which one is closer to the end state, and saving that state.  Next, go to the next link and do the same thing, finding which direction a single step would provide a larger step towards the end goals.  When each link is tested this way, the whole operation is started again from the top, repeated until the end conditions are met or a timeout is reached.</p>
 
-<p>Gradient Descent is another iterative kinematic model, which maps the entire achieveable space of the system.  By rating each pose in a 2D or 3D grid, it’s possible to trace through the map to find the ideal path or system state, although compared to other methods it is typically much more computationally expensive as there can be a lot of achievable poses that may not be realistic but still take up more than a small level of computation power and time.</p>
+<p>Gradient Descent is another iterative kinematic model, which maps the entire achievable space of the system.  By rating each pose in a 2D or 3D grid, it’s possible to trace through the map to find the ideal path or system state, although compared to other methods it is typically much more computationally expensive as there can be a lot of achievable poses that may not be realistic but still take up more than a small level of computation power and time.</p>
 
 <p><img src="/img/IterativeKinematicSolver.png" alt="Iterative Kinematics Example" class="img-responsive" /></p>
  
