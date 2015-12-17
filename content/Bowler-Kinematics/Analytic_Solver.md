@@ -5,7 +5,8 @@ layout: post
 ---
 
 ##Analytic Solver Overview
-Simple robot systems can be analytically solved when constraints and degrees of freedom align.  Delta robots and 2 link revolute (rotational joint) arms are two examples of such robots that can be analytically analyzed.  A delta robot is a system with 3 identical towers or points of rotation, all connecting to one tool tip.  Depending on the configuration, it can pivot around a point or traverse the space, mirrored in 120 degree segments around the work space.  This is also a great example of Parallel links, whereas a Series system, (like the 2 link revolute arm) is a series of sequential links connected one by one.  There is one pose per achievable position since they aren't overconstrained.  It may not be possible to fully orient in every position, but mapping forward and inverse kinematics is a direct affair.
+
+Simple robot systems can be analytically solved when constraints and degrees of freedom align.  Delta robots and 2 link revolute (rotational joint) arms are two examples of such robots that can be analytically analyzed.  A delta robot is a system with 3 identical towers or points of rotation, all connecting to one tool tip.  Depending on the configuration, it can pivot around a point or traverse the space, mirrored in 120 degree segments around the work space.  This is also a great example of Parallel links, whereas a Series system, (like the 2 link revolute arm) is a series of sequential links connected one by one.  There is one pose per achievable position since they aren't over-constrained.  It may not be possible to fully orient in every position, but mapping forward and inverse kinematics is a direct affair.
 
 ##Analytic Solver Techniques
 
