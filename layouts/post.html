@@ -16,6 +16,11 @@
 
   ga('create', 'UA-66232368-1', 'auto');
   ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
 
 </script>
 <title>NR Docs</title>
@@ -84,9 +89,7 @@
 				More
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 			<%end%><br>
-               <ul class="nav bs-docs-sidenav " style=" "">
-      
-
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
                 <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
                 <%get_my_steps(item).each do |s|%>
                     <li <%if item==s%>class="active"<%end%> >
