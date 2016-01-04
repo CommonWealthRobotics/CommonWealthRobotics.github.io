@@ -64,7 +64,7 @@
     <div class="row">
 
             <!-- menu -->
-        <div class="col-md-3">
+        <div class="col-sm-3">
         
             <div class="bs-docs-sidebar hidden-print affix-top">
             	<%if has_last(item)%>
@@ -84,7 +84,7 @@
 				More
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 			<%end%><br>
-               <ul class="nav bs-docs-sidenav " style=" height: 200px;"">
+               <ul class="nav bs-docs-sidenav " style=" "">
       
 
                 <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
@@ -98,7 +98,7 @@
             </div> <!-- bs-docs-sidebar -->
         </div> <!-- col-md-3 -->
             <!-- page content -->
-        <div class="col-md-9" role="main">
+        <div class="col-sm-9" role="main">
             <div class="bs-docs-section">
                 <%= yield %> 
             </div>
