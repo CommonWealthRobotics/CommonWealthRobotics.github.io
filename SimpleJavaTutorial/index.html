@@ -16,6 +16,11 @@
 
   ga('create', 'UA-66232368-1', 'auto');
   ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
 
 </script>
 <title>NR Docs</title>
@@ -56,10 +61,6 @@
             Home</a></li>
             
             
-            <li  ><a href="../about/">
-            About</a></li>
-            
-            
             <li  ><a href="../tutorials/">
             Tutorials</a></li>
             
@@ -82,15 +83,13 @@
 			</a>
 
             
-			<a href="../about/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+			<a href="../kickstarter/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				Next
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				
 				
 			</a><br>
-               <ul class="nav bs-docs-sidenav " style=" "">
-      
-
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
                 <li><strong>Neuron Robotics Documentation</strong><hr class="menuhr" /></li>
                 
                     <li  >
@@ -123,10 +122,6 @@
                 
                     <li class="active" >
                          <a href="./">A Simple Java Tutorial</a></li>
-                    
-                
-                    <li  >
-                         <a href="../about/">About me and my cats</a></li>
                     
                 
                     <li  >

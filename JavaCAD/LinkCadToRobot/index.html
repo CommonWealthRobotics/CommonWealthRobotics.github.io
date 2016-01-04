@@ -16,6 +16,11 @@
 
   ga('create', 'UA-66232368-1', 'auto');
   ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
 
 </script>
 <title>NR Docs</title>
@@ -56,10 +61,6 @@
             Home</a></li>
             
             
-            <li  ><a href="../../about/">
-            About</a></li>
-            
-            
             <li  ><a href="../../tutorials/">
             Tutorials</a></li>
             
@@ -86,9 +87,7 @@
 				More
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 			<br>
-               <ul class="nav bs-docs-sidenav " style=" "">
-      
-
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
                 <li><strong>JavaCAD</strong><hr class="menuhr" /></li>
                 
                     <li  >
