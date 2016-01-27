@@ -90,7 +90,7 @@ html,body {
 }
 
 .bs-docs-sidenav{
-    max-height:1500px;
+    max-height:2500px;
     overflow-y: auto;
 }
 /*
