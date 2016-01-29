@@ -75,9 +75,6 @@ html,body {
 }
 .tuth {
     margin-top: 10px;
-    //padding-top: 0px;
-    //margin-bottom: 0px;
-    //padding-bottom: 0px;
  
 }
 .menuhr {
@@ -93,61 +90,3 @@ html,body {
     max-height:2500px;
     overflow-y: auto;
 }
-/*
-.test {
-    margin-top: -20px;
-    height:400px;
-    background-color: #770000;
-    margin-bottom: 20px;
-    box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
-    }
-    
-
-.tut {
-    
-      height: 100%;
-
-      
-}
-
-.tutpad {
-    background-color: #dddddd;
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-      
-
-}
-
-
-
-
-
-.tuth {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    background-color: #999999;
- 
-}
-
-.tuthribbon{
-}
-
-.tuth:before{
-        content: 'b';
-        position: absolute;
-        left: -10px;
-
-
-
-
-
-
-
-.container{
-    
-    
-} */
