@@ -12,7 +12,9 @@ BowlerStudio can load code from any Github Gist just by navigating to a website 
 
 After you hit make a copy, the webpage of your new gist is poped open. Nothe the URL in the navigation bar contains the URL to your gist. Also notice that since this gist is owned by you, the logged in user, then the Make Copy button changes to Edit...
 
-Hit the edit button to change your version of the code. 
+<img src="/img/bowlerstudioscreengrab/fork.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
+
+When editing your version of the code, Run will save and run the code.  
 
 <img src="/img/bowlerstudioscreengrab/editGist.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
