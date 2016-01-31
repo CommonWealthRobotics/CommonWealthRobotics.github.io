@@ -1,6 +1,6 @@
 ---
 title: ClojureCad
-step: 4
+step: 6
 layout: post
 ---
 

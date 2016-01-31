@@ -1,9 +1,9 @@
 ---
-title: Inline Scripting
-step: 9
+title: Git-as-Filesystem
+step: 3
 layout: post
 ---
 
-You can also add objects to your script by calling another script. This is an example of calling the script in the first tutorial and using that for each arm axis. 
+Bowler Scripting uses Git as the file system for scripts. Files needed by a script should be hosted and pulled from a Git repository. Likewise, code written in another Git repository can be called from any script. 
 
 <script src="https://gist.github.com/madhephaestus/4139e25c910b93e82732.js"></script>

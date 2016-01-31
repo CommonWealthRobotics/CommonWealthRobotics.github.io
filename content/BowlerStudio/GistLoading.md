@@ -6,18 +6,16 @@ layout: post
 
 Github Gist is a code hosting website that makes coding social. A 'Gist' is a snipit of code, and we use it to host scripts for BowlerStudio.
 
-BowlerStudio can load code from any Github Gist just by navigating to a website with a Gist embededded in it or by navigating to the gist page. To modify a demo, just click on the filename in the embeded gist to open the browser based editor.
+BowlerStudio can load code from any Github Gist just by navigating to a website with a Gist embededded. TO edit this file first step is to make a copy. This iwll call Git Fork in the background. If you have already forked this gist, you will be brought to your existing copy. 
 
 <img src="/img/bowlerstudioscreengrab/clickonname.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
-If the Gist is not yours, hit fork.
+After you hit make a copy, the webpage of your new gist is poped open. Nothe the URL in the navigation bar contains the URL to your gist. Also notice that since this gist is owned by you, the logged in user, then the Make Copy button changes to Edit...
 
-<img src="/img/bowlerstudioscreengrab/fork.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
-
-Once you are looking at your own Gist, hit edit and edit the code in the browser. When your done, hit the update gist button. Your new code is read to run in BowlerStudio!
+Hit the edit button to change your version of the code. 
 
 <img src="/img/bowlerstudioscreengrab/editGist.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
-Hit update gist to save your work, then run it from BowlerStudio.
+And finally, to publish your changes to Git, hit the publish button and fill in what you changed and why you changed it. 
 
 <img src="/img/bowlerstudioscreengrab/updateGist.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
