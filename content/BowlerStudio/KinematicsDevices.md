@@ -1,0 +1,9 @@
+---
+title: Kinematics Devices
+step: 8
+layout: post
+---
+
+Whole robots can be loaded from a given XML description of the robots configuration. Note the scripts for kinematics, CAD and Multi-limb coodrination are stored in the static configuration and loaded dynamically at runtime. 
+
+<script src="https://gist.github.com/madhephaestus/c3944b2a203585d969bf.js">t/script>
