@@ -1,6 +1,6 @@
 ---
 title: Python scripting
-step: 7
+step: 5
 layout: post
 ---
 
