@@ -1,6 +1,6 @@
 ---
 title: Scripts As Functions
-step: 3
+step: 2
 layout: post
 ---
 

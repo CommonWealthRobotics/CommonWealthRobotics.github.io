@@ -1,6 +1,6 @@
 ---
 title: Git-as-Filesystem
-step: 2
+step: 3
 layout: post
 ---
 
