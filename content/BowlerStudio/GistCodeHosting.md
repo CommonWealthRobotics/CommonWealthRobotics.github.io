@@ -10,7 +10,7 @@ BowlerStudio can load code from any Github Gist just by navigating to a website 
 
 <img src="/img/bowlerstudioscreengrab/clickonname.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
-After you hit make a copy, the webpage of your new gist is poped open. Nothe the URL in the navigation bar contains the URL to your gist. Also notice that since this gist is owned by you, the logged in user, then the Make Copy button changes to Edit...
+After you hit make a copy, the webpage of your new gist is opened in a new tab. Note the the URL in the navigation bar contains the URL to your gist. Also notice that since this gist is owned by you, the logged in user, then the Make Copy button changes to Edit...
 
 <img src="/img/bowlerstudioscreengrab/fork.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
