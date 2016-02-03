@@ -6,7 +6,7 @@ layout: post
 
 Github Gist is a code hosting website that makes coding social. A 'Gist' is a snipit of code, and we use it to host scripts for BowlerStudio.
 
-BowlerStudio can load code from any Github Gist just by navigating to a website with a Gist embededded. TO edit this file first step is to make a copy. This iwll call Git Fork in the background. If you have already forked this gist, you will be brought to your existing copy. 
+BowlerStudio can load code from any Github Gist just by navigating to a website with a Gist embededded. To edit this file first step is to make a copy. This iwll call Git Fork in the background. If you have already forked this gist, you will be brought to your existing copy. 
 
 <img src="/img/bowlerstudioscreengrab/clickonname.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
