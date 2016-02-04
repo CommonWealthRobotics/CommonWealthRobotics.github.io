@@ -1,5 +1,5 @@
 ---
-title: Java Code Examples
+title: DyIO Programming Examples
 tutorial: true
 ordering: 3
 layout: post
