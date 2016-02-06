@@ -4,9 +4,9 @@ menu: true
 menuorder: 0
 menuname: "Neuron Robotics Cooperitive"
 layout: landing
-winInstaller32: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.8.4/Windows-32-BowlerStudio-0.8.4.exe"
-winInstaller64: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.8.4/Windows-64-BowlerStudio-0.8.4.exe"
-linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.8.4/Ubuntu-BowlerStudio-0.8.4.deb"
-macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.8.4/MacOSX-BowlerStudio-0.8.4.zip"
+winInstaller32: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.9.0/Windows-32-BowlerStudio-0.9.0.exe"
+winInstaller64: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.9.0/Windows-64-BowlerStudio-0.9.0.exe"
+linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.9.0/Ubuntu-BowlerStudio-0.9.0.deb"
+macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/0.9.0/MacOSX-BowlerStudio-0.9.0.zip"
 ---
 
