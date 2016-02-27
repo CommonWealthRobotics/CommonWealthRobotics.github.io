@@ -1,5 +1,5 @@
 ---
-title: C Basic Server
+title: C Custom Namespace
 step: 2
 layout: post
 ---
