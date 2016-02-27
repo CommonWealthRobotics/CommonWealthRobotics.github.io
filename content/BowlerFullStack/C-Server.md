@@ -1,5 +1,5 @@
 ---
-title: C Dependancies
+title: C Basic Server
 step: 0
 layout: post
 ---
