@@ -4,12 +4,12 @@ step: 1
 layout: post
 ---
 
-#The 8 Primitive Types#
+#The 8 Primitive Types
 
-##Integers##
+##Integers
 There are 4 Integer types in Java, which account for half the primitive types. The types are long, int, short, byte.
 
-<table border="3">
+<table border="3" cellpadding="10" cellspacing="5">
 <tr>
 <td>Integer Type</td>
 <td> Size</td>
@@ -27,7 +27,7 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 </tr>
 <tr>
 <td>short</td>
-<td>4 bytes</td>
+<td>2 bytes</td>
 <td> Stores a value between -32768 and 32767 </td>
 </tr>
 <tr>
@@ -38,10 +38,10 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 </table>
 
 
-##Other Primitives##
+##Other Primitives
 
 
-<table border="3">
+<table border="3" cellpadding="5" cellspacing="5">
 <tr>
 <td>Type</td>
 <td> Size</td>
