@@ -50,3 +50,7 @@ or without the negative flag
 
 * 1+2+4+8+16+32+64 = 127
 
+#Practice
+
+You can sharpen your binary skills with the [Cisco Binary Game](https://learningnetwork.cisco.com/docs/DOC-1803)
+
