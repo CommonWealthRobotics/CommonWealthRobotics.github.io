@@ -15,4 +15,38 @@ A bit represents 2 values, and so each bit you add together is in base 2. Most m
 
 #Bytes
 
-A byte is a set of 8 bits. The selection of 8 bits to make the standard byte size was decided by convention and is now a standard of computer languages.
+A byte is a set of 8 bits. The selection of 8 bits to make the standard byte size was decided by convention and is now a standard of computer languages. A byte is a value of 0 - 255
+
+* bit 0 = 1
+* bit 1 = 2
+* bit 2 = 4
+* bit 3 = 8
+* bit 4 = 16
+* bit 5 = 32
+* bit 6 = 64
+* bit 7 = 128
+
+And when you add all the bits together 
+
+* 1+2+4+8+16+32+64+128 = 255
+
+# Signed Bytes
+In a signed byte, the top bit is read as a negative flag. The same amount of data is stored, just shifted by -128. 
+
+* bit 0 = 1
+* bit 1 = 2
+* bit 2 = 4
+* bit 3 = 8
+* bit 4 = 16
+* bit 5 = 32
+* bit 6 = 64
+* bit 7 = negative flag
+
+And when you add all the bits together 
+
+* (1+2+4+8+16+32+64)*(-1) = -127
+
+or without the negative flag
+
+* 1+2+4+8+16+32+64 = 127
+
