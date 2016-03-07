@@ -31,7 +31,7 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 <td> Stores a value between -32768 and 32767 </td>
 </tr>
 <tr>
-<td>short</td>
+<td>byte</td>
 <td>1 byte</td>
 <td>Stores an integer between -128 and 127</td>
 </tr>
