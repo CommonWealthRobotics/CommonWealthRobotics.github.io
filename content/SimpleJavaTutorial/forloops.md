@@ -13,7 +13,7 @@ We will be looking at how a for loop can help us list all odd numbers between 1 
 integer, or i, to equal 1, and make sure the for loop stops looping when our condition, i equals 1001, is met, but not 
 before, and to make sure that only the odd numbers are being recorded we need to increment i by 2 each time.
 
-<script src="https://gist.github.com/MrMepper/831a897d58b1753f982f.js"></script>
+<script src="https://gist.github.com/madhephaestus/8a06a5fd3f94c309ed78.js"></script>
 
 We now have created a for loop that prints out all odd numbers between 1 and 1001. `int i = 1` sets the value of `integer`
 i to 1. `i <= 1001` sets our condition for the for loop. It means that as long as `integer` i is less than or equal to

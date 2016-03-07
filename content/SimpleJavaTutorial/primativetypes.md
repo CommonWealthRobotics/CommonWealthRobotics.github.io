@@ -41,7 +41,7 @@ There are 4 Integer types in Java, which account for half the primitive types. T
 ##Other Primitives
 
 
-<table border="3" cellpadding="5" cellspacing="5">
+<table border="3" cellpadding="10" cellspacing="5">
 <tr>
 <td>Type</td>
 <td> Size</td>
