@@ -1,6 +1,6 @@
 ---
 title: Kinematics Devices
-step: 11
+step: 10
 layout: post
 ---
 
