@@ -15,8 +15,3 @@ classes work.
 
 The class name `HelloWorld` should match the name of the file (e.g. `HelloWorld.java`). For any program that you want to 
 run, a `main` class is necessary. All `main` methods are written as seen above:
-
-    public static void main(String[] args)
-    {
-        //Do something here
-    }
