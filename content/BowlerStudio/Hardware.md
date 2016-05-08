@@ -1,6 +1,6 @@
 ---
 title: Hardware
-step: 0
+step: 12
 layout: post
 ---
 
