@@ -1,6 +1,6 @@
 ---
 title: Play Wav File
-step: 9
+step: 1
 layout: post
 ---
 
