@@ -224,7 +224,7 @@
 						</a>
 						<a
 							href="https://java.com/en/download/">All
-							platforms require Java 1.8_51 or greater</a>
+							platforms require Java 64 bit 1.8_51 or greater</a>
 					</h2>
 					<h2 class="section-heading text-center">Choose your Platform</h2>
 				</div>
@@ -235,9 +235,6 @@
 							size="80%" style="margin-left: auto; margin-right: auto;">
 						</a>
 						<h3 class="text-center">Download BowlerStudio for:</h3>
-						<h3 class="text-center">
-							<a href="<%=@item[:winInstaller32]%>">Windows 32 Bit (7 and 10)</a>
-						</h3>
 						<h3 class="text-center">
 							<a href="<%=@item[:winInstaller64]%>">Windows 64 Bit (7 and 10)</a>
 						</h3>
@@ -275,13 +272,17 @@
 						<pre class="bash">
 							
 							<code>
-								## For 16.04, optionally add the Oracle JVM
+								### For 16.04, add the Oracle JVM
 								sudo add-apt-repository ppa:webupd8team/java
 								sudo apt-get update
-								sudo apt-get install oracle-java8-installer libopencv2.4-jni  libopencv2.4-java 
-								sudo apt-get install oracle-java8-set-default
+								sudo apt-get install oracle-java8-installer oracle-java8-set-default libopencv2.4-jni  libopencv2.4-java arduino slic3r 
 								### Install the .deb (Command Line)
-								dpkg -i Ubuntu-BowlerStudio-<version>.deb
+								### remove any old versions
+								rm Ubuntu-BowlerStudio-*.deb 
+								### get the latest version
+								wget <%=@item[:linInstaller]%> 
+								### install BowlerStudio
+								dpkg -i Ubuntu-BowlerStudio-*.deb
 							</code>
 						</pre>
 						<h4 class="text-center">
