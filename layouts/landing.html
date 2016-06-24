@@ -246,17 +246,10 @@
 							class="img-responsive" src="img/tux.png" alt=""
 							style="margin-left: auto; margin-right: auto;">
 						</a>
-						<pre class="bash">
-						<code>
-								### For 16.04, add the Oracle JVM
-								sudo add-apt-repository ppa:webupd8team/java
-								sudo apt-get update
-							</code>
-							</pre>
 						<h3 class="text-center">
 							<a href="<%=@item[:linInstaller]%>">Download BowlerStudio for Linux (Ubuntu 16.04 LTS)</a>
 						</h3>
-						<p class="lead text-center">Install the Oracle Java 8 from a PPA as a dependency</p>
+						
 
 						<p class="lead text-center">
 							Open with in "Ubuntu Software Center" and click "Install". Ubuntu
@@ -276,22 +269,7 @@
 								src="img/terminal_linux.png" class="img-responsive"
 								style="margin-left: auto; margin-right: auto;">
 						</p>
-						<pre class="bash">
-							
-							<code>
-								### For 16.04, add the Oracle JVM
-								sudo add-apt-repository ppa:webupd8team/java
-								sudo apt-get update
-								sudo apt-get install oracle-java8-installer oracle-java8-set-default libopencv2.4-jni  libopencv2.4-java arduino slic3r 
-								### Install the .deb (Command Line)
-								### remove any old versions
-								rm Ubuntu-BowlerStudio-*.deb 
-								### get the latest version
-								wget <%=@item[:linInstaller]%> 
-								### install BowlerStudio
-								dpkg -i Ubuntu-BowlerStudio-*.deb
-							</code>
-						</pre>
+
 						<h4 class="text-center">
 							<a
 								href="https://github.com/NeuronRobotics/BowlerStudio#bash-linuxos-xcygwinother-unix-like-shell">Older
@@ -319,6 +297,17 @@
 			</div>
 			<!-- /.container -->
 		</div>
+		<p class="lead text-center">Install the PPA for all of the dependancies and install BowlerStudio</p>
+		<pre class="bash">
+							
+							<code>
+								sudo add-apt-repository ppa:mad-hephaestus/commonwealthrobotics
+								sudo apt-get update
+								sudo apt-get install oracle-java8-installer oracle-java8-set-default libopencv2.4-jni  libopencv2.4-java arduino slic3r 
+								wget <%=@item[:linInstaller]%> 
+								dpkg -i Ubuntu-BowlerStudio-*.deb
+							</code>
+		</pre>
 	</div>
 	<!-- /.content-section-a -->
 
