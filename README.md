@@ -9,8 +9,6 @@ Build monitor:
 
 https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io
 
-[![Build Status](https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io.svg?branch=source)](https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io)
-
 ## How this thing works ##
 * The content directory will become the root of the website.
   - content/foo.md will become http://domain.com/foo/
