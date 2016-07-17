@@ -1,15 +1,15 @@
-NeuronRobotics.github.io
+CommonWealthRobotics.github.io
 ========================
 
 The Website for the Bowler System
 
-http://neuronrobotics.github.io/
+http://CommonWealthRobotics.github.io/
 
 Build monitor:
 
-https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
+https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io
 
-[![Build Status](https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io.svg?branch=source)](https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io)
+[![Build Status](https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io.svg?branch=source)](https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io)
 
 ## How this thing works ##
 * The content directory will become the root of the website.
@@ -22,9 +22,9 @@ https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
 
 ## Local Compile ##
 ```
-  git clone https://github.com/NeuronRobotics/NeuronRobotics.github.io.git
+  git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
   sudo apt-get install ruby2.1-dev  bundler
-  cd into NeuronRobotics.github.io
+  cd into CommonWealthRobotics.github.io
   bundle install
   bundle exec nanoc view && bundle exec guard
   
@@ -34,7 +34,7 @@ https://travis-ci.org/NeuronRobotics/NeuronRobotics.github.io
   sudo port install ruby19
   sudo port install rb19-bundler
   bundle-1.9 install
-  cd NeuronRobotics.github.io
+  cd CommonWealthRobotics.github.io
   bundle-1.9 exec nanoc view && bundle-1.9 exec guard
 
 
@@ -153,8 +153,8 @@ menuname: "Home"
 On the new landing page the download links come from the frontmatter in the `index.md` file.
 Update them by comitting a new index.md file with updated links to this repo.
 ```
-winInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/*.*.*/Windows-nrdk-*.*.*.exe"
-linInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/*.*.*/Ubuntu-nrdk-*.*.*.deb"
-macInstaller: "https://github.com/NeuronRobotics/BowlerStudio/releases/download/*.*.*/MacOSX-nrdk-*.*.*.zip"
+winInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/Windows-nrdk-*.*.*.exe"
+linInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/Ubuntu-nrdk-*.*.*.deb"
+macInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/MacOSX-nrdk-*.*.*.zip"
 ```
 
