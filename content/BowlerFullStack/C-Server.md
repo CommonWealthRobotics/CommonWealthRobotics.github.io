@@ -1,5 +1,5 @@
 ---
-title: C Basic Server
+title: Arduino Basic Server
 step: 0
 layout: post
 ---
