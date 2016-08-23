@@ -208,11 +208,15 @@
 								style="margin-left: auto; margin-right: auto;">
 						</p>
 
+<<<<<<< HEAD
 						<h4 class="text-center">
 							<a
 								href="https://github.com/CommonWealthRobotics/BowlerStudio#bash-linuxos-xcygwinother-unix-like-shell">Older
 								Builds (Ubuntu 14.04)</a>
 						</h4>
+=======
+
+>>>>>>> branch 'source' of git@github.com:NeuronRobotics/NeuronRobotics.github.io.git
 
 
 					</div>
@@ -242,9 +246,33 @@
 							<code>
 	sudo add-apt-repository ppa:mad-hephaestus/commonwealthrobotics -y
 	sudo apt-get update
+	sudo apt-get remove arduino bowlerstudio 
 	sudo apt-get install bowlerstudio oracle-java8-set-default oracle-java8-installer arduino-ide
 							</code>
 		</pre>
+	</div>
+	<div>
+		<a name="PPASID"></a>
+		<p class="lead text-center">Other Ubuntu/Debian besides 16.04 Instructions</p>
+		<pre class="bash">
+							
+							<code>
+	sudo apt-get install software-properties-common python-software-properties						
+	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu xenial main" -y
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 71EA898B 
+	sudo apt-get update
+	sudo apt-get remove arduino bowlerstudio 
+	sudo apt-get install bowlerstudio oracle-java8-set-default oracle-java8-installer arduino-ide
+							</code>
+		</pre>
+		
+	</div>
+	<div>
+	<h4 class="text-center">
+		<a
+		href="https://github.com/NeuronRobotics/BowlerStudio#bash-linuxos-xcygwinother-unix-like-shell">Older
+		Builds (Ubuntu 14.04)</a>
+	</h4>	
 	</div>
 	<!-- /.content-section-a -->
 

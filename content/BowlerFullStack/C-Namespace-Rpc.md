@@ -1,5 +1,5 @@
 ---
-title: C Custom Namespace
+title: Arduino Custom Namespace
 step: 2
 layout: post
 ---

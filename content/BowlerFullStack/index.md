@@ -1,5 +1,5 @@
 ---
-title: Bowler Full Stack
+title: Bowler Arduino/Java 
 tutorial: true
 layout: post
 ordering: 9
