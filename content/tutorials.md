@@ -1,5 +1,5 @@
 ---
-title: "Neuron Robotics Documentation"
+title: "Documentation"
 potato: "is life"
 menu: true
 menuorder: 1
