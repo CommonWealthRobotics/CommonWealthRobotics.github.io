@@ -1,13 +1,8 @@
-# .travis.yml
-
 language: ruby
 install:
-    - bundle install
-
+- bundle install
 script: bundle exec rake site:deploy
-
 sudo: false
-
 env:
-    global:
-        secure: "n2cN89iUjGyLaOcbkeax7iDiOTfGSrw4pVbxwkU4Kk6TIHslFwDIclNIyJ2h8SlUK+GYvWxlnVwP8pDILdZIjSmrGSaudTibIkGGc4jgMWQF4AbmqzCbavrnl/tYWrcfXf30byg3/vNh7wsupH4x/GRXq1xN8uZKskfPFQcEvpo="
+  global:
+  - secure: SjR5fYCD0BrKZf+kkAOb0lBaZtQWKhscAyldWLyzVejKH/F15HXgeSyUjH3PB78v4c8K8OzQqvkQ2bGQpUe/8dPlpq7ZPFI9qOF1CwZ6z87r1jD7we3KqQUwK706oF5UOGHj5X436wUy8JGMMFwNsWN9OGbqPJAZOmnhM0zt/R/0w1YY3dr80jKTSMmzISJjpiBNGk86+ZWAUATa1eI55wHCRVp/1hZFg4cLh9lj3m5AUbZOgKzizmZCiJavxRHRDkxNXoeUt4fD2iKPS65+zRMSWTimNODm7XkGqXv8ENlHgSIdvBh9Js+F2eh/1sRa0MFYgh6b4eg3i7Ird6mnEXvXaYwlviQLrz9ZLsrpS36mnrvO4e7BBapCZtvUZZKgWVzuRagPPVcFtpnBf4Fz4IohXvJS60YeGGjjMW50nGOLSKki3NRdS6F8DvH+HQR4U5E6shn2Cr4K18WS59PZv4tky1llVw032CWKPmHgxgHmYMl3tJSZCXhFIJ9JYEI+T23wPVEsmxz/dad6akJWvGfZDt5GZ0Dr8i143Ev9KOmAbhmC1Cwn/X7glYGQ9wur79DPni+89CZ60Wf7Qy3afsVMOxdQfI/eqYjkVO3+yoblrzS5v/Lmd0CMDdWAuhZ6eHeKvvqcQwiRlYnK8reaR7UKm1OxowFMoq+V6hY1oH0=
