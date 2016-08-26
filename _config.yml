@@ -2,8 +2,8 @@
 markdown: rdiscount
 pygments: true
 permalink: /:title
-relative_source: ../nrsite/
-destination: ../nrsite/
+relative_source: ../cwsite/
+destination: ../cwsite/
 # Settings for deploy rake task
 # Username and repo of Github repo, e.g.
 # https://github.com/USERNAME/REPO.git
@@ -11,8 +11,8 @@ destination: ../nrsite/
 # repo defaults to USERNAME.github.io
 # Branch defaults to "source" for USERNAME.github.io
 # or "master" otherwise
-username: NeuronRobotics
-repo: NeuronRobotics.github.io
+username: CommonWealthRobotics
+repo: CommonWealthRobotics.github.io
 branch: source
 permalink: /:categories/:title
 gems: [jekyll-category-aware-prev-next]
