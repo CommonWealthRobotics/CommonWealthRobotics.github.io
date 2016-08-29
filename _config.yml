@@ -17,3 +17,4 @@ branch: source
 permalink: /:categories/:title
 gems: [jekyll-category-aware-prev-next]
 exclude: ["vendor"]
+
