@@ -146,6 +146,10 @@ menuname: "Home"
 * `menuorder: #` is used to sort the menu. if omitted the item will be placed last
 * `menuname: "Name"` is the label for the menu item to be used in place of the page title. If title is omitted too it will be the file name.
 
+## Forking the repo and setting up travis.ci ##
+You need to define two variables. `GH_TOKEN` and `GIT_NAME` in your project's travis-ci settings.
+Your `GIT_NAME` should match the username of the account you used to generate your github token and your `GH_TOKEN` should be generated as per these instructions. https://help.github.com/articles/creating-an-access-token-for-command-line-use/
+
 ## Updating download links ##
 
 On the new landing page the download links come from the frontmatter in the `index.md` file.
