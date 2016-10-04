@@ -1,6 +1,6 @@
 ---
 title: Java Client Custom namespace
-step: 3
+step: 4
 layout: post
 ---
 

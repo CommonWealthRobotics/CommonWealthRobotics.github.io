@@ -1,6 +1,6 @@
 ---
 title: Java Basic Client
-step: 1
+step: 2
 layout: post
 ---
 
