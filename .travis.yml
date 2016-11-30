@@ -1,6 +1,8 @@
 language: ruby
 install:
 - bundle install
+- git config --global user.email "mad.hephaestus@gmail.com"
+- git config --global user.name "Kevin Harrington"
 script: bundle exec rake site:deploy
 sudo: false
 env:
