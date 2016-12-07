@@ -1,5 +1,5 @@
 ---
-title: SVG Bezier 
+title: Extrude SVG  
 step: 18
 layout: post
 ---
