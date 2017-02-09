@@ -2,3 +2,4 @@ vendor
 tmp
 output
 /CSGdatabase.json
+/crash.log
