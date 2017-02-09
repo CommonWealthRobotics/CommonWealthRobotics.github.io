@@ -1,5 +1,5 @@
 ---
-title: (CAD) Stereoscopic telepresence robot
+title: (CAD) Telepresence robot
 step: 1
 layout: post
 ---
