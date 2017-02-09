@@ -1,6 +1,6 @@
 ---
 title: (WEB)Design principals tutorial
-step: 2
+step: 3
 layout: post
 ---
 
