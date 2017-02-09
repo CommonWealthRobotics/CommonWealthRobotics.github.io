@@ -1,6 +1,6 @@
 ---
-title: [WEB/CAD] Add CAD design principals tutorial
-step: 1
+title: (WEB) Add CAD design principals tutorial
+step: 2
 layout: post
 ---
 

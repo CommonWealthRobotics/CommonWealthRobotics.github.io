@@ -21,7 +21,7 @@ https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io
 ## Local Compile ##
 ```
   git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
-  sudo apt-get install ruby2.1-dev  bundler
+  sudo apt-get install ruby2.3-dev  bundler
   cd into CommonWealthRobotics.github.io
   bundle install
   bundle exec nanoc view && bundle exec guard

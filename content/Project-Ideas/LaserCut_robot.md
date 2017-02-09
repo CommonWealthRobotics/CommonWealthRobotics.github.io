@@ -1,6 +1,6 @@
 ---
-title: [CAD/Robotics] 
-step: 2
+title: (CAD) Laser Cut robot
+step: 1
 layout: post
 ---
 
