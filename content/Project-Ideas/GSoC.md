@@ -7,7 +7,7 @@ layout: post
 
 Welcome Google Summer of Code interns!
 
-This set is a list of some of the ideas that we have accumulated to improvements to BowlerStudio. The different projects are listed to the left. The type of technology the project is using is in the (Type). Some ideas include sample code to demonstrate a concept.  
+This is a list of ideas for and improvements to BowlerStudio. The different projects are listed to the left. The type of technology the project is using is in the (Type). Some ideas include sample code to demonstrate a concept.  
 
 
 To add new project ideas clone :
