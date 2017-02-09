@@ -1,6 +1,6 @@
 ---
 title: (JavaFX) Redesign Creature Lab
-step: 2
+step: 3
 layout: post
 ---
 
