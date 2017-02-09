@@ -1,5 +1,5 @@
 ---
-title: (Java) Slicer for 3d Printing
+title: (Java) Slicer for 3d Printing/ CNC
 step: 2
 layout: post
 ---
