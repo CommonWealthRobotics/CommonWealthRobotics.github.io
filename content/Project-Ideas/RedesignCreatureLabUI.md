@@ -1,9 +1,9 @@
 ---
-title: (JavaFX) Redesign 
+title: (JavaFX) Redesign Creature Lab
 step: 2
 layout: post
 ---
 
-BowlerStudio already supports a few languages, but it would be great to have a visual programming environment for very young users. It could be an implementation of Scratch/App Maker in BowlerStudio. It could also be a graphical representation of a lisp. Any usable block style implementation would be a major boost to usability. 
+The UI for the creature lab shows up as an overlay on the 3d window. This is not helpful. At the very least this should be moved to a tab, ant in the best case it should be replaces with a more custom and streamlined version of the features.  
  
 Mentor : Kevin Harrington https://github.com/madhephaestus
