@@ -6,4 +6,4 @@ layout: post
 
 It is a butter passing robot. It passes butter... and occasionally has an existential crisis about it.
   
-Mentor : Elisa Heinricher https://github.com/InfDeath
+Mentor : Alex Gray https://github.com/InfDeath
