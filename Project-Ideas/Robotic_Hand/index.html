@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en"  class="full" > <!--  -->
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,18 +16,24 @@
 
   ga('create', 'UA-66232368-1', 'auto');
   ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
 
 </script>
 <title>Docs</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
+
+
     <!-- Custom styles for this template -->
     <link href="/assets/offcanvas.css" rel="stylesheet">
 	    <link href="/assets/docsmin.css" rel="stylesheet">
-	    <link href="/assets/full.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
 	<link href="/assets/mods.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,8 +42,8 @@
     <![endif]-->
   </head>
 
-  <body>
-    <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,7 +52,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -63,18 +68,137 @@
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
-    <div class="hero-unit test">
-    </div>
-    <div class="container">
-        <p>Use Bowler Studio to create a robotic humanoid hand that is capable of picking and placing objects.</p>
+  <div class="container bs-docs-container">
+    <div class="row">
 
-<p>Mentor : Elisa Heinricher https://github.com/InfDeath</p>
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+                <a href="../Stereoscopic_telepresence_robot/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				Previous
+			</a>
+
+            
+			<a href="../Power_Generator/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>BowlerStudio Project Ideas</strong><hr class="menuhr" /></li>
+                
+                    <li  >
+                         <a href="../GSoC/">Google Summer Of Code</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Tour_Guide_robot/">(CAD) Tour Guide robot</a></li>
+                    
+                
+                    <li  >
+                         <a href="../sim_challenge/">(Java) Simulate Robot Missions</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CarryAll_robot/">(CAD) CarryAll robot</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Bohemian_Queenbot/">(CAD) Bohemian Queenbot</a></li>
+                    
+                
+                    <li  >
+                         <a href="../GearGenerator/">(CAD) Gear Generator</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Butter_Passing_robot/">(CAD) Butter Passing robot</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Tiny_Humanoid/">(CAD) Tiny Robot Humanoid</a></li>
+                    
+                
+                    <li  >
+                         <a href="../LaserCut_robot/">(CAD) Laser Cut robot</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Stereoscopic_telepresence_robot/">(CAD) Stereoscopic Telepresence robot</a></li>
+                    
+                
+                    <li class="active" >
+                         <a href="./">(CAD) Laser Cut robot</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Power_Generator/">(CAD) Power Generator</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Scanning_robot_arm/">(CAD) Scanning robot arm</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Parametric3dPrinter/">(CAD) Parametric 3d printer</a></li>
+                    
+                
+                    <li  >
+                         <a href="../LangaugeAdd/">(Java) Make graphic DSL</a></li>
+                    
+                
+                    <li  >
+                         <a href="../JavaSlicer/">(Java) Slicer for 3d Printing/ CNC</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Networked_Swarm_Rovers/">(JAVA) networked swarm rovers</a></li>
+                    
+                
+                    <li  >
+                         <a href="../RobotBuildWorkflow/">(JavaFX) Workflow for generating robots</a></li>
+                    
+                
+                    <li  >
+                         <a href="../RedesignCreatureLabUI/">(JavaFX) Redesign Creature Lab</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CAD_Design_tut/">(WEB)Design principals tutorial</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<p>Use Bowler Studio to create a robotic humanoid hand that is capable of picking and placing objects.</p>
+
+<p>Mentor : Alex Gray https://github.com/InfDeath</p>
  
-    </div>
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
