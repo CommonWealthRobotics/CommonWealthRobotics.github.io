@@ -1,6 +1,6 @@
 ---
 title: (Java) Simulate Robot Missions
-step: 1
+step: 2
 layout: post
 ---
 
