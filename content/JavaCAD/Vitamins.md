@@ -4,7 +4,7 @@ step: 17
 layout: post
 ---
 
-BowelrStudio supports a large and growing library of hardware. the library of hardware can be found here:
+BowelrStudio supports a large and growing library of hardware. The library of hardware can be found here:
 
 https://github.com/madhephaestus/Hardware-Dimensions
 
