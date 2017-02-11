@@ -5,4 +5,4 @@ layout: post
 ordering: 2
 ---
 
-This tutorial explores some of the features of bowler studio. 
+This tutorial explores some of the features of BowlerStudio. 
