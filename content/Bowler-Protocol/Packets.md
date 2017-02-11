@@ -20,7 +20,7 @@ layout: post
 
 ### DEVICE ID ###
 
-The bowler address is a globally unique address across all bowler devices. Now two devices should have the same 6 byte address. This field contains the address of the Device that is being communicated with.
+The bowler address is a globally unique address across all bowler devices. No two devices should have the same 6 byte address. This field contains the address of the Device that is being communicated with.
 
 One address out of all the possible addresses is treated differently. This address is the Link Local Address. It consists of all zeros (00:00:00:00:00:00) and any bowler device will respond to it.
 
@@ -40,11 +40,11 @@ Also, there are two levels of priority (low and high)
 
 ### Direction Flag ###
 
-Packets travel along a bidirectional link between a Host and a Device. The Direction flag specifies the direction the packet is traveling. a value of 0 indicates a packet is traveling from Host to Device. Likewise, A value of 1 indicates Device to host.
+Packets travel along a bidirectional link between a Host and a Device. The direction flag specifies the direction the packet is traveling. A value of 0 indicates a packet is traveling from Host to Device. Likewise, a value of 1 indicates Device to host.
 
 ### Collision Resolution Number ###
 
-In the event that a bowler device implements two name-spaces with identical RPCs, The device will return an error packet if this field is left zero. To resolve this collision, the host must supply the index of the desired namespace. This index is the same as the index used in bcs.core._nms
+In the event that a bowler device implements two name-spaces with identical RPCs, the device will return an error packet if this field is left zero. To resolve this collision, the host must supply the index of the desired namespace. This index is the same as the index used in bcs.core._nms
 
 ### Sources and Examples ###
 
