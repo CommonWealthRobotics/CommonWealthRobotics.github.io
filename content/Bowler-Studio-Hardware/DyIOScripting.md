@@ -10,7 +10,7 @@ Devices like the DyIO are passed to scripts using the name found on the MyDevice
 
   [DyIO Scripting Tutorials](/DyIO-Programming/Digital-Input-Example-Simple/).
 
-If you had a DyIO connected when you started Bowler Studio you should have seen a connection dialog box.
+If you had a DyIO connected when you started BowlerStudio you should have seen a connection dialog box.
 You can check to see if the DyIO is connected by clicking on the 'My Devices' tab.
 
 <script src="https://gist.github.com/madhephaestus/5da47af65fbc1f991821.js"></script>
