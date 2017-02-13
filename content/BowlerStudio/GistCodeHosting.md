@@ -18,6 +18,6 @@ When editing your version of the code, Run will save and run the code.
 
 <img src="/img/bowlerstudioscreengrab/editGist.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
 
-And finally, to publish your changes to Git, hit the publish button and fill in what you changed and why you changed it. 
+And finally, to publish your changes to Git, hit the Publish button and fill in what you changed and why you changed it. 
 
 <img src="/img/bowlerstudioscreengrab/updateGist.png" alt="BowlerStudio Screen Cap" class="img-responsive" >
