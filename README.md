@@ -18,6 +18,9 @@ https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io
 * the script takes all the .md files, shoves them into templates and hosts them
 * some files/folders have special metadata that the script used to populate the front page
 
+## Forking Repo and setting up travis ci ##
+see this link for updating .congif.yaml with a new token. https://gist.github.com/willprice/e07efd73fb7f13f917ea
+
 ## Local Compile ##
 ```
   git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
