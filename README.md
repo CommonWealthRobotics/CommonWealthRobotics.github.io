@@ -27,7 +27,7 @@ see this link for updating .congif.yaml with a new token. https://gist.github.co
   sudo apt-get install ruby2.3-dev  bundler
   cd into CommonWealthRobotics.github.io
   bundle install
-  bundle exec nanoc view & bundle exec guard
+  bundle exec nanoc view && bundle exec guard
   
   For mac:
   Install xcode
