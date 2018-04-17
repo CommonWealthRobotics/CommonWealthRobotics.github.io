@@ -1,0 +1,10 @@
+
+---
+title: Advanced Transforms
+step: 16
+layout: post
+---
+
+In this example we use lists of transform to move the same object to many locations
+
+<script src="https://gist.github.com/madhephaestus/6c7ae38c2919438b9900630b24341683.js"></script>
