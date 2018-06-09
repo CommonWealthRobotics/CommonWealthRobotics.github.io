@@ -1,5 +1,5 @@
 ---
-title: Cylinder and Cone
+title: Cylinder, Cone, Hexagon, Pyrmid
 step: 4
 layout: post
 ---
