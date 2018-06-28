@@ -4,9 +4,9 @@ menu: true
 menuorder: 0
 menuname: "CommonWealth Robotics"
 layout: landing
-winInstaller32: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.26.2/Windows-32-BowlerStudio-0.26.2.exe"
-winInstaller64: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.26.2/Windows-64-BowlerStudio-0.26.2.exe"
-linInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.26.2/Ubuntu-BowlerStudio-0.26.2.deb"
-macInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.26.2/MacOSX-BowlerStudio-0.26.2.zip"
+winInstaller32: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.27.0/Windows-32-BowlerStudio-0.27.0.exe"
+winInstaller64: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.27.0/Windows-64-BowlerStudio-0.27.0.exe"
+linInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.27.0/Ubuntu-BowlerStudio-0.27.0.deb"
+macInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.27.0/MacOSX-BowlerStudio-0.27.0.zip"
 ---
 
