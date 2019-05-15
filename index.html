@@ -236,11 +236,9 @@
 		<pre class="bash">
 							
 							<code>
-	sudo add-apt-repository ppa:webupd8team/java
 	sudo add-apt-repository ppa:mad-hephaestus/commonwealthrobotics -y
 	sudo apt-get update
-	sudo apt-get remove arduino bowlerstudio 
-	sudo apt-get install bowlerstudio oracle-java8-set-default oracle-java8-installer arduino-ide
+	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx
 							</code>
 		</pre>
 	</div>
@@ -257,6 +255,25 @@
 	sudo apt-get update
 	sudo apt-get remove arduino bowlerstudio 
 	sudo apt-get install bowlerstudio oracle-java8-set-default oracle-java8-installer arduino-ide
+							</code>
+		</pre>
+		<h4 class="text-center">
+		<a
+			href="https://github.com/CommonWealthRobotics/BowlerStudio#bash-linuxos-xcygwinother-unix-like-shell">Older
+			Builds (Ubuntu 14.04)</a>
+	</h4>
+		
+	</div>
+	<div>
+		<a name="PPA1804"></a>
+		<p class="lead text-center">Ubuntu 18.04 Instructions</p>
+		<pre class="bash">
+							
+							<code>				
+	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu xenial main" -y
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 71EA898B 
+	sudo apt-get update 
+	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx=8u161-b12-1ubuntu2 libopenjfx-java=8u161-b12-1ubuntu2
 							</code>
 		</pre>
 		<h4 class="text-center">
