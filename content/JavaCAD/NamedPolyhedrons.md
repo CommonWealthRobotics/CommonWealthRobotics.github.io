@@ -1,5 +1,5 @@
 ---
-title: Named Polyhedrons
+title: Polyhedrons
 step: 5
 layout: post
 ---
