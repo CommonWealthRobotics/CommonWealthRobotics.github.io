@@ -236,8 +236,7 @@
 		<pre class="bash">
 							
 							<code>	
-	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 71EA898B 
-	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu xenial main" -y
+	sudo add-apt-repository ppa:mad-hephaestus/commonwealthrobotics -y
 	sudo apt-get update 
 	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx=8u161-b12-1ubuntu2 libopenjfx-java=8u161-b12-1ubuntu2 libopenjfx-jni=8u161-b12-1ubuntu2
 							</code>
@@ -247,7 +246,8 @@
 		<pre class="bash">
 							
 							<code>
-	sudo add-apt-repository ppa:mad-hephaestus/commonwealthrobotics -y
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 71EA898B 
+	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu bionic main" -y
 	sudo apt-get update
 	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx
 							</code>
@@ -261,7 +261,7 @@
 							<code>
 	sudo apt-get install software-properties-common python-software-properties
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 71EA898B 
-	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu xenial main" -y
+	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu bionic main" -y
 	sudo apt-get update
 	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx
 							</code>
