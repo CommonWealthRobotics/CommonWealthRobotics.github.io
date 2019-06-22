@@ -223,7 +223,7 @@
 			</div>
 			<!-- /.container -->
 		</div>		
-	<a name="PPA1804"></a>
+	<a name="PPA"></a>
 		<p class="lead text-center">Ubuntu 18.04 Instructions</p>
 		<pre class="bash">
 							
@@ -233,7 +233,7 @@
 	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx=8u161-b12-1ubuntu2 libopenjfx-java=8u161-b12-1ubuntu2 libopenjfx-jni=8u161-b12-1ubuntu2
 							</code>
 		</pre>
-		<a name="PPA"></a>
+		<a name="PPA1604"></a>
 		<p class="lead text-center">Ubuntu 16.04 PPA instructions</p>
 		<pre class="bash">
 							
@@ -244,6 +244,25 @@
 	sudo apt-get install bowlerstudio openjdk-8-jdk openjfx
 							</code>
 		</pre>
+	</div>
+	<div>
+		<a name="PPAPI"></a>
+		<p class="lead text-center">Rasberry Pi Instructions</p>
+		<pre class="bash">
+							
+							<code>
+	sudo apt-get install openjdk-8-jdk 
+	export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+	wget https://chriswhocodes.com/downloads/openjfx-8u60-sdk-overlay-linux-armv6hf.zip
+	sudo unzip  openjfx-8u60-sdk-overlay-linux-armv6hf.zip -d $JAVA_HOME/../
+	# replace this with the latest from https://github.com/CommonWealthRobotics/BowlerStudio/releases
+	wget https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.31.8/BowlerScriptingKernel-0.41.0-fat.jar
+	java -jar BowlerScriptingKernel-0.41.0-fat.jar -r
+						</code>
+		</pre>
+		<h4 class="text-center">
+	</h4>
+		
 	</div>
 	<div>
 		<a name="PPADEBIAN"></a>
