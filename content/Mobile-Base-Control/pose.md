@@ -1,11 +1,11 @@
 ---
-title: Pose Base
-step: 3
+title: Pose Base Simple
+step: 4
 layout: post
 ---
 
-Apply transformations to the base to move all of the limbs 
+Apply transformations to the base to move all of the limbs in 0 time. 
 
-<script src="https://gist.github.com/madhephaestus/47cb1b1054873e1348f6dc1379cad9d8.js"></script>
+<script src="https://gist.github.com/madhephaestus/d87d23adc4ac32f52a05be055255672b.js"></script>
 
 
