@@ -1,11 +1,11 @@
 ---
 title: One Limb Moved to Alter Pose
-step: 7
+step: 8
 layout: post
 ---
 
-Apply transformations to the base to move just one of the limbs 
+Gather the limbs into groups and send the transforms to the limbs in groups. 
 
-<script src="https://gist.github.com/madhephaestus/a6e2a2299bf6e8ff6c573fdf262036f6.js"></script>
+<script src="https://gist.github.com/madhephaestus/a7e0b72c571593d1f332d5d958414b98.js"></script>
 
 
