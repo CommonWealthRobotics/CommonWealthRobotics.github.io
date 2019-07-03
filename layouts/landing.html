@@ -257,7 +257,10 @@
 	sudo unzip  openjfx-8u60-sdk-overlay-linux-armv6hf.zip -d $JAVA_HOME/../
 	# replace this with the latest from https://github.com/CommonWealthRobotics/BowlerStudio/releases
 	wget https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.31.8/BowlerScriptingKernel-0.41.0-fat.jar
-	java -jar BowlerScriptingKernel-0.41.0-fat.jar -r
+	# for a REPL
+	java -jar BowlerScriptingKernel-*-fat.jar -r
+	# to run a script
+	java -jar BowlerScriptingKernel-*-fat.jar -g https://github.com/OperationSmallKat/greycat.git launch.groovy
 						</code>
 		</pre>
 		<h4 class="text-center">

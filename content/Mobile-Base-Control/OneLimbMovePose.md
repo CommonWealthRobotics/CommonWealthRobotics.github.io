@@ -1,5 +1,5 @@
 ---
-title: Cycle Groups of limbs
+title: One Limb at a time
 step: 7
 layout: post
 ---

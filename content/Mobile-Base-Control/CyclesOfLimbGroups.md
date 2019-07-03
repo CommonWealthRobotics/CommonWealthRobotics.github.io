@@ -1,5 +1,5 @@
 ---
-title: One Limb Moved to Alter Pose
+title: Cycle groups
 step: 8
 layout: post
 ---
