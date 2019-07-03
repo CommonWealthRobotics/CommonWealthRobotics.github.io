@@ -8,5 +8,7 @@ winInstaller32: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/d
 winInstaller64: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.32.4/Windows-64-BowlerStudio-0.32.4.exe"
 linInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.32.4/Ubuntu-BowlerStudio-0.32.4.deb"
 macInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.32.4/MacOSX-BowlerStudio-0.32.4.zip"
+kernelJAR:    "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.32.4/BowlerScriptingKernel-0.43.0-fat.jar"
+studioJar:    "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/0.32.4/BowlerStudio.jar"
 ---
 
