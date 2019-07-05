@@ -73,20 +73,20 @@
             <div class="bs-docs-sidebar hidden-print affix-top">
             	<%if has_last(item)%>
                 <a href="<%=relative_path_to(last_step(item))%>" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span  aria-hidden="true"></span>
 				Previous
 			</a><%end%>
 
             <%if has_next(item)%>
 			<a href="<%=relative_path_to(next_step(item))%>" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				Next
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span  aria-hidden="true"></span>
 				
 				
 			</a><%else%>
 			<a href="/tutorials/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				More
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				<span  aria-hidden="true"></span></a>
 			<%end%><br>
                <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
                 <li><strong><%=get_title(item.parent)%></strong><hr class="menuhr" /></li>
