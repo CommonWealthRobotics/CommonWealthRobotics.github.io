@@ -3,3 +3,8 @@ tmp
 output
 /CSGdatabase.json
 /crash.log
+/#1#input.txt
+/#1#travis.log
+/#2#travis.log
+/input.txt
+/travis.log
