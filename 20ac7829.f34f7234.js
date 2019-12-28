@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{96:function(e){e.exports=JSON.parse('{"docsSidebars":{"someSidebar":[{"type":"category","label":"BowlerStudio","items":[{"type":"link","label":"Welcome to BowlerStudio","href":"/docs/bowlerstudio/welcome"}]}]},"permalinkToSidebar":{"/docs/bowlerstudio/welcome":"someSidebar"}}')}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{106:function(n,t,e){"use strict";e.r(t);var o=e(0),c=e.n(o),r=e(127);t.default=function(){return c.a.createElement(r.a,{to:"/docs/bowlerstudio/welcome"})}},127:function(n,t,e){"use strict";var o=e(17);e.d(t,"a",(function(){return o.c})),e.d(t,"b",(function(){return o.d}))}}]);
