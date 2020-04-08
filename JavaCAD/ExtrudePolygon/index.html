@@ -76,13 +76,13 @@
         
             <div class="bs-docs-sidebar hidden-print affix-top">
             	
-                <a href="../SimpleLoadingLibraries/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+                <a href="../ExtrusionBezier/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
 				<span  aria-hidden="true"></span>
 				Previous
 			</a>
 
             
-			<a href="../AdvancedTransforms/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+			<a href="../ExtrudeRevolve/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				Next
 				<span  aria-hidden="true"></span>
 				
@@ -183,8 +183,8 @@
                          <a href="../SimpleLoadingLibraries/">Loading Libraries (Factory)</a></li>
                     
                 
-                    <li class="active" >
-                         <a href="./">Factories with Parameters</a></li>
+                    <li  >
+                         <a href="../LoadingLibrariesWithParams/">Factories with Parameters</a></li>
                     
                 
                     <li  >
@@ -223,8 +223,8 @@
                          <a href="../ExtrusionBezier/">Extrude Bezier</a></li>
                     
                 
-                    <li  >
-                         <a href="../ExtrudePolygon/">Extrude Polygon or Slice</a></li>
+                    <li class="active" >
+                         <a href="./">Extrude Polygon or Slice</a></li>
                     
                 
                     <li  >
@@ -250,13 +250,11 @@
             <!-- page content -->
         <div class="col-sm-9" role="main">
             <div class="bs-docs-section">
-                <p>In software sometimes we want to separate out some code that we may want to use over and over again, or maybe we want to share it with other people. In JavaCAD we want to use the <a href="https://en.wikipedia.org/wiki/Factory_method_pattern">Factory Pattern</a> meaning we create a factory with the script, then call it to create objects for us. The simplest case of this is to return a CSG which we call ‘.clone()’. </p>
+                
+<p>Take a slice of an object then extrude that slice</p>
 
-<p>You can create and share factories just by posting a script in a git repository. By loading up the ArrayList ‘servoMeasurments’ you can pass variables to the factory as parameters. Below you can see the factory itself and how it loads the parameters. 
-<script src="https://gist.github.com/madhephaestus/cc98723a870e9666ff2c.js"></script></p>
+<script src="https://gist.github.com/madhephaestus/bca12f6f75981559f8473feee7217f41.js"></script>
 
-<p>This is a parametric script for generating servos. It takes in a bunch of measurements from your servo and creates the shapes to make a servo. 
-<script src="https://gist.github.com/madhephaestus/3f9fef17b23acfadf3f7.js"></script></p>
  
             </div>
         </div>
