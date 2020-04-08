@@ -1,5 +1,5 @@
 ---
-title: Revolve Polygon or Slice 
+title: Extrude Polygon or Slice 
 step: 20
 layout: post
 ---
