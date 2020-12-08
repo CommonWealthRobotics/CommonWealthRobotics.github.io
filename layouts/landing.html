@@ -259,7 +259,6 @@
 		<pre class="bash">
 							
 							<code>
-	sudo apt update --allow-releaseinfo-change
 	sudo apt update
 	sudo apt-get install openjdk-8-jdk openjdk-8-jre-headless
 	export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
@@ -268,9 +267,9 @@
 	# replace this with the latest from https://github.com/CommonWealthRobotics/BowlerStudio/releases
 	wget <%=@item[:kernelJAR]%>
 	# for a REPL
-	java -jar BowlerScriptingKernel-*-fat.jar -r
+	java -jar <%=@item[:kernelJAROnly]%> -r
 	# to run a script
-	java -jar BowlerScriptingKernel-*-fat.jar -g https://github.com/OperationSmallKat/greycat.git launch.groovy
+	java -jar <%=@item[:kernelJAROnly]%> -g https://github.com/OperationSmallKat/greycat.git launch.groovy
 						</code>
 		</pre>
 		<h4 class="text-center"></h4>
