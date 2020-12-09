@@ -1,4 +1,4 @@
-language: ruby
+language: ruby 
 install:
 - bundle install
 script: bundle exec rake site:deploy
