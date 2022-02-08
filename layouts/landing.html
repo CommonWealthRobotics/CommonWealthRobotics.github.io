@@ -171,23 +171,12 @@
 						
 					</div>
 					<div class="col-lg-3 col-sm-4">
-						<a href="<%=@item[:linInstaller]%>"> <img
-							class="img-responsive" src="img/ubuntu.png" alt=""
-							style="margin-left: auto; margin-right: auto;">
-						</a>
-						<h3 class="text-center">
-							<a  class="btn btn-default text-center "href="<%=@item[:linInstaller]%>">BowlerStudio for Ubuntu</a>
-						</h3>
-	
-
-					</div>
-					<div class="col-lg-3 col-sm-4">
 						<a href="<%=@item[:studioScript]%>"> <img
 							class="img-responsive" src="img/tux.png" alt=""
 							style="margin-left: auto; margin-right: auto;">
 						</a>
 						<h3 class="text-center">
-							<a  class="btn btn-default text-center "href="<%=@item[:studioScript]%>">BowlerStudio for Other Linux</a>
+							<a  class="btn btn-default text-center "href="<%=@item[:studioScript]%>">BowlerStudio for Linux</a>
 						</h3>
 	
 
@@ -257,30 +246,7 @@
 						
 		</div>
 	
-	
-	
-		<a name="PPA"></a>
-		<h2 class="lead text-center">Ubuntu 18.04 PPA Instructions</h2>
-		<pre class="bash">
-							
-							<code>	
-	sudo add-apt-repository ppa:mad-hephaestus/commonwealthrobotics -y
-	sudo apt-get update 
-	sudo apt-get install bowlerstudio curl
-							</code>
-		</pre>
-	
-		<a name="PPA1604"></a>
-		<h2 class="lead text-center">Ubuntu 16.04 PPA Instructions</h2>
-		<pre class="bash">
-							
-							<code>
-	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 71EA898B 
-	sudo add-apt-repository "deb http://ppa.launchpad.net/mad-hephaestus/commonwealthrobotics/ubuntu bionic main" -y
-	sudo apt-get update
-	sudo apt-get install bowlerstudio curl
-							</code>
-		</pre>
+
 		
 	
 	<a name="PPAPI"></a>
