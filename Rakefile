@@ -220,7 +220,6 @@ namespace :site do
       sh "git config --global user.name 'acamilo'"
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
-      sh "git push --quiet origin #{DESTINATION_BRANCH}"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
       puts "My work is done, Will I Dream...?"
     end

@@ -35,10 +35,8 @@ jobs:
       run: bundle install
         
     - name: Build Site
-      run: |
-         bundle exec rake site:deploy
-         git add --all .
-         git commit -m 'Updating to website.'
+      run: bundle exec rake site:deploy
+      
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
