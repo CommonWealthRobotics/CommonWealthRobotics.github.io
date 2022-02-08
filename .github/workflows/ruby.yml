@@ -35,7 +35,6 @@ jobs:
       run: bundle install
         
     - name: Build Site
-      run: bundle exec rake site:deploy
-      
-    - name: Push
-      run: git push --quiet https://${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}.git master  
+      run: |
+           bundle exec rake site:deploy
+          cd ../cwsite; git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}.git master  
