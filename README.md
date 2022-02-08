@@ -24,7 +24,7 @@ see this link for updating .congif.yaml with a new token. https://gist.github.co
 ## Local Compile ##
 ```
   git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
-  sudo apt-get install ruby2.5-dev  bundler
+  sudo apt-get install ruby2.7-dev  bundler
   cd into CommonWealthRobotics.github.io
   bundle install
   bundle exec nanoc view & bundle exec guard

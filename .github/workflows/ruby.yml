@@ -38,4 +38,4 @@ jobs:
       run: bundle exec rake site:deploy
       
     - name: Push
-      run: cd ./cwsite/; git push --quiet origin master  
+      run: git push --quiet origin deploy  

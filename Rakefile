@@ -88,7 +88,7 @@ end
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
-    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+    sh "mkdir #{CONFIG["destination"]}"
   end
 end
 
@@ -207,17 +207,14 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
-    sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
-
     # Generate the site
     sh "bundle exec nanoc"#"bundle exec jekyll build"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(CONFIG["destination"]) do
-      sh "git config --global user.email 'alex.camilo@gmail.com'"
-      sh "git config --global user.name 'acamilo'"
+      sh "git config --global user.email 'mad.hephaestus@gmail.com'"
+      sh "git config --global user.name 'Kevin Harrington'"
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
