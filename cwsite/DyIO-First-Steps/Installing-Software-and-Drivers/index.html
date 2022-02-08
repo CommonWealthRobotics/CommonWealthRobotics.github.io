@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+                <a href="../Anatomy-of-the-DyIO/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span  aria-hidden="true"></span>
+				Previous
+			</a>
+
+            
+			<a href="../Testing-With-NR-Console/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>DyIO First Steps</strong><hr class="menuhr" /></li>
+                
+                    <li  >
+                         <a href="../Anatomy-of-the-DyIO/">Anatomy of the DyIO</a></li>
+                    
+                
+                    <li class="active" >
+                         <a href="./">Installing Software and Drivers</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Testing-With-NR-Console/">Testing with the DyIO Tab in Bowler Studio</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Setting-up-a-Processing-Sketch/">Setting up a Processing Sketch</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Where-to-go-from-here/">Where to go next</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Setting-up-an-eclipse-project/">Setting up an Eclipse Project</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h2 id="installing-software-and-drivers">Installing Software and Drivers</h2>
+<p>Before you can use the DyIO you’ll need to install Bowler Studio for your computer.
+Even if you plan to use Eclipse, Processing, or some other language entirely it is still a good idea to install BowlerStudio for your platform because it also installs drivers for the DyIO itself.</p>
+
+<div class="bs-callout bs-callout-danger">
+
+  <h4 id="do-not-plug-in-dyio-on-windows-before-installing-drivers">Do not plug in DyIO on Windows before installing drivers.</h4>
+
+  <p>On a windows computer it is important to run the installer before plugging in the DyIO. This prevents windows from auto-installing a correct driver.</p>
+
+  <p>If you did this and are failing to connect to your DyIO then</p>
+
+  <ol>
+    <li>Go into the <code>Device Manager</code></li>
+    <li>Right Click on <code>DyIO v.3</code></li>
+    <li>Select <code>Uninstall Driver</code></li>
+    <li>Unplug the DyIO</li>
+    <li>Continue Below</li>
+  </ol>
+
+</div>
+
+<h2 id="making-sure-everything-works">Making sure everything works</h2>
+
+<div class="bs-callout bs-callout-info">
+
+  <h4 id="try-using-bowlerstudio">Try Using BowlerStudio</h4>
+
+  <p>IF you’re viewing this in a web browser thats cool but it will make more sense in BowlerStudio because you can just click “Run” and get instant gratification.</p>
+</div>
+
+<p>We’re gonna use this simple groovy script to check the status of our DyIO.
+If you don’t have a DyIO plugged in BowlerStudio should prompt you when you try and run the gist below. If everything worked out you should see the status of all the DyIO’s channels, its Serial Number, and some additional information.</p>
+
+<p>If everything’s kosher feel free to move onto additional steps.</p>
+
+<script src="https://gist.github.com/madhephaestus/5da47af65fbc1f991821.js"></script>
+
+<h2 id="common-mac-problems">Common MAC problems</h2>
+
+<h3 id="wrong-java-version">Wrong Java Version</h3>
+<p>Sometimes, especially if you’re using an older mac, the version of java is pretty old and needs to be updated. If you’re getting the error below then you need to click on this link and install java version 8 or newer.</p>
+
+<p><img src="/img/mac-old-java.png" class="img-responsive" /></p>
+
+<h2 id="custom-installs-and-special-cases">Custom installs and special cases</h2>
+
+<h3 id="just-the-udev-rules-please">Just the UDEV rules please</h3>
+
+<h3 id="java-on-the-raspberry-pi">Java on the Raspberry Pi</h3>
+
+<h3 id="java-on-the-beagle-bone-black">Java on the Beagle Bone Black</h3>
+
+<h4 id="beaglbone-blackgreen-getting-started">Beaglbone Black/Green Getting Started:</h4>
+<p>Visit the getting started guide and get your Beabgleboard up and running.
+http://beagleboard.org/getting-started</p>
+
+<h3 id="ssh-access">SSH Access</h3>
+<p>It is important to have SSH access on your Beaglebone for installing Java and building BowlerStudio. First get SSH access on your Beaglebone Black/Green the guide below will help with that no matter which operating system you are using.</p>
+
+<p><strong>Linux / UNIX</strong></p>
+
+<ol>
+  <li>Open a Terminal emulator</li>
+  <li>Type : ssh root@192.168.7.2</li>
+  <li>When prompted for a password just hit enter the root password is blank by default on the Beaglebone</li>
+</ol>
+
+<p><strong>Windows</strong></p>
+
+<ol>
+  <li>Download and Install PuTTY Telnet Client: http://www.putty.org/</li>
+  <li>Install and Open PuTTY</li>
+  <li>Select SSH in the configuration dialog, type: 192.168.7.2 for the address  and click open</li>
+  <li>Type in root for the username, the password is blank by default so just hit enter</li>
+</ol>
+
+<p><strong>Mac OS X</strong></p>
+
+<ol>
+  <li>On Mac OS X go into the /Applications/Utilities and open Terminal.app</li>
+  <li>Type : sudo ssh root@192.168.7.2</li>
+  <li>Type your user password</li>
+  <li>When prompted for a password just hit enter the root password is blank by default on the Beaglebone</li>
+</ol>
+
+<h3 id="setting-up-a-new-user-account">Setting Up a New User Account</h3>
+
+<p>For security purposes and preventing catastrophic failures with the operating system it is good practice to make a dedicated user account for running your applications and programs on the Beaglebone Black/Green. During this part of the tutorial we will go over adding a new user to the Beaglebone Black.</p>
+
+<p>First Open an SSH session using the guide above. For this process we need to login as root, as mentioned before the default password for root is blank so type nothign when prompted for it.</p>
+
+<p>To create a new user type the following and follow the instructions on the screen:</p>
+
+<p><code>shell
+sudo adduser newusername
+</code></p>
+
+<p>Now that we have created a new user account we need to add it to the sudoers file so the user can perform tasks as administrator. </p>
+
+<p>Type the following to add your new user to the sudoers file:</p>
+
+<p><code>shell
+sudo yournewusername sudo
+</code></p>
+
+<h3 id="installing-java-8-jdk-on-beaglebone-blackgreen">Installing Java 8 JDK on Beaglebone Black/Green</h3>
+
+<p><strong>From a Linux PC</strong>
+These Instructions Require a PC Running Linux, they might work with OS X But untested</p>
+
+<p><strong>Installing on Debian</strong> (ships with Beaglebone)</p>
+
+<p>The Neuron Robotics RDK and BowlerStudio require the latest Java 8 JDK/JRE for ARM from Oracle. </p>
+
+<ol>
+  <li>First on your local machine download the latest Java 8 package for Linux ARM v6/v7 Hard Fload ABI found here: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</li>
+  <li>Copy the Java archive to the home directory of the root user on your Beaglebone Black/Green. Open up a Terminal session on your local machine and type with the following command:</li>
+</ol>
+
+<p><code>shell
+sudo scp /path/to/java/archive root@192.168.7.2:/path/to/user/home
+</code>
+3. Once the file has finished copying over to the home directory of your user account on the Beaglebone open up a Terminal session and SSH into the Beaglebone
+4. Once inside the SSH session on the Beaglebone Black/Green unpack the java archive:</p>
+
+<p><code>shell
+gunzip jdk-8-linux-arm-vfp-hflt.tar.gz
+</code></p>
+
+<ol>
+  <li>Copy Upack the tar into the /usr directory:</li>
+</ol>
+
+<p><code>shell
+ sudo tar xf jdk-8-linux-arm-vfp-hflt.tar -C /usr
+</code></p>
+
+<ol>
+  <li>Next update the Java path by adding the following lines to the .bashrc file </li>
+</ol>
+
+<p><code>shell
+sudo nano ~/.bash_profile
+</code></p>
+
+<p>Add the follownig to the ~/.bash_profile and save it</p>
+
+<p><code>shell
+#### JAVA 1.8.0 #######################
+    export JAVA_HOME=/usr/jdk1.8.0_60
+    export PATH=$PATH:$JAVA_HOME/bin
+ #### JAVA 1.8.0 #######################
+</code></p>
+
+<p>Then Run</p>
+
+<p><code>
+source ~/.bash_profile
+</code></p>
+
+<ol>
+  <li>Finally to test the install and check the Java version:</li>
+</ol>
+
+<p><code>shell
+java -version
+</code>
+It should print back something like this:</p>
+
+<p><code>shell
+java version "1.8.0_60"
+Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)
+</code></p>
+
+<h3 id="installing-gradle-27-on-beaglebone-blackgreen">Installing Gradle 2.7 on Beaglebone Black/Green</h3>
+
+<ol>
+  <li>Open a Terminal session</li>
+  <li>Access the Beaglebone over SSH under the user account you created earlier inthe tutorial</li>
+  <li>Now download the latest Gradle</li>
+</ol>
+
+<p><code>shell
+cd /tmp
+sudo wget https://services.gradle.org/distributions/gradle-2.7-all.zip
+</code>
+4. Now to unpack the archive, create the install directory, and move the contents of the archive tot he directory</p>
+
+<p><code>shell
+unzip gradle-2.4-all.zip
+sudo mkdir -p /opt/gradle/2.4
+sudo mv gradle-2.4/* /opt/gradle/2.4/
+sudo ln -s /opt/gradle/2.4/ /opt/gradle/current
+</code></p>
+
+<ol>
+  <li>Now to add the proper PATH, open your bash profile:</li>
+</ol>
+
+<p><code>shell
+sudo nano ~/.bash_profile
+</code></p>
+
+<p>Add the following to the file:
+  ```shell
+#### GRADLE 2.7 ###########################</p>
+
+<pre><code>export GRADLE_HOME=/opt/gradle/current
+export PATH=$PATH:$GRADLE_HOME/bin
+</code></pre>
+
+<h4 id="gradle-27">GRADLE 2.7</h4>
+<p>```</p>
+
+<p>Then Run</p>
+
+<p><code>
+source ~/.bash_profile
+</code></p>
+
+<ol>
+  <li>Test installation and check version:</li>
+</ol>
+
+<p><code>
+gradle -version
+</code></p>
+
+<h3 id="installing-maven-333-on-beaglebone-blackgreen">Installing Maven 3.3.3 on Beaglebone Black/Green</h3>
+
+<ol>
+  <li>Open a Terminal session</li>
+  <li>Access the Beaglebone over SSH under the user account you created earlier inthe tutorial</li>
+  <li>Now download the latest Maven</li>
+</ol>
+
+<p><code>shell
+cd /tmp
+sudo wget http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+</code></p>
+
+<ol>
+  <li>Now to unpack the archive, create the install directory, and move the contents of the archive tot he directory</li>
+</ol>
+
+<p><code>shell
+sudo tar -xvzpf apache-maven-3.3.3-bin.tar.gz
+sudo mkdir -p /opt/maven/3.3.3
+sudo mv apache-maven-3.3.3/* /opt/maven/3.3.3/
+sudo ln -s /opt/maven/3.3.3/ /opt/maven/current
+</code></p>
+
+<ol>
+  <li>Now to add the proper PATH, open your bash profile:</li>
+</ol>
+
+<p><code>shell
+sudo nano ~/.bash_profile
+</code></p>
+
+<p>Add the following to the file:</p>
+
+<p>```shell
+#### MAVEN 3.3.3 #########################</p>
+
+<pre><code>export MAVEN_HOME=/opt/maven/current
+export PATH=$PATH:$MAVEN_HOME/bin
+</code></pre>
+
+<h4 id="maven-333">MAVEN 3.3.3</h4>
+<p>```</p>
+
+<p>Then Run</p>
+
+<p><code>
+source ~/.bash_profile
+</code></p>
+
+<ol>
+  <li>Test installation and check version:</li>
+</ol>
+
+<p><code>
+mvn -version
+</code></p>
+
+<p><strong>Installing on Ubuntu</strong></p>
+
+<p>Coming Soon……</p>
+
+<p><strong>From a Mac</strong></p>
+
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+

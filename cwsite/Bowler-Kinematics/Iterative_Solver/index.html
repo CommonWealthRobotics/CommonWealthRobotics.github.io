@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+                <a href="../Analytic_Solver/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span  aria-hidden="true"></span>
+				Previous
+			</a>
+
+            
+			<a href="../CAD_Scripts/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>Bowler Kinematics</strong><hr class="menuhr" /></li>
+                
+                    <li  >
+                         <a href="../Kinematics/">Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Advanced_Kinematics/">Advanced Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Kinematics_model/">Kinematics Model</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Analytic_Solver/">Analytic Solver</a></li>
+                    
+                
+                    <li class="active" >
+                         <a href="./">Iterative Solver</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CAD_Scripts/">CAD Scripts</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CustomKinematics/">Custom Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../MovingKinematicsDevices/">Moving Kinematics Devices</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h2 id="iterative-solver-overview">Iterative Solver Overview</h2>
+
+<p>Complex robot systems may not have a ‘one-size fits all’ solution to kinematics, and require some sort of decision or criteria matrix to specify and choose tool paths.  Robots that have many limbs may have a large array of possible solution poses, so building a robust system to prioritize hypothetical energy efficiency, torque curves or minimize link motion can take a control system to the next level.  With more conditionals, optimizations and search criteria, the control algorithm greatly expands in complexity and computational requirements.</p>
+
+<h2 id="iterative-solver-techniques">Iterative Solver Techniques</h2>
+
+<p>Standard binary search tree methods work by looking at branches to see which option is better.  By traversing the tree it’s possible to directly compare each branch path and find the optimal path through the system, and by iteratively repeating the search, the ideal matches can be found.  </p>
+
+<p>The kinematic equivalent of this function is to have a starting pose, and ‘build the tree’ towards the desired end conditions.  Starting from a base position, shift the first link one step in either direction (clockwise and counterclockwise, forward and back, etc) and determine which one is closer to the end state, and saving that state.  Next, go to the next link and do the same thing, finding which direction a single step would provide a larger step towards the end goals.  When each link is tested this way, the whole operation is started again from the top, repeated until the end conditions are met or a timeout is reached.</p>
+
+<p>Gradient Descent is another iterative kinematic model, which maps the entire achievable space of the system.  By rating each pose in a 2D or 3D grid, it’s possible to trace through the map to find the ideal path or system state, although compared to other methods it is typically much more computationally expensive as there can be a lot of achievable poses that may not be realistic but still take up more than a small level of computation power and time.</p>
+
+<p><img src="/img/IterativeKinematicSolver.png" alt="Iterative Kinematics Example" class="img-responsive" /></p>
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+

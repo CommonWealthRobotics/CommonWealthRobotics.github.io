@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+                <a href="../Kinematics_model/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span  aria-hidden="true"></span>
+				Previous
+			</a>
+
+            
+			<a href="../Iterative_Solver/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>Bowler Kinematics</strong><hr class="menuhr" /></li>
+                
+                    <li  >
+                         <a href="../Kinematics/">Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Advanced_Kinematics/">Advanced Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Kinematics_model/">Kinematics Model</a></li>
+                    
+                
+                    <li class="active" >
+                         <a href="./">Analytic Solver</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Iterative_Solver/">Iterative Solver</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CAD_Scripts/">CAD Scripts</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CustomKinematics/">Custom Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../MovingKinematicsDevices/">Moving Kinematics Devices</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h2 id="analytic-solver-overview">Analytic Solver Overview</h2>
+
+<p>Simple robot systems can be analytically solved when constraints and degrees of freedom align.  Delta robots and 2 link revolute (rotational joint) arms are two examples of such robots that can be analytically analyzed.  A delta robot is a system with 3 identical towers or points of rotation, all connecting to one tool tip.  Depending on the configuration, it can pivot around a point or traverse the space, mirrored in 120 degree segments around the work space.  This is also a great example of Parallel links, whereas a Series system, (like the 2 link revolute arm) is a series of sequential links connected one by one.  There is one pose per achievable position since they aren’t over-constrained.  It may not be possible to fully orient in every position, but mapping forward and inverse kinematics is a direct affair.</p>
+
+<h2 id="analytic-solver-techniques">Analytic Solver Techniques</h2>
+
+<p>Direct systems can be analyzed as a series of linear equations or simplified to laws of triangles.  A 2 link planar arm reaching for a point in 2D space has a limited number of ways to solve the end point.  The base position and end point are known, so the end position of link 1 is the unknown.  Drawing out the system to find that link position and with that the associated angles means equations of motion can be determined with a few simple lines of code or lower level math.  There is no standard algorithm for finding the ideal pose, and it does not need to be recursively run for optimization purposes.</p>
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+

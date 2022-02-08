@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+
+            
+			<a href="../Installing-Software-and-Drivers/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>DyIO First Steps</strong><hr class="menuhr" /></li>
+                
+                    <li class="active" >
+                         <a href="./">Anatomy of the DyIO</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Installing-Software-and-Drivers/">Installing Software and Drivers</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Testing-With-NR-Console/">Testing with the DyIO Tab in Bowler Studio</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Setting-up-a-Processing-Sketch/">Setting up a Processing Sketch</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Where-to-go-from-here/">Where to go next</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Setting-up-an-eclipse-project/">Setting up an Eclipse Project</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h2 id="dyio-at-a-glance">DyIO At a Glance</h2>
+
+<p>Starting at the top we see the <code>Bowler Connection</code> which is a 5v level serial port, the <code>External Power Connection</code> which is where you connect an external battery, and the <code>USB Connection</code> where you connect the DyIO to your PC, Phone, or Board.</p>
+
+<p>Moving down we see the <code>bank power Jumpers/Switches</code> which control the power flowing to the banks and the two <code>Channel Banks</code> which is where all your sensors and motors get connected.</p>
+
+<p>Finally, we see the <code>Status LED</code> which shows you what the DyIO is thinking, the <code>Reset Switch</code> which is used for firmware upgrades, and finally the <code>Power Mode LEDs</code> which show you the voltage of each bank’s center row of pins.</p>
+
+<p><img src="/img/Dyio-layout.png" class="img-responsive" /></p>
+
+<p>Status LED Key:</p>
+
+<ul>
+  <li>Blue: Device is connected to an application and communicating.</li>
+  <li>Teal (both Blue and Green): Device is not connected to an application or not communicating.</li>
+  <li>Purple (both Blue and Red): Battery voltage fluctuation error (the voltage on a bank set to</li>
+  <li>Motors power mode is fluctuating). This is usually caused by the connected battery pack being close to dead or dead, and will update every 10 seconds.</li>
+  <li>Red: Error condition. Try re-flashing the firmware or shooting us an email.</li>
+  <li>Red to Green slow flashing: Error condition. Try re-flashing the firmware.</li>
+</ul>
+
+<h2 id="banks-and-power">Banks and Power</h2>
+<div class="bs-callout bs-callout-info">
+
+  <h4 id="servos-and-usb">Servos and USB</h4>
+
+  <p>The DyIO won’t let you run Servoes off of a bank with a Green voltage by default. Computer USB ports are picky and too many servoes could result in damage or odd behavior if powered from USB. If you know what you’re doing then you can disable “Safe Mode” through code or in the DyIO tab to disable this behavior.</p>
+</div>
+
+<div class="bs-callout bs-callout-warning">
+
+  <h4 id="servo-brownouts-and-low-batteries">Servo Brownouts and Low batteries</h4>
+
+  <p>The DyIO will Disable Servos if the voltage dips below 5v when trying to move servoes to prevent damage to batteries. You can recover from this by configuring the channel again or commanding another position.</p>
+</div>
+
+<p>You’ve probably noticed the jumpers or switches above each of the two banks.
+These connect the banks to either 5v from the PC’s USB port or the connected battery.</p>
+
+<p>The Lights at the bottom of each bank indicate it’s voltage.</p>
+
+<ul>
+  <li>RED indicates Servo/Battery Voltage (5.5 or greater)</li>
+  <li>Yellow indicates no voltage</li>
+  <li>Green indicates Sensor Voltage (5v)</li>
+</ul>
+
+<p>Moving the Jumper/Switch to the “Sensors” position connects the entire bank to 5v from the USB.
+Moving the Jumper/Switch to the “Motors” position connects the entire bank to the external Battery.</p>
+
+<p><img src="/img/Dyio-leds-without-power.png" class="img-responsive" /></p>
+
+<h2 id="inputs-and-outputs">Inputs and Outputs</h2>
+<p>The DyIO has 24, 3-pin channels that are grouped into two banks with 12 channels each These channels are used to connect sensors, actuators (i.e. servos) or other peripherals to the DyIO. </p>
+
+<p>Each channel has a number of possible modes that change the behavior of the pin and give the user access to different functionality.</p>
+
+<p><img src="/img/channels.png" class="img-responsive" />
+<img src="/img/dyioposter_had.png" class="img-responsive" /></p>
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+

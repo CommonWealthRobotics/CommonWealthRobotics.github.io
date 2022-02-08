@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+
+            
+			<a href="../Packets/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>Bowler Protocol</strong><hr class="menuhr" /></li>
+                
+                    <li class="active" >
+                         <a href="./">Overview</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Packets/">Packet Format</a></li>
+                    
+                
+                    <li  >
+                         <a href="../RPCs-and-Namespaces/">RPCs and Namespaces</a></li>
+                    
+                
+                    <li  >
+                         <a href="../DyIO/">A look at the DyIO</a></li>
+                    
+                
+                    <li  >
+                         <a href="../BowlerBoard/">A look at the BowlerBoard</a></li>
+                    
+                
+                    <li  >
+                         <a href="../IO-Namespace/">com.bcs.io Namespace</a></li>
+                    
+                
+                    <li  >
+                         <a href="../PID-Namespace/">com.bcs.PID namespace</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h2 id="what-is-it">What is it?</h2>
+
+<p>The Bowler Protocol is a tool used by the DyIO and the Bowler Board (and hopefully many other devices) to provide a standard way of exposing their functionality, features, and data to another connected device through the use of Remote Procedure Calls and standard interfaces encapsulating sets of functionality that can be queried by the connecting device at runtime.</p>
+
+<p>Each Device maintains a collection of functions identified by a 4 byte RPC value. Each function can take and return an arbitrary amount of arguments. These RPCs are then organized into groups with the 4 byte RPC being unique to that group. These groups are called Namespaces and are intended to function as interfaces. For Example, The presence of bcs.cartesian indicates that the device can receive position commands and be queried for it’s current position, etc.</p>
+
+<p><img src="/img/rpc-explorer.png" style="img-responsive" /></p>
+
+<h2 id="how-does-introspection-work">How does Introspection work?</h2>
+
+<p>Each device must support name-space introspection and can optionally support RPC introspection.</p>
+
+<h3 id="namespace-introspection">Namespace Introspection</h3>
+
+<p>Each device has a namespace called bcs.core with two RPCs. One which is a simple ping and the other which allows the connecting device to get a list of namespaces the device implements.</p>
+
+<p><img src="/img/bcsrpc_rpc.png" style="img-responsive" /></p>
+
+<h3 id="rpc-introspection">RPC Introspection</h3>
+
+<p>the bcs.rpc Namespace allows a device to get the 4 byte RPC identifier and the amount of and types of all the calling and return arguments.</p>
+
+<p><img src="/img/rpcfunc.png" style="img-responsive" /></p>
+
+<p><img src="/img/rpcfunc2.png" style="img-responsive" /></p>
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+
