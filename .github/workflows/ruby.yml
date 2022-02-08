@@ -39,6 +39,6 @@ jobs:
       
     - name: Push
       run: |
-         git checkout  deploy
-         git pull origin source
+         git checkout origin deploy
+         git pull . source
          git push --quiet origin deploy  
