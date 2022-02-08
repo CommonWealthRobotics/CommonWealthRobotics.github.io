@@ -14,7 +14,7 @@ on:
     branches: [ source ]
 
 jobs:
-  test:
+  website-deploy:
 
     runs-on: ubuntu-latest
     strategy:
