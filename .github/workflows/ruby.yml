@@ -31,7 +31,17 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Run tests
+    - name: Deps For tests
       run: bundle install
-    - name: Launch Site
-      run: bundle exec rake site:deploy
+        
+    - name: Build Site
+      run: |
+         bundle exec rake site:deploy
+         git add --all .
+         git commit -m 'Updating to website.'
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}    
+    
