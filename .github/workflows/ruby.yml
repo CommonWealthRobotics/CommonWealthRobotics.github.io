@@ -37,9 +37,5 @@ jobs:
     - name: Build Site
       run: bundle exec rake site:deploy
       
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}    
-    
+    - name: Push
+      run: git push --quiet https://${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}.git master  
