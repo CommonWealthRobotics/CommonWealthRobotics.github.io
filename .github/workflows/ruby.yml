@@ -38,4 +38,7 @@ jobs:
       run: bundle exec rake site:deploy
       
     - name: Push
-      run: git push --quiet origin deploy  
+      run: |
+         git checkout  deploy
+         git pull source
+         git push --quiet origin deploy  
