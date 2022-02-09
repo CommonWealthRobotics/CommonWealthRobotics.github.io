@@ -42,7 +42,9 @@ jobs:
             git checkout source   
             
     - name: Pull deploy into source
-      run: git pull origin deploy --allow-unrelated-histories
+      run: |
+           git fetch origin 
+           git merge origin/deploy -m "Auto-merge from CI "
       
     - name: Push upstream changes to deploy
       run: pit push
