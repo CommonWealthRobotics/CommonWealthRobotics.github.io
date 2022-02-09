@@ -27,7 +27,8 @@ jobs:
       run: git fetch 
       
     - name: Config
-      run: | 
+      run: |
+            git checkout source 
             git config --global user.email "mad.hephaestus@gmail.com"
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
