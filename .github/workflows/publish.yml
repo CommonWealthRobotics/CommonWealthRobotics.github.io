@@ -26,6 +26,7 @@ jobs:
     - name: Checkout Deploy
       run: |
          git fetch 
+         git pull
          git config --global user.email "mad.hephaestus@gmail.com"
          git config --global user.name "Kevin Harrington"
          git config pull.rebase false
