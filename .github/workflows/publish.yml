@@ -24,12 +24,12 @@ jobs:
     steps:         
     - uses: actions/checkout@v2
     - name: Fetch
-      run: git fetch 
+      run: git fetch origin
       
     - name: Config
       run: |
             git checkout source 
-            git log -p -1
+            git log -1
             git config --global user.email "mad.hephaestus@gmail.com"
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
@@ -38,13 +38,11 @@ jobs:
     - name: Check deploy commit
       run: |
             git checkout deploy 
-            git log -p -1
+            git log -1
             git checkout source   
-            
-    - name: Pull deploy into source
-      run: |
-           git fetch origin 
-           git merge origin/deploy -m "Auto-merge from CI "
+      
+    - name: Merge deploy into source
+      run: git merge origin/deploy -m "Auto-merge from CI " --allow-unrelated-histories
       
     - name: Push upstream changes to deploy
       run: pit push
