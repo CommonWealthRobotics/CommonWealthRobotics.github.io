@@ -279,7 +279,6 @@
 	export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 	wget https://chriswhocodes.com/downloads/openjfx-8u60-sdk-overlay-linux-armv6hf.zip
 	sudo unzip  openjfx-8u60-sdk-overlay-linux-armv6hf.zip -d $JAVA_HOME/../
-	# replace this with the latest from https://github.com/CommonWealthRobotics/BowlerStudio/releases
 	wget <%=@item[:kernelJAR]%>
 	# for a REPL
 	java -jar <%=@item[:kernelJAROnly]%> -r
