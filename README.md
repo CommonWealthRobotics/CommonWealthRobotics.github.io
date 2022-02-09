@@ -171,7 +171,6 @@ On the new landing page the download links come from the frontmatter in the `ind
 Update them by comitting a new index.md file with updated links to this repo.
 ```
 winInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/Windows-nrdk-*.*.*.exe"
-linInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/Ubuntu-nrdk-*.*.*.deb"
 macInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/MacOSX-nrdk-*.*.*.zip"
 ```
 
