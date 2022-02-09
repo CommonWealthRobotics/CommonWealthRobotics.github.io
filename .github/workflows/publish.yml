@@ -32,6 +32,7 @@ jobs:
             git config --global user.email "mad.hephaestus@gmail.com"
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
+            git config --global core.mergeoptions --no-edit
             
     - name: Pull deploy into source
       run: git pull origin deploy --allow-unrelated-histories
