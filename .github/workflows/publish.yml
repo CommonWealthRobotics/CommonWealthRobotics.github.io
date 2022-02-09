@@ -34,7 +34,7 @@ jobs:
             git config pull.rebase false
             
     - name: Pull deploy into source
-      run: git pull origin deployr --allow-unrelated-histories
+      run: git pull origin deploy --allow-unrelated-histories
       
     - name: Push upstream changes to deploy
       run: pit push
