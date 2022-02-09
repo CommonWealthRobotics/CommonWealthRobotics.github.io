@@ -34,7 +34,7 @@ jobs:
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
             git config --global core.mergeoptions --no-edit
-            git update-index --assume-unchanged .github/workflows/publish.yml
+            
             
     - name: Check deploy commit
       run: |
@@ -43,7 +43,9 @@ jobs:
             git checkout source   
       
     - name: Merge deploy into source
-      run: git merge origin/deploy -m "Auto-merge from CI " --allow-unrelated-histories
+      run: |
+            git update-index --assume-unchanged .github/workflows/publish.yml
+            git merge origin/deploy -m "Auto-merge from CI " --allow-unrelated-histories
       
     - name: Push upstream changes to deploy
       run: pit push
