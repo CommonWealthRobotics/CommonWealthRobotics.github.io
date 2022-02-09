@@ -39,7 +39,7 @@ jobs:
          git fetch
          git config pull.rebase false  
          git checkout deploy
-         git pull . source  
+         git pull . source   --allow-unrelated-histories
          
     - name: Build Site
       run: bundle exec rake site:deploy
