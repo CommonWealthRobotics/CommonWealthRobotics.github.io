@@ -30,10 +30,10 @@ jobs:
       run: |
             git checkout source 
             git log -1
-            git config --global user.email "mad.hephaestus@gmail.com"
-            git config --global user.name "Kevin Harrington"
+            git config user.email "mad.hephaestus@gmail.com"
+            git config user.name "Kevin Harrington"
             git config pull.rebase false
-            git config --global core.mergeoptions --no-edit
+            git config core.mergeoptions --no-edit
             
             
     - name: Check deploy commit
@@ -44,11 +44,11 @@ jobs:
       
     - name: Merge deploy into source
       run: |
-            git update-index --assume-unchanged .github/workflows/publish.yml
-            git merge origin/deploy --no-ff --no-edit --allow-unrelated-histories -m "Auto-merge from CI " 
+            git update-index --assume-unchanged ./.github/workflows/publish.yml
+            git merge origin/deploy --strategy-option ours --no-ff --no-edit --allow-unrelated-histories -m "Auto-merge from CI " 
       
-    - name: Push upstream changes to deploy
-      run: pit push
+    - name: Push upstream changes to source
+      run: git push
       
     - name: Checkout Deploy
       run: git checkout deploy
