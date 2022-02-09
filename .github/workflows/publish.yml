@@ -45,7 +45,7 @@ jobs:
     - name: Merge deploy into source
       run: |
             git update-index --assume-unchanged .github/workflows/publish.yml
-            git merge origin/deploy -m "Auto-merge from CI " --no-edit --allow-unrelated-histories
+            git merge origin/deploy --no-edit --allow-unrelated-histories -m "Auto-merge from CI " 
       
     - name: Push upstream changes to deploy
       run: pit push
