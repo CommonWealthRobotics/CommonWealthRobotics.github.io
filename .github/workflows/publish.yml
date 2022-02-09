@@ -30,7 +30,8 @@ jobs:
          git config --global user.name "Kevin Harrington"
          git config pull.rebase false
          git checkout deploy
-         git pull . source   --allow-unrelated-histories
+         git pull
+         git pull origin source --allow-unrelated-histories
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
