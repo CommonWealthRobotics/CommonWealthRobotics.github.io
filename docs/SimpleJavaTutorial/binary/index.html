@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+
+            
+			<a href="../primativetypes/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>A Simple Java Tutorial</strong><hr class="menuhr" /></li>
+                
+                    <li class="active" >
+                         <a href="./">Binary</a></li>
+                    
+                
+                    <li  >
+                         <a href="../primativetypes/">Primitive Types</a></li>
+                    
+                
+                    <li  >
+                         <a href="../forloops/">For Loops</a></li>
+                    
+                
+                    <li  >
+                         <a href="../whileloops/">While Loops</a></li>
+                    
+                
+                    <li  >
+                         <a href="../ifstatements/">If Statements</a></li>
+                    
+                
+                    <li  >
+                         <a href="../ifstatementsquiz/">If Statements Quiz</a></li>
+                    
+                
+                    <li  >
+                         <a href="../elseifstatements/">Else/If Statements</a></li>
+                    
+                
+                    <li  >
+                         <a href="../elsestatements/">Else Statements</a></li>
+                    
+                
+                    <li  >
+                         <a href="../classes/">Classes</a></li>
+                    
+                
+                    <li  >
+                         <a href="../constructors/">Constructors</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h1 id="bits">Bits</h1>
+<p>Bits are a single value of 1 or 0 and are the basic thing a computer understands. Also known as true as 1 and false as 0, these values make up the basic building blocks of all computing. </p>
+
+<p>In the electrical world, applying a voltage to a a pin will make it go from false to true. This means Bits are very easy to store, move and read electrically. </p>
+
+<p>A bit represents 2 values, and so each bit you add together is in base 2. Most math in the 0-9 scale is in base 10, as in each unit is 10 times the last. In base 2, also known as binary, each unit is 2 times the last. Base 10 is hard to make electrical circuits understand, unlike binary, which is easy. </p>
+
+<h1 id="bytes">Bytes</h1>
+
+<p>A byte is a set of 8 bits. The selection of 8 bits to make the standard byte size was decided by convention and is now a standard of computer languages. A byte is a value of 0 - 255</p>
+
+<ul>
+  <li>bit 0 = 1</li>
+  <li>bit 1 = 2</li>
+  <li>bit 2 = 4</li>
+  <li>bit 3 = 8</li>
+  <li>bit 4 = 16</li>
+  <li>bit 5 = 32</li>
+  <li>bit 6 = 64</li>
+  <li>bit 7 = 128</li>
+</ul>
+
+<p>And when you add all the bits together </p>
+
+<ul>
+  <li>1+2+4+8+16+32+64+128 = 255</li>
+</ul>
+
+<h1 id="signed-bytes">Signed Bytes</h1>
+<p>In a signed byte, the top bit is read as a negative flag. The same amount of data is stored, just shifted by -128. </p>
+
+<ul>
+  <li>bit 0 = 1</li>
+  <li>bit 1 = 2</li>
+  <li>bit 2 = 4</li>
+  <li>bit 3 = 8</li>
+  <li>bit 4 = 16</li>
+  <li>bit 5 = 32</li>
+  <li>bit 6 = 64</li>
+  <li>bit 7 = negative flag</li>
+</ul>
+
+<p>And when you add all the bits together </p>
+
+<ul>
+  <li>(1+2+4+8+16+32+64)*(-1) = -127</li>
+</ul>
+
+<p>or without the negative flag</p>
+
+<ul>
+  <li>1+2+4+8+16+32+64 = 127</li>
+</ul>
+
+<h1 id="practice">Practice</h1>
+
+<p>You can sharpen your binary skills with the <a href="https://learningnetwork.cisco.com/docs/DOC-1803">Cisco Binary Game</a></p>
+
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+

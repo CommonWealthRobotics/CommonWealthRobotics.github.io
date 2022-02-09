@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66232368-1', 'auto');
+  ga('send', 'pageview');
+  
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+ });
+
+</script>
+<title>Docs</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/assets/bootstrap_min_css.css">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/offcanvas.css" rel="stylesheet">
+	    <link href="/assets/docsmin.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	<link href="/assets/mods.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-twttr-rendered="true">
+  <nav class="navbar navbar-fixed-top navbar-inverse navfront" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li  ><a href="../../">
+            CommonWealth Robotics</a></li>
+            
+            
+            <li  ><a href="../../tutorials/">
+            Tutorials</a></li>
+            
+            
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  <div class="container bs-docs-container">
+    <div class="row">
+
+            <!-- menu -->
+        <div class="col-sm-3">
+        
+            <div class="bs-docs-sidebar hidden-print affix-top">
+            	
+                <a href="../Kinematics/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
+				<span  aria-hidden="true"></span>
+				Previous
+			</a>
+
+            
+			<a href="../Kinematics_model/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+				Next
+				<span  aria-hidden="true"></span>
+				
+				
+			</a><br>
+               <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
+                <li><strong>Bowler Kinematics</strong><hr class="menuhr" /></li>
+                
+                    <li  >
+                         <a href="../Kinematics/">Kinematics</a></li>
+                    
+                
+                    <li class="active" >
+                         <a href="./">Advanced Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Kinematics_model/">Kinematics Model</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Analytic_Solver/">Analytic Solver</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Iterative_Solver/">Iterative Solver</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CAD_Scripts/">CAD Scripts</a></li>
+                    
+                
+                    <li  >
+                         <a href="../CustomKinematics/">Custom Kinematics</a></li>
+                    
+                
+                    <li  >
+                         <a href="../MovingKinematicsDevices/">Moving Kinematics Devices</a></li>
+                    
+                      
+                </ul> <!-- nav bs-docs-sidenav -->
+                
+            </div> <!-- bs-docs-sidebar -->
+        </div> <!-- col-md-3 -->
+            <!-- page content -->
+        <div class="col-sm-9" role="main">
+            <div class="bs-docs-section">
+                
+<h2 id="jacobian">Jacobian</h2>
+
+<p>For Kinematic systems, the Task Space is used to describe the global coordinates, where the task is being performed.  Forward Kinematics solves for the Task Space based on the robot properties.  The Joint Space is the internal robot reference system, which typically includes the joint angles, lengths and offsets.  Inverse Kinematics solves for the Joint Space from the Task Space.  Both are important ways of modeling jobs and systems, and being able to convert between them are absolutely critical in modeling and job functionality.</p>
+
+<p>A Jacobian Matrix defines the physical properties and is used in both Forward and Inverse Kinematics models to translate between the Task and Joint spaces.  The Jacobian matrix, which is calculated from the DH parameters and current pose of the system, multiplied by the Joint Space Velocity matrix gives the Task Space Velocity.  The Inverse Kinematics side can get much more complicated as adjusting this equation to solve for the Joint space means taking the inverse of the Jacobian matrix.</p>
+
+<h2 id="inverse-jacobian">Inverse Jacobian</h2>
+
+<p>By definition, the inverse of a matrix is what needs to be multiplied by a matrix to result in the identity matrix.  Only square matrices can have inverses, and not all square matrices can be inverted (and are called noninvertible or singular).  In kinematics, the Jacobian matrix size is based on both the number of links and degrees of freedom.  The three possible conditions are where the system DOF and the number of links are: equal, greater than or less than.  There will only be a square Jacobian when the system DOF and number of links are equal.  When the system DOF is greater than the number of links, it is very possible that not all desired states are achievable.  When the number of links is greater than the system DOF, over-articulation is possible.  This means that there may be multiple poses that give a solution to one particular task space.  A 6 link system in a 3 DOF space (x,y,z coordinates) will result in a Jacobian with 3 rows and 6 columns.</p>
+
+<script src="https://gist.github.com/mdiblasi/9925fd3572b30419c425.js"></script>
+
+<h2 id="pseudo-jacobian">Pseudo Jacobian</h2>
+
+<p>Generating the Inverse Jacobian for solving the Inverse Kinematics (assuming achievable poses), isn’t possible for non-square Jacobians.  In these cases, which are typically iterative rather than analytic, an approximation is appropriate, which is achieved with the Pseudo Jacobian.  The Pseudo Jacobian is calculated by manipulating the Jacobian, which has the extra benefit of avoiding a case where two sequential limbs are locked straight out, also known as a singularity condition.</p>
+
+<script src="https://gist.github.com/mdiblasi/38c718158daeb0dda564.js"></script>
+
+ 
+            </div>
+        </div>
+    </div> <!-- row -->
+  </div> <!-- container bs-docs-container -->
+<!--  
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+  Woo! Footer!
+  </div>
+</footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/assets/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/holder.js"></script>
+    <script src="/assets/offcanvas.js"></script>
+  </body>
+</html>
+
+
+
