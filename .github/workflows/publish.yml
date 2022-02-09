@@ -31,9 +31,6 @@ jobs:
             git config --global user.email "mad.hephaestus@gmail.com"
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
-            
-    - name: Delete deploy 
-      run: git branch -d deploy
       
     - name: Delete upstream
       run: git push origin --delete deploy
