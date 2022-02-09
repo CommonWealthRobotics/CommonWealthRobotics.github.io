@@ -21,8 +21,17 @@ jobs:
       matrix:
         ruby-version: ['2.5']
 
-    steps:
+    steps:         
     - uses: actions/checkout@v2
+    - name: Checkout Deploy
+      run: |
+         git fetch 
+         git config --global user.email "mad.hephaestus@gmail.com"
+         git config --global user.name "Kevin Harrington"
+         git config pull.rebase false
+         git pull origin deploy   --allow-unrelated-histories
+         git checkout deploy
+         git pull . source   --allow-unrelated-histories
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -33,16 +42,7 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Deps For tests
       run: bundle install
-      
-    - name: Checkout Deploy
-      run: |
-         git fetch 
-         git config --global user.email "mad.hephaestus@gmail.com"
-         git config --global user.name "Kevin Harrington"
-         git config pull.rebase false
-         git pull origin deploy   --allow-unrelated-histories
-         git checkout deploy
-         git pull . source   --allow-unrelated-histories
+   
          
     - name: Build Site
       run: bundle exec rake site:deploy
