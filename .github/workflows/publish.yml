@@ -34,6 +34,7 @@ jobs:
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
             git config --global core.mergeoptions --no-edit
+            git update-index --assume-unchanged .github/workflows/publish.yml
             
     - name: Check deploy commit
       run: |
