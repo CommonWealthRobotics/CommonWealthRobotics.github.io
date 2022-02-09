@@ -40,7 +40,6 @@ jobs:
          git checkout deploy
          git config --global user.email "mad.hephaestus@gmail.com"
          git config --global user.name "Kevin Harrington"
-         git config pull.ff only 
          git config pull.rebase false
          git pull . source   --allow-unrelated-histories
          
