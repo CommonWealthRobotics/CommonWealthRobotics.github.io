@@ -23,15 +23,21 @@ jobs:
 
     steps:         
     - uses: actions/checkout@v2
+    - name: Fetch
+      run: git fetch 
+      
+    - name: Config
+      run: | 
+            git config --global user.email "mad.hephaestus@gmail.com"
+            git config --global user.name "Kevin Harrington"
+            git config pull.rebase false
+      
+    - name: Delete upstream
+      run: git push origin --delete deploy
+      
     - name: Checkout Deploy
-      run: |
-         git fetch 
-         git config --global user.email "mad.hephaestus@gmail.com"
-         git config --global user.name "Kevin Harrington"
-         git config pull.rebase false
-         git checkout deploy
-         git pull
-         git pull origin source --allow-unrelated-histories
+      run: git checkout -b deploy
+      
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -48,4 +54,4 @@ jobs:
       run: bundle exec rake site:deploy
       
     - name: Push
-      run: git push --quiet 
+      run: git push --set-upstream origin deploy
