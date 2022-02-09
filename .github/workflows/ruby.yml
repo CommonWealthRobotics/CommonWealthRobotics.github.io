@@ -33,13 +33,16 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Deps For tests
       run: bundle install
-        
+      
+    - name: Checkout Deploy
+      run: |
+         git fetch
+         git config pull.rebase true  
+         git checkout deploy
+         git pull . source  
+         
     - name: Build Site
       run: bundle exec rake site:deploy
       
     - name: Push
-      run: |
-         git fetch
-         git checkout deploy
-         git pull . source
-         git push --quiet 
+      run: git push --quiet 
