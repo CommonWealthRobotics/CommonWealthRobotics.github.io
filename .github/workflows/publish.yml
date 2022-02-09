@@ -31,12 +31,21 @@ jobs:
             git config --global user.email "mad.hephaestus@gmail.com"
             git config --global user.name "Kevin Harrington"
             git config pull.rebase false
+            
+    - name: Pull deploy into source
+      run: git pull origin deploy
       
-    - name: Delete upstream
-      run: git push origin --delete deploy
+    - name: Push upstream changes to deploy
+      run: pit push
       
     - name: Checkout Deploy
-      run: git checkout -b deploy
+      run: git checkout deploy
+      
+    - name: Pull latest deploy
+      run: git pull
+      
+    - name: Pull changes in source into deploy
+      run: git pull origin source --allow-unrelated-histories
       
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
@@ -54,4 +63,4 @@ jobs:
       run: bundle exec rake site:deploy
       
     - name: Push
-      run: git push --set-upstream origin deploy
+      run: git push --quiet 
