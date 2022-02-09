@@ -39,6 +39,8 @@ jobs:
          git fetch
          git config pull.rebase false  
          git checkout deploy
+         git config --global user.email "mad.hephaestus@gmail.com"
+         git config --global user.name "Kevin Harrington"
          git pull . source   --allow-unrelated-histories
          
     - name: Build Site
