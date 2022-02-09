@@ -37,7 +37,7 @@ jobs:
     - name: Checkout Deploy
       run: |
          git fetch
-         git config pull.rebase true  
+         git config pull.rebase false  
          git checkout deploy
          git pull . source  
          
