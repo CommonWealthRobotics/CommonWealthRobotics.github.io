@@ -1,5 +1,5 @@
 ---
-title: Revolve Extrude 
+title: Sweep Extrude
 step: 20
 layout: post
 ---
