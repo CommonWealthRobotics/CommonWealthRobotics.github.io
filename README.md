@@ -7,7 +7,7 @@ http://CommonWealthRobotics.github.io/
 
 Build monitor:
 
-https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io
+https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io/actions
 
 ## How this thing works ##
 * The content directory will become the root of the website.
