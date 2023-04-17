@@ -10,8 +10,6 @@ name: Build and Deploy
 on:
   push:
     branches: [ source ]
-  pull_request:
-    branches: [ source ]
 
 jobs:
   website-deploy:
@@ -23,54 +21,10 @@ jobs:
 
     steps:         
     - uses: actions/checkout@v2
-    - name: Fetch
-      run: git fetch origin
-      
-    - name: Config
-      run: |
-            git checkout source 
-            git log -1
-            git config user.email "mad.hephaestus@gmail.com"
-            git config user.name "Kevin Harrington"
-            git config pull.rebase false
-            git config core.mergeoptions --no-edit
-            
-            
-    - name: Check deploy commit
-      run: |
-            git checkout deploy 
-            git log -1
-            git checkout source   
-      
-    - name: Merge deploy into source
-      run: |
-            git update-index --assume-unchanged ./.github/workflows/publish.yml
-            git merge origin/deploy --strategy-option ours --no-ff --no-edit --allow-unrelated-histories -m "Auto-merge from CI " 
-      
-      
-    - name: Checkout Deploy
-      run: git checkout deploy
-      
-    - name: Pull latest deploy
-      run: git pull
-      
-    - name: Pull changes in source into deploy
-      run: git pull origin source --allow-unrelated-histories
-      
     - name: Set up Ruby
-    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-    # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
       uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Deps For tests
-      run: bundle install
-   
-         
-    - name: Build Site
-      run: bundle exec rake site:deploy
-      
     - name: Push
-      run: git push --quiet 
+      run: bash deploy.sh

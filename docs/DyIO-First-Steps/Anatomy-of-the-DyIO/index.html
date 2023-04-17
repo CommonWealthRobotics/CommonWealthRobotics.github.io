@@ -76,13 +76,9 @@
         
             <div class="bs-docs-sidebar hidden-print affix-top">
             	
-                <a href="../Installing-Software-and-Drivers/" class="btn btn-default navbtn pull-left btn-sm" aria-label="Left Align">
-				<span  aria-hidden="true"></span>
-				Previous
-			</a>
 
             
-			<a href="../Testing-With-NR-Console/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
+			<a href="../Installing-Software-and-Drivers/" class="btn btn-default navbtn btn-sm" aria-label="Right Align">
 				Next
 				<span  aria-hidden="true"></span>
 				
@@ -91,12 +87,12 @@
                <ul class="nav bs-docs-sidenav active" data-spy="active" data-offset-top="25" data-offset-bottom="20">
                 <li><strong>DyIO First Steps</strong><hr class="menuhr" /></li>
                 
-                    <li  >
-                         <a href="../Installing-Software-and-Drivers/">Installing Software and Drivers</a></li>
-                    
-                
                     <li class="active" >
                          <a href="./">Anatomy of the DyIO</a></li>
+                    
+                
+                    <li  >
+                         <a href="../Installing-Software-and-Drivers/">Installing Software and Drivers</a></li>
                     
                 
                     <li  >
@@ -123,65 +119,69 @@
         <div class="col-sm-9" role="main">
             <div class="bs-docs-section">
                 
-<h2 id="dyio-at-a-glance">DyIO At a Glance</h2>
+## DyIO At a Glance##
 
-<p>Starting at the top we see the <code>Bowler Connection</code> which is a 5v level serial port, the <code>External Power Connection</code> which is where you connect an external battery, and the <code>USB Connection</code> where you connect the DyIO to your PC, Phone, or Board.</p>
+Starting at the top we see the `Bowler Connection` which is a 5v level serial port, the `External Power Connection` which is where you connect an external battery, and the `USB Connection` where you connect the DyIO to your PC, Phone, or Board.
 
-<p>Moving down we see the <code>bank power Jumpers/Switches</code> which control the power flowing to the banks and the two <code>Channel Banks</code> which is where all your sensors and motors get connected.</p>
+Moving down we see the `bank power Jumpers/Switches` which control the power flowing to the banks and the two `Channel Banks` which is where all your sensors and motors get connected.
 
-<p>Finally, we see the <code>Status LED</code> which shows you what the DyIO is thinking, the <code>Reset Switch</code> which is used for firmware upgrades, and finally the <code>Power Mode LEDs</code> which show you the voltage of each bank’s center row of pins.</p>
+Finally, we see the `Status LED` which shows you what the DyIO is thinking, the `Reset Switch` which is used for firmware upgrades, and finally the `Power Mode LEDs` which show you the voltage of each bank's center row of pins.
 
-<p><img src="/img/Dyio-layout.png" class="img-responsive" /></p>
+<img src="/img/Dyio-layout.png" class="img-responsive"/>
 
-<p>Status LED Key:</p>
 
-<ul>
-  <li>Blue: Device is connected to an application and communicating.</li>
-  <li>Teal (both Blue and Green): Device is not connected to an application or not communicating.</li>
-  <li>Purple (both Blue and Red): Battery voltage fluctuation error (the voltage on a bank set to</li>
-  <li>Motors power mode is fluctuating). This is usually caused by the connected battery pack being close to dead or dead, and will update every 10 seconds.</li>
-  <li>Red: Error condition. Try re-flashing the firmware or shooting us an email.</li>
-  <li>Red to Green slow flashing: Error condition. Try re-flashing the firmware.</li>
-</ul>
+Status LED Key:
 
-<h2 id="banks-and-power">Banks and Power</h2>
-<div class="bs-callout bs-callout-info">
+* Blue: Device is connected to an application and communicating.
+* Teal (both Blue and Green): Device is not connected to an application or not communicating.
+* Purple (both Blue and Red): Battery voltage fluctuation error (the voltage on a bank set to
+* Motors power mode is fluctuating). This is usually caused by the connected battery pack being close to dead or dead, and will update every 10 seconds.
+* Red: Error condition. Try re-flashing the firmware or shooting us an email.
+* Red to Green slow flashing: Error condition. Try re-flashing the firmware.
 
-  <h4 id="servos-and-usb">Servos and USB</h4>
 
-  <p>The DyIO won’t let you run Servoes off of a bank with a Green voltage by default. Computer USB ports are picky and too many servoes could result in damage or odd behavior if powered from USB. If you know what you’re doing then you can disable “Safe Mode” through code or in the DyIO tab to disable this behavior.</p>
+
+
+
+
+## Banks and Power ##
+<div class="bs-callout bs-callout-info" markdown="1">
+
+#### Servos and USB ####
+	
+The DyIO won't let you run Servoes off of a bank with a Green voltage by default. Computer USB ports are picky and too many servoes could result in damage or odd behavior if powered from USB. If you know what you're doing then you can disable "Safe Mode" through code or in the DyIO tab to disable this behavior.
 </div>
 
-<div class="bs-callout bs-callout-warning">
-
-  <h4 id="servo-brownouts-and-low-batteries">Servo Brownouts and Low batteries</h4>
-
-  <p>The DyIO will Disable Servos if the voltage dips below 5v when trying to move servoes to prevent damage to batteries. You can recover from this by configuring the channel again or commanding another position.</p>
+<div class="bs-callout bs-callout-warning" markdown="1">
+	
+#### Servo Brownouts and Low batteries ####
+	
+The DyIO will Disable Servos if the voltage dips below 5v when trying to move servoes to prevent damage to batteries. You can recover from this by configuring the channel again or commanding another position.
 </div>
 
-<p>You’ve probably noticed the jumpers or switches above each of the two banks.
-These connect the banks to either 5v from the PC’s USB port or the connected battery.</p>
+You've probably noticed the jumpers or switches above each of the two banks.
+These connect the banks to either 5v from the PC's USB port or the connected battery.
 
-<p>The Lights at the bottom of each bank indicate it’s voltage.</p>
+The Lights at the bottom of each bank indicate it's voltage.
 
-<ul>
-  <li>RED indicates Servo/Battery Voltage (5.5 or greater)</li>
-  <li>Yellow indicates no voltage</li>
-  <li>Green indicates Sensor Voltage (5v)</li>
-</ul>
 
-<p>Moving the Jumper/Switch to the “Sensors” position connects the entire bank to 5v from the USB.
-Moving the Jumper/Switch to the “Motors” position connects the entire bank to the external Battery.</p>
+* RED indicates Servo/Battery Voltage (5.5 or greater)
+* Yellow indicates no voltage
+* Green indicates Sensor Voltage (5v)
 
-<p><img src="/img/Dyio-leds-without-power.png" class="img-responsive" /></p>
+Moving the Jumper/Switch to the "Sensors" position connects the entire bank to 5v from the USB.
+Moving the Jumper/Switch to the "Motors" position connects the entire bank to the external Battery.
 
-<h2 id="inputs-and-outputs">Inputs and Outputs</h2>
-<p>The DyIO has 24, 3-pin channels that are grouped into two banks with 12 channels each These channels are used to connect sensors, actuators (i.e. servos) or other peripherals to the DyIO. </p>
+<img src="/img/Dyio-leds-without-power.png" class="img-responsive"/>
 
-<p>Each channel has a number of possible modes that change the behavior of the pin and give the user access to different functionality.</p>
+## Inputs and Outputs ##
+The DyIO has 24, 3-pin channels that are grouped into two banks with 12 channels each These channels are used to connect sensors, actuators (i.e. servos) or other peripherals to the DyIO. 
 
-<p><img src="/img/channels.png" class="img-responsive" />
-<img src="/img/dyioposter_had.png" class="img-responsive" /></p>
+Each channel has a number of possible modes that change the behavior of the pin and give the user access to different functionality.
+
+
+<img src="/img/channels.png" class="img-responsive"/>
+<img src="/img/dyioposter_had.png" class="img-responsive"/>
  
             </div>
         </div>
