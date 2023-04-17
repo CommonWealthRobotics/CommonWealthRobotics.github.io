@@ -47,8 +47,6 @@ jobs:
             git update-index --assume-unchanged ./.github/workflows/publish.yml
             git merge origin/deploy --strategy-option ours --no-ff --no-edit --allow-unrelated-histories -m "Auto-merge from CI " 
       
-    - name: Push upstream changes to source
-      run: git push
       
     - name: Checkout Deploy
       run: git checkout deploy
