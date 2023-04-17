@@ -23,6 +23,7 @@ compile '*' do
   elsif item[:extension] == 'js'
     # don’t filter stylesheets
   elsif item[:extension] == 'md'
+    filter :kramdown
     if item[:layout] != nil
         #puts "[#{Rainbow(item.reference).red}]\t\t layout '#{Rainbow(item[:layout]).yellow}' requested in front matter"
         layout item[:layout]
