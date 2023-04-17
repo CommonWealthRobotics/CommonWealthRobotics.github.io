@@ -2,6 +2,8 @@
 
 set -e 
 
+rm -rf docs
+
 git fetch origin
 
 git log -1
