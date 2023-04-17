@@ -1,6 +1,6 @@
 ---
 title: Advanced Kinematics
-step: 1
+step: 0
 layout: post
 ---
 

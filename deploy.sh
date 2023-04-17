@@ -17,7 +17,7 @@ git checkout deploy
 
 git pull
 
-git pull source --allow-unrelated-histories
+git pull . source --allow-unrelated-histories
 
 set -e 
 
