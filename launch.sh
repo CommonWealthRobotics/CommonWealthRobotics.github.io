@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
-sudo apt-get install ruby2.5-dev  bundler;
+sudo apt install rbenv
+rbenv install 2.7.5
 bundle install;
 bundle exec nanoc view & bundle exec guard;
