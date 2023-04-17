@@ -23,9 +23,7 @@ git pull . source --allow-unrelated-histories
 
 set -e 
 
-bundle install
-
-bundle exec rake site:deploy
+bash compile.sh
 
 set +e
 
