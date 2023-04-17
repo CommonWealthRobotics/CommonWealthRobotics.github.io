@@ -31,6 +31,6 @@ git add --all .
 
 git commit -a -m"Update for deploy"
 
-git push origin deploy 
+git push --force
 
 git checkout source
