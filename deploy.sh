@@ -17,6 +17,8 @@ git checkout deploy
 
 git pull --allow-unrelated-histories
 
+git merge source --strategy-option ours --no-ff --no-edit --allow-unrelated-histories -m "Auto-merge from CI " 
+
 git pull . source --allow-unrelated-histories
 
 set -e 
