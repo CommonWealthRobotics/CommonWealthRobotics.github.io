@@ -267,23 +267,24 @@
         <div class="col-sm-9" role="main">
             <div class="bs-docs-section">
                 
-<iframe width="280" height="150" src="http://www.youtube.com/embed/A88uCyVGOHs" frameborder="0" allowfullscreen></iframe>
+<iframe width="280" height="150" src="http://www.youtube.com/embed/A88uCyVGOHs" frameborder="0" allowfullscreen=""></iframe>
 
-A Digital Input Channel is a channel on the DyIO set to Digital Input mode. Some common sensors that are typically used in Digital Input mode include limit switches and buttons.
+<p>A Digital Input Channel is a channel on the DyIO set to Digital Input mode. Some common sensors that are typically used in Digital Input mode include limit switches and buttons.</p>
 
-All channels on the DyIO may be set to Digital Input mode, and all channels in Digital Input mode can read input in either synchronous or asynchronous mode.
+<p>All channels on the DyIO may be set to Digital Input mode, and all channels in Digital Input mode can read input in either synchronous or asynchronous mode.</p>
 
-Channels on the DyIO set to Digital Input mode will read the voltage between the signal pin of that channel and a ground - usually the ground pin of that channel.
+<p>Channels on the DyIO set to Digital Input mode will read the voltage between the signal pin of that channel and a ground - usually the ground pin of that channel.</p>
 
-The DyIO then will return that input as either a "high" or "low" value:
+<p>The DyIO then will return that input as either a “high” or “low” value:</p>
 
-    Input over 2.5 volts is considered high, otherwise it is considered low.
-    When coding in Java using the DyIO, "high" is given as a boolean true value ("low" is given as a boolean false).
+<pre><code>Input over 2.5 volts is considered high, otherwise it is considered low.
+When coding in Java using the DyIO, "high" is given as a boolean true value ("low" is given as a boolean false).
+</code></pre>
 
+<p>In This example we will poll the digital input port and print out the values. To run the example in NrConsole, hit run and press a button connected to channel 8.</p>
 
-In This example we will poll the digital input port and print out the values. To run the example in NrConsole, hit run and press a button connected to channel 8.
+<script src="https://gist.github.com/madhephaestus/40fadfa5804eee848e62.js"></script>
 
-<script src='https://gist.github.com/madhephaestus/40fadfa5804eee848e62.js'></script>
  
             </div>
         </div>
