@@ -25,7 +25,7 @@ see this link for updating .congif.yaml with a new token. https://gist.github.co
 ```
   git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
   sudo apt install rbenv
-  rbenv install 2.7.5
+  rbenv install 2.7.6
   cd into CommonWealthRobotics.github.io
   bundle install
   bundle exec nanoc view & bundle exec guard
