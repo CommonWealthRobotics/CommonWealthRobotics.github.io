@@ -15,7 +15,7 @@ git merge origin/deploy --strategy-option ours --no-ff --no-edit --allow-unrelat
 
 git checkout deploy
 
-git pull
+git pull --allow-unrelated-histories
 
 git pull . source --allow-unrelated-histories
 
