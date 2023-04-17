@@ -10,8 +10,6 @@ name: Build and Deploy
 on:
   push:
     branches: [ source ]
-  pull_request:
-    branches: [ source ]
 
 jobs:
   website-deploy:
