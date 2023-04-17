@@ -19,7 +19,7 @@ git pull
 
 git pull . source --allow-unrelated-histories
 
-#set -e 
+set -e 
 
 bundle install
 
@@ -27,6 +27,7 @@ bundle exec rake site:deploy
 
 git commit -a -m"Update for deploy"
 
+set +e
 git push --quiet ls\
 
 
