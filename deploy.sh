@@ -2,15 +2,12 @@
 
 git fetch origin
 
-git checkout source 
 git log -1
 git config user.email "mad.hephaestus@gmail.com"
 git config user.name "Kevin Harrington"
 git config pull.rebase false
 git config core.mergeoptions --no-edit
 
-git checkout deploy 
-git log -1
 git checkout source   
 
 git update-index --assume-unchanged ./.github/workflows/publish.yml
@@ -20,10 +17,12 @@ git checkout deploy
 
 git pull
 
-git pull origin source --allow-unrelated-histories
+git pull source --allow-unrelated-histories
 
 bundle install
 
 bundle exec rake site:deploy
+
+git commit -a -m"Update for deploy"
 
 git push --quiet 
