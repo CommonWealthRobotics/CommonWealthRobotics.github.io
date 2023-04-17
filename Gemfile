@@ -1,6 +1,6 @@
 source "http://production.cf.rubygems.org/"
 
-ruby '-> 2.7.0'
+ruby '~> 2.7.6'
 
 gem 'nanoc', '~> 3.7.4'
 gem 'rainbow', '~> 2.0.0'
