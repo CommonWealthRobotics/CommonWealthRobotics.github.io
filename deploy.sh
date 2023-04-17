@@ -27,6 +27,7 @@ bundle exec rake site:deploy
 
 git commit -a -m"Update for deploy"
 
-git push --quiet 
+#git push --quiet ls\
 
-git checkout source
+
+#git checkout source
