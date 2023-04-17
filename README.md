@@ -7,7 +7,7 @@ http://CommonWealthRobotics.github.io/
 
 Build monitor:
 
-https://travis-ci.org/CommonWealthRobotics/CommonWealthRobotics.github.io
+https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io/actions
 
 ## How this thing works ##
 * The content directory will become the root of the website.
@@ -24,11 +24,7 @@ see this link for updating .congif.yaml with a new token. https://gist.github.co
 ## Local Compile ##
 ```
   git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
-  sudo apt install rbenv
-  rbenv install 2.7.5
-  cd into CommonWealthRobotics.github.io
-  bundle install
-  bundle exec nanoc view & bundle exec guard
+  bash launch.sh
   
   For mac:
   Install xcode

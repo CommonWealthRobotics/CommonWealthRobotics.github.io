@@ -127,99 +127,51 @@
         <div class="col-sm-9" role="main">
             <div class="bs-docs-section">
                 
-<h2 id="packet-format">Packet Format</h2>
+## Packet Format ##
 
-<table>
-  <thead>
-    <tr>
-      <th>Size</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1b</td>
-      <td>Protocol Revision</td>
-      <td>The revision of the Bowler protocol to use</td>
-    </tr>
-    <tr>
-      <td>6b</td>
-      <td>Target Device ID</td>
-      <td>The IEEE OUI-48 MAC address of the recipient device</td>
-    </tr>
-    <tr>
-      <td>1b</td>
-      <td>Packet Type</td>
-      <td>Metadata pertaining to how the packet will affect device state.</td>
-    </tr>
-    <tr>
-      <td>1bit</td>
-      <td>Direction Flag</td>
-      <td>Indicates the packet as a request or a response.</td>
-    </tr>
-    <tr>
-      <td>7bit</td>
-      <td>Namespace Collision Resolution</td>
-      <td>Used to resolve namespace collisions when multiple namespaces have similarly named RPCs.</td>
-    </tr>
-    <tr>
-      <td>1b</td>
-      <td>Data Length</td>
-      <td>The length of data to come including the RPC.</td>
-    </tr>
-    <tr>
-      <td>1b</td>
-      <td>Header Checksum</td>
-      <td>The checksum to determine the validity of the packet.</td>
-    </tr>
-    <tr>
-      <td>4b</td>
-      <td>RPC</td>
-      <td>The Bowler RPC call identifier.</td>
-    </tr>
-    <tr>
-      <td>0b to 251b</td>
-      <td>Packet Data</td>
-      <td>The rest of the data, Arguments or return values.</td>
-    </tr>
-  </tbody>
-</table>
+|     Size       |      Name                       |        Description      |
+|----------------|---------------------------------|-------------------------|
+| 1b             | Protocol Revision               | The revision of the Bowler protocol to use |
+| 6b             | Target Device ID                | The IEEE OUI-48 MAC address of the recipient device |
+| 1b             | Packet Type                     | Metadata pertaining to how the packet will affect device state. |
+| 1bit           | Direction Flag                  | Indicates the packet as a request or a response. |
+| 7bit           | Namespace Collision Resolution  | Used to resolve namespace collisions when multiple namespaces have similarly named RPCs. |
+| 1b             | Data Length                     | The length of data to come including the RPC. |
+| 1b             | Header Checksum                 | The checksum to determine the validity of the packet.|
+| 4b             | RPC                             | The Bowler RPC call identifier. |
+| 0b to 251b     | Packet Data					   | The rest of the data, Arguments or return values. |
 
-<h3 id="device-id">DEVICE ID</h3>
+### DEVICE ID ###
 
-<p>The bowler address is a globally unique address across all bowler devices. Now two devices should have the same 6 byte address. This field contains the address of the Device that is being communicated with.</p>
+The bowler address is a globally unique address across all bowler devices. Now two devices should have the same 6 byte address. This field contains the address of the Device that is being communicated with.
 
-<p>One address out of all the possible addresses is treated differently. This address is the Link Local Address. It consists of all zeros (00:00:00:00:00:00) and any bowler device will respond to it.</p>
+One address out of all the possible addresses is treated differently. This address is the Link Local Address. It consists of all zeros (00:00:00:00:00:00) and any bowler device will respond to it.
 
-<h3 id="packet-type">Packet Type</h3>
+### Packet Type ###
 
-<p>A packet can either be Asynchronous (spontaneous device to host) or Synchronous (a host initiated request or a response to one).</p>
+A packet can either be Asynchronous (spontaneous device to host) or Synchronous (a host initiated request or a response to one).
 
-<p>This is further divided into State Changing and non State Changing. State changing packets will cause the device to do something, to change it’s state. For Example, setting a pin state would be state changing but querying it’s state wouldn’t be.</p>
+This is further divided into State Changing and non State Changing. State changing packets will cause the device to do something, to change it's state. For Example, setting a pin state would be state changing but querying it's state wouldn't be.
 
-<p>Also, there are two levels of priority (low and high)</p>
+Also, there are two levels of priority (low and high)
 
-<ul>
-  <li>POST(<code>0x20</code>)		Synchronous, Device State Changing</li>
-  <li>GET(<code>0x10</code>) 		Synchronous, query for information, non state changing</li>
-  <li>STATUS(<code>0x00</code>) 	Synchronous, High priority non state changing</li>
-  <li>CRITICAL(<code>0x30</code>) Synchronous, High Priority State Changing</li>
-  <li>ASYNC(<code>0x40</code>) 	Asynchronous, high priority, state changing.</li>
-</ul>
+ * POST(`0x20`)		Synchronous, Device State Changing
+ * GET(`0x10`) 		Synchronous, query for information, non state changing
+ * STATUS(`0x00`) 	Synchronous, High priority non state changing
+ * CRITICAL(`0x30`) Synchronous, High Priority State Changing
+ * ASYNC(`0x40`) 	Asynchronous, high priority, state changing.
 
-<h3 id="direction-flag">Direction Flag</h3>
+### Direction Flag ###
 
-<p>Packets travel along a bidirectional link between a Host and a Device. The Direction flag specifies the direction the packet is traveling. a value of 0 indicates a packet is traveling from Host to Device. Likewise, A value of 1 indicates Device to host.</p>
+Packets travel along a bidirectional link between a Host and a Device. The Direction flag specifies the direction the packet is traveling. a value of 0 indicates a packet is traveling from Host to Device. Likewise, A value of 1 indicates Device to host.
 
-<h3 id="collision-resolution-number">Collision Resolution Number</h3>
+### Collision Resolution Number ###
 
-<p>In the event that a bowler device implements two name-spaces with identical RPCs, The device will return an error packet if this field is left zero. To resolve this collision, the host must supply the index of the desired namespace. This index is the same as the index used in bcs.core._nms</p>
+In the event that a bowler device implements two name-spaces with identical RPCs, The device will return an error packet if this field is left zero. To resolve this collision, the host must supply the index of the desired namespace. This index is the same as the index used in bcs.core._nms
 
-<h3 id="sources-and-examples">Sources and Examples</h3>
+### Sources and Examples ###
 
-<p>The code can be found on our company github page in the c-bowler and java-bowler projects.</p>
- 
+The code can be found on our company github page in the c-bowler and java-bowler projects. 
             </div>
         </div>
     </div> <!-- row -->

@@ -213,10 +213,6 @@ namespace :site do
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(CONFIG["destination"]) do
-      sh "git config --global user.email 'mad.hephaestus@gmail.com'"
-      sh "git config --global user.name 'Kevin Harrington'"
-      sh "git add --all ."
-      sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
       puts "My work is done, Will I Dream...?"
     end
