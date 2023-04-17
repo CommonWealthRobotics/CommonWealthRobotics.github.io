@@ -12,8 +12,7 @@ else
 	~/.rvm/bin/rvm pkg install openssl
 	~/.rvm/bin/rvm install 2.7.6 --with-openssl-dir=$HOME/.rvm/usr
 fi
-
-
+~/.rvm/bin/rvm install ruby-2.7.6
 source $FILE
 bundle install;
 bundle exec nanoc view & bundle exec guard;
