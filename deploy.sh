@@ -31,6 +31,8 @@ bash compile.sh
 
 set +e
 
+echo "commonwealthrobotics.com" >./docs/CNAME
+
 git add --all .
 
 git commit -a -m"Update for deploy"
