@@ -27,10 +27,12 @@ bundle install
 
 bundle exec rake site:deploy
 
+set +e
+
+git add --all .
+
 git commit -a -m"Update for deploy"
 
-
 git push origin deploy 
-
 
 git checkout source
