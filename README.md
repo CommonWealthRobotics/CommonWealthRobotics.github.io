@@ -47,6 +47,7 @@ To compile the source locally and see the rendered changes, run:
 ```
 and navagete to 
 
+
 http://localhost:3000/
 
 to view the local build. As you make changes, it will automatically compile continously. 
@@ -174,4 +175,7 @@ Update them by comitting a new index.md file with updated links to this repo.
 winInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/Windows-nrdk-*.*.*.exe"
 macInstaller: "https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/*.*.*/MacOSX-nrdk-*.*.*.zip"
 ```
+# Contributions
 
+Main Author of documentation: Kevin Harrington
+Revised by: @dnlr-p
