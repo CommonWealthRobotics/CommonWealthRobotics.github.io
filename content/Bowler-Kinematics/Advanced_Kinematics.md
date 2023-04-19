@@ -22,9 +22,3 @@ By definition, the inverse of a matrix is what needs to be multiplied by a matri
 Generating the Inverse Jacobian for solving the Inverse Kinematics (assuming achievable poses), isn't possible for non-square Jacobians.  In these cases, which are typically iterative rather than analytic, an approximation is appropriate, which is achieved with the Pseudo Jacobian.  The Pseudo Jacobian is calculated by manipulating the Jacobian, which has the extra benefit of avoiding a case where two sequential limbs are locked straight out, also known as a singularity condition.
 
 <script src="https://gist.github.com/mdiblasi/38c718158daeb0dda564.js"></script>
-
-
-
-
-
-
