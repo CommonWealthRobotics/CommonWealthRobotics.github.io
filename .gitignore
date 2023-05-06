@@ -8,3 +8,4 @@ output
 /#2#travis.log
 /input.txt
 /travis.log
+.DS_Store
