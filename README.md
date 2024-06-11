@@ -25,10 +25,16 @@ see this link for updating .congif.yaml with a new token. https://gist.github.co
 ```
   git clone https://github.com/CommonWealthRobotics/CommonWealthRobotics.github.io.git
   bash launch.sh
+  ```
   
   For mac:
+  
+  ```
   Install xcode
   Install macports
+  ```
+  
+  ```
   sudo port install ruby19
   sudo port install rb19-bundler
   bundle-1.9 install
