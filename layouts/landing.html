@@ -154,7 +154,7 @@
 
 			<h2 class="section-heading text-center">BowlerStudio Release</h2>
 			<h4 class="section-heading text-center">BowlerStudio Minium
-				Spec: 64 bit 2.2ghz Quad Core w/ 16GB (32GB RAM recommended) ram,
+				Spec: 64 bit 2.2ghz Quad Core w/ 4GB (8GB RAM recommended) ram,
 				OpenGL3.0+ and 512mb disk space</h4>
 
 			<h2 class="section-heading text-center">Choose your Installer</h2>
@@ -238,7 +238,7 @@
 
 			</h2>
 			<h4 class="section-heading text-center">Kernel Minium Spec: 4B
-				RAM, Java 8, and JavaFX u60+ (x86, x64 and ARMv6 Hf supported)</h4>
+				RAM, Java 17, and JavaFX u60+ (x86, x64 and ARMv6 Hf supported)</h4>
 
 			<h2 class="section-heading text-center">
 				<a class="btn btn-default text-center" href="<%=@item[:kernelJAR]%>"
@@ -257,11 +257,7 @@
 		<pre class="bash">
 							
 							<code>
-	sudo apt update
-	sudo apt-get install openjdk-8-jdk openjdk-8-jre-headless
-	export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
-	wget https://chriswhocodes.com/downloads/openjfx-8u60-sdk-overlay-linux-armv6hf.zip
-	sudo unzip  openjfx-8u60-sdk-overlay-linux-armv6hf.zip -d $JAVA_HOME/../
+    sudo apt install openjdk-17-jdk -y
 	wget <%=@item[:kernelJAR]%>
 	# for a REPL
 	java -jar <%=@item[:kernelJAROnly]%> -r
