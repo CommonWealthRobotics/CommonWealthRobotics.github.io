@@ -1,10 +1,10 @@
 ---
-title: JBullet Physics Engine
+title: MuJoCo Physics Engine
 step: 11
 layout: post
 ---
 
-JBullet is a java port of the Bullet Physics engine. BowlerStudio provices the JBullet runtime for users to build with. 
+JBullet is a java port of the MuJoCo Physics engine. BowlerStudio provides the Java bindings for the MuJoCo runtime for users to build with. 
 
 [Check out the In Depth JBullet Physics Tutorial](/JBullet-Physics/Cube/)
 
