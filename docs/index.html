@@ -101,6 +101,9 @@
 					<p class="lead">Scripts can be loaded from your hard drive and
 						modified using an editor of your choice, or loaded from Github
 						gists for a truly "backed up in the cloud" coding experience.</p>
+					<p class="lead">Robots are simulated with the fast and accurate 
+						<a href="https://github.com/google-deepmind/mujoco">MuJoCo Physics Engine</a>. Users
+					can test out configurations and different motors all before printing and buying parts. </p>	
 					<p class="lead">BowlerStudio features the Creature Creator, a
 						co-engineering interface that lets users generate robots with
 						slide bars. The application will generate 3d printable STL's that
@@ -149,10 +152,9 @@
 	<div class="content-section-a">
 		<div class="col-lg-12 col-sm-12">
 
-			<h2 class="section-heading text-center">BowlerStudio Alpha
-				Release</h2>
+			<h2 class="section-heading text-center">BowlerStudio Release</h2>
 			<h4 class="section-heading text-center">BowlerStudio Minium
-				Spec: 64 bit 2.2ghz Quad Core w/ 16GB (32GB RAM recommended) ram,
+				Spec: 64 bit 2.2ghz Quad Core w/ 4GB (8GB RAM recommended) ram,
 				OpenGL3.0+ and 512mb disk space</h4>
 
 			<h2 class="section-heading text-center">Choose your Installer</h2>
@@ -169,9 +171,20 @@
 						</a>
 						<h3 class="text-center">
 							<a class="btn btn-default text-center "
-								href="https://github.com/CommonWealthRobotics/Installer-Linux-BowlerStudio/releases/latest/download/bowlerstudio">BowlerStudio for Linux</a>
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-Linux-arm64.AppImage">ARM Linux AppImage</a>
 						</h3>
-
+						<h3 class="text-center">
+							<a class="btn btn-default text-center "
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-Linux-arm64.deb">ARM Linux Deb</a>
+						</h3>
+						<h3 class="text-center">
+							<a class="btn btn-default text-center "
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-Linux-x86_64.AppImage">x86 Linux AppImage</a>
+						</h3>
+						<h3 class="text-center">
+							<a class="btn btn-default text-center "
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-Linux-x86_64.deb">x86 Linux Deb</a>
+						</h3>
 					</div>
 					<div class="col-lg-3 col-sm-4">
 						<a href="https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/1.24.0/Windows-64-BowlerStudio-1.24.0.exe"> <img
@@ -181,10 +194,12 @@
 						</a>
 						<h3 class="text-center">
 							<a class="btn btn-default text-center "
-								href="https://github.com/CommonWealthRobotics/BowlerStudio/releases/download/1.24.0/Windows-64-BowlerStudio-1.24.0.exe">BowlerStudio for Windows
-								10</a>
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-Windows-x86_64.zip">Windows Standalone</a>
 						</h3>
-
+						<h3 class="text-center">
+							<a class="btn btn-default text-center "
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-Windows-x86_64.exe">Windows Local Installer</a>
+						</h3>
 					</div>
 
 					<div class="col-lg-3 col-sm-4">
@@ -194,9 +209,11 @@
 						</a>
 						<h3 class="text-center">
 							<a class="btn btn-default text-center"
-								href="https://github.com/CommonWealthRobotics/Installer-MacOS-BowlerStudio/releases/latest/download/bowlerstudio">BowlerStudio for Mac
-								(13.2+)</a>
-							
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-MacOS-arm64.dmg">Mac Aarch64</a>
+						</h3>
+						<h3 class="text-center">
+							<a class="btn btn-default text-center"
+								href="https://github.com/CommonWealthRobotics/HatRack/releases/latest/download/BowlerLauncher-MacOS-x86_64.dmg">Mac x86_64</a>
 						</h3>
 					</div>
 
@@ -205,62 +222,13 @@
 			<!-- /.container -->
 		</div>
 				<a name="PPAPI"></a>
-		<h2 class="lead text-center">Linux Install Instructions</h2>
-		<pre class="bash">
-							
-							<code>
-mkdir -p $HOME/bin/
-wget https://github.com/CommonWealthRobotics/Installer-Linux-BowlerStudio/releases/latest/download/bowlerstudio -O $HOME/bin/bowlerstudio
-chmod +x $HOME/bin/bowlerstudio
-bash $HOME/bin/bowlerstudio
-					</code>
-		</pre>
-		<h2 class="lead text-center">MacOS Install Instructions</h2>
-		<pre class="bash">
-							
-							<code>
-mkdir -p $HOME/bin/
-curl -L https://github.com/CommonWealthRobotics/Installer-MacOS-BowlerStudio/releases/latest/download/bowlerstudio -o $HOME/bin/bowlerstudio
-chmod +x $HOME/bin/bowlerstudio
-bash $HOME/bin/bowlerstudio
-					</code>
-		</pre>
-		<div class="col-lg-12 col-sm-12">
-
-			<h2 class="section-heading text-center">Advanced File Editors:</h2>
-			<div class="col-lg-3 col-sm-4">
-				<a
-					href="https://github.com/CommonWealthRobotics/ESP32ArduinoEclipseInstaller/blob/master/README.md">
-					<img class="img-responsive" src="img/eclipse.png" alt=""
-					style="margin-left: auto; margin-right: auto;">
-				</a>
-				<h3 class="text-center">
-					<a class="btn btn-default text-center"
-						href="https://github.com/CommonWealthRobotics/ESP32ArduinoEclipseInstaller/blob/master/README.md">Eclipse
-						IDE for advanced Groovy Editing</a>
-					</p>
-				</h3>
-			</div>
-
-			<div class="col-lg-3 col-sm-4">
-				<a href="https://inkscape.org/release/"> <img
-					class="img-responsive" src="img/inkscape-logo.png" alt=""
-					style="margin-left: auto; margin-right: auto;">
-				</a>
-				<h3 class="text-center">
-					<a class="btn btn-default text-center "
-						href="https://inkscape.org/release/">Inkscape Vector Editor</a>
-				</h3>
 
 
-			</div>
-
-		</div>
 		<div class="col-lg-12 col-sm-12">
 
 			<h2 class="section-heading text-center">Advanced Users:</h2>
-			<h4 class="section-heading text-center">BowlerStudio Minium
-				Spec: Java 8 64 bit, and JavaFX u60+, 2.2ghz Quad Core w/ 16GB (32GB
+			<h4 class="section-heading text-center">BowlerStudio Minimum
+				Spec:  2.2ghz Quad Core w/ 4GB (16GB
 				RAM recommended) ram, OpenGL3.0+ and 512mb disk space</h4>
 
 			<h2 class="section-heading text-center">
@@ -269,8 +237,8 @@ bash $HOME/bin/bowlerstudio
 					Standalone Jar</a>
 
 			</h2>
-			<h4 class="section-heading text-center">Kernel Minium Spec: 1GB
-				RAM, Java 8, and JavaFX u60+ (x86, x64 and ARMv6 Hf supported)</h4>
+			<h4 class="section-heading text-center">Kernel Minium Spec: 4B
+				RAM, Java 17, and JavaFX u60+ (x86, x64 and ARMv6 Hf supported)</h4>
 
 			<h2 class="section-heading text-center">
 				<a class="btn btn-default text-center" href="https://github.com/CommonWealthRobotics/bowler-script-kernel/releases/latest/download/bowler-kernel.jar"
@@ -289,11 +257,7 @@ bash $HOME/bin/bowlerstudio
 		<pre class="bash">
 							
 							<code>
-	sudo apt update
-	sudo apt-get install openjdk-8-jdk openjdk-8-jre-headless
-	export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
-	wget https://chriswhocodes.com/downloads/openjfx-8u60-sdk-overlay-linux-armv6hf.zip
-	sudo unzip  openjfx-8u60-sdk-overlay-linux-armv6hf.zip -d $JAVA_HOME/../
+	sudo apt install openjdk-17-jdk -y
 	wget https://github.com/CommonWealthRobotics/bowler-script-kernel/releases/latest/download/bowler-kernel.jar
 	# for a REPL
 	java -jar bowler-kernel.jar -r
