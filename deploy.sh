@@ -2,6 +2,8 @@
 
 set -e 
 
+mv docs/maven/ ./maven/
+
 rm -rf docs
 
 git fetch origin
@@ -32,6 +34,8 @@ bash compile.sh
 set +e
 
 echo "commonwealthrobotics.com" >./docs/CNAME
+
+mv ./maven/ docs/
 
 git add --all .
 
