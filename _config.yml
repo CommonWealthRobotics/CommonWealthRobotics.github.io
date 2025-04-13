@@ -10,6 +10,7 @@ destination: ./docs/
 # username defaults to ENV['GIT_NAME'] used by Travis
 # repo defaults to USERNAME.github.io
 # Branch defaults to "source" for USERNAME.github.io
+
 # or "master" otherwise
 username: CommonWealthRobotics
 repo: CommonWealthRobotics.github.io
